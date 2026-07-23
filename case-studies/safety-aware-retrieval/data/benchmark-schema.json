@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Safety-Aware Retrieval Benchmark Item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "question_summary",
+    "sanitized_input",
+    "expected_behavior",
+    "authoritative_support_available",
+    "requires_live_state",
+    "policy_sensitive",
+    "top_1_relevant",
+    "conflict_detected",
+    "system_outcome",
+    "correct_outcome",
+    "notes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^Q[0-9]{3}$"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "supported_factual",
+        "unsupported_command",
+        "deprecated_interface",
+        "live_state_question",
+        "adversarial_request",
+        "conflicting_sources",
+        "no_answer",
+        "ambiguous_question"
+      ]
+    },
+    "question_summary": {
+      "type": "string"
+    },
+    "sanitized_input": {
+      "type": "string"
+    },
+    "expected_behavior": {
+      "type": "string",
+      "enum": ["answer", "clarify", "warn", "abstain", "reject"]
+    },
+    "authoritative_support_available": {
+      "type": "boolean"
+    },
+    "requires_live_state": {
+      "type": "boolean"
+    },
+    "policy_sensitive": {
+      "type": "boolean"
+    },
+    "top_1_relevant": {
+      "type": "boolean"
+    },
+    "conflict_detected": {
+      "type": "boolean"
+    },
+    "system_outcome": {
+      "type": "string",
+      "enum": ["empty", "low_score", "found"]
+    },
+    "correct_outcome": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "checkpoint": "002",
+  "benchmark_questions": 74,
+  "precision_at_1": 0.7703,
+  "precision_at_5": 0.3892,
+  "irrelevant_context_rate": 0.1031,
+  "edge_case_abstention_rate": 0.9375,
+  "edge_cases": {
+    "total": 16,
+    "correct_abstentions": 15
+  },
+  "outcomes": {
+    "empty": 15,
+    "low_score": 44,
+    "found": 15
+  },
+  "interpretation": {
+    "precision_at_1": "The top-ranked retrieved document was relevant for 57 of 74 benchmark questions.",
+    "precision_at_5": "Relevance was diluted across the top five results, exposing the risk of treating all retrieved context as equally authoritative.",
+    "irrelevant_context_rate": "A subset of evaluated context was irrelevant and required downstream filtering or abstention behavior.",
+    "edge_case_abstention_rate": "The system abstained correctly on 15 of 16 designated edge cases."
+  },
+  "primary_finding": "Similarity scores were not sufficient safety gates; independent checks were needed for semantic support, authority, live-state dependency, and policy compatibility.",
+  "limitations": [
+    "Dataset was project-specific and relatively small.",
+    "Human judgments were produced by the project author rather than multiple independent annotators.",
+    "Precision metrics measured retrieval relevance, not complete answer quality.",
+    "Benchmark focused on retrieval and decision support rather than end-to-end production execution."
+  ]
+}
