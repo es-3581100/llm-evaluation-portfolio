@@ -6,314 +6,113 @@ My work centers on a practical question:
 
 > How do we determine whether an AI system is correct, well-grounded, safe, reproducible, and operating within its actual authority?
 
-I build evaluation frameworks, adversarial test cases, regression suites, audit records, and safety controls for LLM-based systems. My background is project-driven rather than degree-driven, with an emphasis on observable evidence, reproducible testing, and high-signal technical reporting.
+I build evaluation frameworks, adversarial test cases, regression suites, audit records, and safety controls for LLM-based systems. My background is project-driven, with an emphasis on observable evidence, reproducible testing, and high-signal technical reporting.
 
-I am currently seeking remote opportunities in:
+I am currently seeking remote opportunities in LLM evaluation, AI quality assurance, model red-teaming, AI safety testing, RAG and grounding evaluation, and AI training or response analysis.
 
-* LLM evaluation
-* AI quality assurance
-* Model red-teaming
-* AI safety testing
-* RAG and grounding evaluation
-* AI training and response analysis
+## Featured Evidence
 
-## Core Evaluation Skills
+* **74-question retrieval benchmark:** evaluated grounding, abstention, authority conflicts, live-state dependency, and adversarial requests. Aggregate precision and abstention metrics are being reconciled against the corrected BM25 score-direction contract.
+* **750-run agent-memory experiment:** five systems, five scenarios, frozen holdout seeds, paired statistical analysis.
+* **Evaluation methods:** adversarial cases, grounding checks, regression testing, provenance tracking, and bounded claims.
 
-### LLM Evaluation
+**Integrity note:** A post-hoc audit found that the FTS5/BM25 score direction had been interpreted backward. The empty-outcome count remained unchanged at 15, while corrected threshold classification changed the balance between low-score and found outcomes from 44/15 to 15/44. Precision and abstention aggregates remain withheld until they can be recomputed and traced to the corrected internal checkpoint artifact.
 
-* Designing structured evaluation rubrics
-* Comparing model outputs against explicit success criteria
-* Identifying hallucinations, unsupported claims, and reasoning gaps
-* Separating factual errors from instruction-following failures
-* Evaluating uncertainty calibration and appropriate abstention
-* Creating repeatable pass, fail, blocked, and inconclusive classifications
-
-### Adversarial Testing
-
-* Prompt-injection and jailbreak testing
-* Role-framing and identity-capture analysis
-* Authority-escalation and instruction-conflict testing
-* Malicious or unsupported request detection
-* Hidden-state and context-drift investigation
-* Cross-model behavioral comparison
-
-### Grounding and Retrieval
-
-* RAG retrieval-quality evaluation
-* Source authority and provenance tracking
-* Contradiction detection across canonical and legacy sources
-* No-answer and low-confidence behavior testing
-* Precision and irrelevant-context measurement
-* Evidence sufficiency and grounding verification
-
-### Quality Assurance
-
-* Regression-test design
-* Deterministic fixture generation
-* Invariance and repeatability testing
-* Failure taxonomy development
-* Reproduction steps and checkpoint reporting
-* Expected-versus-observed bug documentation
-
-### Technical Tools
-
-* Python
-* Pytest
-* SQL and SQLite
-* Git and GitHub
-* Linux
-* JSON and YAML schemas
-* ChromaDB and vector retrieval
-* API and tool-calling workflows
-* MCP-based agent tooling
-* Structured prompt and system-prompt design
-
-## Selected Projects
-
-### KolM'af-AI: Safety-Gated Control Plane for Tool-Using LLM Agents
-
-KolM'af-AI is an independently developed control-plane and evaluation project for safely connecting LLM agents to a live software environment.
-
-The system is designed so that safety does not depend solely on the model behaving correctly. Instead, permissions, command classifications, confirmation requirements, and execution boundaries are enforced structurally.
-
-#### Evaluation and QA work
-
-* Developed a command-safety registry covering more than 170 commands, endpoints, and approved read-only patterns.
-* Designed tiered action classifications separating read-only, confirmable, and prohibited operations.
-* Built structural protections against high-risk commands even when a model attempted to provide confirmation.
-* Created deterministic test suites for policy compilation, registry integrity, command classification, and read-only enforcement.
-* Added provenance metadata, audit logging, health checks, and degraded-state reporting.
-* Designed preflight gates that block live operations when required systems are unavailable or out of sync.
-* Documented failure modes, recovery procedures, and release-readiness checks.
-
-#### What this demonstrates
-
-* Agentic-system evaluation
-* Tool-use safety testing
-* Instruction and authority-boundary analysis
-* Regression testing
-* High-signal bug reporting
-* Reproducible release validation
-* Safety enforced through system architecture rather than model trust
-
-**Repository:** `[Add repository link]`
-
----
+## Featured Projects
 
 ### Safety-Aware Retrieval Evaluation
 
-I developed and evaluated a retrieval benchmark for an AI control-plane knowledge system.
+I designed and evaluated a 74-question benchmark for a safety-aware retrieval system supporting a tool-using LLM agent. The benchmark tested whether the system could distinguish supported questions from misleading, malicious, deprecated, state-dependent, or unsupported requests, and abstain when reliable evidence was unavailable.
 
-The benchmark included standard questions, adversarial requests, unsupported-command requests, live-state-dependent questions, deprecated interfaces, and cases where the correct behavior was to abstain.
+**Evidence:** [`case-studies/safety-aware-retrieval/`](case-studies/safety-aware-retrieval/)
 
-#### Evaluation work
+#### Evaluation Highlights
 
-* Expanded the dataset to 74 evaluation questions.
-* Measured precision at multiple retrieval depths.
-* Tracked irrelevant-context retrieval.
-* Evaluated empty-result, low-score, found-answer, and abstention outcomes.
-* Tested conflict detection between canonical and legacy documentation.
-* Added adversarial cases where strong lexical similarity could produce a dangerously incorrect answer.
-* Demonstrated that retrieval-score thresholds alone were insufficient for semantic and policy safety.
-* Developed a multi-class adversarial taxonomy and independent decision-layer model.
+* Corrected retrieval outcomes: 15 empty, 15 low-score, 44 found
+* Aggregate precision and abstention metrics are being reconciled against the corrected BM25 score-direction contract
+* Caveat: project-specific, single-annotator benchmark with N=74
+* Tested unsupported commands, deprecated interfaces, live-state questions, adversarial requests, conflicting sources, no-answer cases, and ambiguity
+* Separated retrieval outcome from final observed behavior in the public benchmark schema
 
-One evaluation checkpoint achieved a 93.75% abstention rate on designated edge cases, showing that the system generally avoided providing unsupported answers when evidence was insufficient.
+#### My Role
 
-#### What this demonstrates
+I defined the evaluation problem, established success and failure criteria, directed the implementation and testing process, reviewed generated artifacts, investigated regressions, and maintained the final claim boundaries.
 
-* RAG evaluation
-* Grounding verification
-* Adversarial dataset design
-* Abstention testing
-* Retrieval metrics
-* Semantic failure analysis
-* Evidence-based threshold calibration
+#### Skills Demonstrated
 
-**Evaluation report:** `[Add report link]`
-**Dataset:** `[Add dataset link]`
+RAG evaluation, grounding verification, adversarial dataset design, abstention testing, retrieval metrics, semantic failure analysis, schema design, and evidence-based threshold calibration.
 
----
+### Belief Lifecycle Engine: Evaluating Temporal Authority in Long-Lived Agents
 
-### LLM Adversarial-Layer and Action-Envelope Design
+**Status:** Independent working paper; not peer reviewed or submitted for publication.
 
-I designed a non-executing evaluation layer for determining whether a proposed AI action is supported, permitted, sufficiently grounded, and correctly bound to user approval.
+I designed and evaluated an auditable architecture for preventing previously correct but outdated beliefs from continuing to authorize agent actions. The work includes a deterministic simulator, five comparative systems, five controlled scenarios, frozen holdout seeds, safety and availability metrics, paired statistical analysis, and documented reproducibility requirements.
 
-The work focused on preventing subtle authority drift between retrieval, reasoning, proposal generation, confirmation, and execution.
+**Evidence:** [`research/belief-lifecycle-engine/`](research/belief-lifecycle-engine/)
 
-#### Evaluation concerns addressed
+#### Evaluation Highlights
 
-* Unsupported proposals presented as approved
-* Confirmation attached to the wrong action or sub-action
-* Derived fields depending circularly on one another
-* Conflicting producers for execution eligibility
-* Expired approvals remaining active
-* Schema and enum drift
-* Authority claims changing across summaries
-* Child actions losing identity or provenance
-* Policy state being inferred from narrative language
+* 750 frozen validation runs
+* Five system variants and five controlled scenarios
+* 30 previously unused frozen seeds per condition
+* Explicit unsafe-action, false-invalidation, valid-rejection, throughput, and gating-latency metrics
+* Paired seed comparison with Wilcoxon signed-rank tests, Holm correction, Hodges-Lehmann estimates, rank-biserial effects, and paired bootstrap intervals
+* 75.11% reduction in valid-action rejection across recoverable scenarios
+* Zero observed unsafe actions in the tested candidate runs: 0/150, reported with a bounded confidence claim rather than as proof of universal safety
+* Reported negative pilot findings and architecture corrections
 
-The design uses independent fields rather than collapsing approval, activation, execution, connectivity, and mutation scope into one confidence score.
+#### My Role
 
-#### What this demonstrates
+I defined the former-knowns failure mode, established the evaluation questions and measurable outcomes, directed the implementation and testing process, reviewed generated artifacts, investigated regressions, checked statistical reporting, and preserved the final claim boundaries.
 
-* Evaluation-schema design
-* State-machine and lifecycle analysis
-* Authority and approval testing
-* Adversarial review
-* Specification auditing
-* Detection of circular dependencies
-* Cross-document consistency validation
+#### Skills Demonstrated
 
-**Design documents:** `[Add design-document link]`
+Experimental design, AI-agent safety evaluation, lifecycle-state modeling, baseline construction, regression analysis, statistical testing, Python simulation, reproducibility discipline, and publication-style technical reporting.
 
----
+## Core Skills
 
-### Multi-Model Red-Team Research
+* LLM evaluation and rubric design
+* RAG and grounding evaluation
+* Adversarial test-case design
+* Model red-teaming and prompt-injection analysis
+* Abstention and uncertainty evaluation
+* Regression-test design
+* Failure taxonomy development
+* Tool-use and authority-boundary testing
+* Provenance and audit-record design
+* Python, Pytest, SQL, SQLite, Git, Linux, JSON, and YAML
 
-I conduct structured comparisons of how different LLMs respond to roleplay pressure, prompt injection, conflicting instructions, authority framing, and requests to weaken their own safeguards.
+## Evaluation Approach
 
-Models tested have included systems from OpenAI, Anthropic, Google, DeepSeek, Kimi, and other providers.
+I separate text similarity, factual support, policy permission, live-state availability, and safe answerability. A confident unsupported answer is usually worse than a clear no-answer result.
 
-#### Research methods
+More detail: [`docs/evaluation-approach.md`](docs/evaluation-approach.md)
 
-* Preserve original prompts and model outputs.
-* Separate observed behavior from interpretation.
-* Identify the specific instruction or framing that changed behavior.
-* Compare successful and unsuccessful variants.
-* Avoid treating one dramatic output as proof of a universal vulnerability.
-* Document model, context, conditions, limitations, and reproducibility.
-* Convert raw conversations into structured evaluation reports.
+## Development Approach
 
-#### What this demonstrates
+These projects were developed using AI-assisted coding, editing, and adversarial review. I defined the evaluation problems, established the success and failure criteria, directed the implementation process, ran and reviewed the tests, investigated regressions, verified the reported artifacts, and take responsibility for the final claims.
 
-* Behavioral LLM evaluation
-* Cross-model comparison
-* Jailbreak and prompt-injection analysis
-* Qualitative failure classification
-* Responsible vulnerability documentation
-* Clear separation of evidence and inference
+AI-generated output is treated as material to verify, not as independent evidence that a system works.
 
-**Reports:** `[Add red-team report directory link]`
+## Additional Work In Progress
 
----
+* Safety-gated control plane for tool-using LLM agents
+* LLM adversarial-layer and action-envelope design
+* Multi-model red-team research
+* Deterministic context compiler and skill-tree testing
 
-### Deterministic Context Compiler and Skill-Tree Testing
-
-I helped design and validate a model-agnostic context compiler and skill-routing system for specialized AI agents.
-
-The system resolves task-specific skills while preventing specialist or reviewer agents from silently taking control of the wider workflow.
-
-#### Evaluation work
-
-* Tested deterministic generation across repeated runs.
-* Distinguished meaningful registry changes from timestamp-only changes.
-* Verified source hashes and generated-artifact integrity.
-* Tested policy precedence and read-only specialist roles.
-* Created invariance comparisons.
-* Tested withheld-evidence boundaries and non-promotion rules.
-* Validated negative-I/O behavior.
-* Maintained frozen checkpoints before advancing development phases.
-
-#### What this demonstrates
-
-* Determinism testing
-* Agent-routing evaluation
-* Context and policy isolation
-* Artifact-integrity verification
-* Reproducible compiler testing
-* Drift detection
-
-**Project documentation:** `[Add project link]`
-
-## Evaluation Philosophy
-
-### Evidence Before Narrative
-
-A polished explanation is not evidence that a system worked. Important claims should be traceable to test output, source material, logs, fixtures, or reproducible observations.
-
-### Abstention Is a Valid Result
-
-An evaluator should reward systems that recognize insufficient evidence. A confident unsupported answer is often worse than an explicit no-answer result.
-
-### Safety Should Not Depend on Model Personality
-
-A safe system should remain safe when the underlying model changes, becomes confused, follows a malicious instruction, or overestimates its authority.
-
-### Separate Observation From Inference
-
-My reports distinguish between:
-
-* What was directly observed
-* What was reproduced
-* What is strongly supported
-* What remains an inference
-* What could not be verified
-
-### Regression Tests Should Preserve Lessons
-
-When a failure is discovered, the goal is not only to repair the immediate issue. The failure should become a durable test so that future versions cannot silently reintroduce it.
-
-## Example Evaluation Report Format
-
-My reports generally include:
-
-1. Evaluation objective
-2. System and model context
-3. Test conditions
-4. Expected behavior
-5. Observed behavior
-6. Reproduction steps
-7. Evidence and artifacts
-8. Failure classification
-9. Severity and impact
-10. Known limitations
-11. Recommended next test
-12. Final disposition
-
-Common dispositions include:
-
-* Pass
-* Pass with limitations
-* Reproducible failure
-* Inconclusive
-* Blocked by environment
-* Requires independent review
-* Not approved for progression
-
-## Current Development Goals
-
-I am expanding my experience with established evaluation platforms and observability tools, including:
-
-* OpenAI Evals
-* Weights & Biases
-* Standardized RAG-evaluation frameworks
-* Larger-scale annotation and human-coding workflows
-* Formal bias and fairness evaluation methods
-
-My existing work has primarily used custom Python, Pytest, SQL, structured schemas, evaluation datasets, and project-specific reporting systems.
-
-## What I Can Contribute
-
-I would be especially useful on teams that need someone to:
-
-* Evaluate difficult or ambiguous model outputs
-* Create adversarial test cases
-* Design clear scoring rubrics
-* Find failures that ordinary happy-path testing misses
-* Investigate why a model or agent behaved incorrectly
-* Validate RAG grounding and source use
-* Build repeatable regression tests
-* Write reports that engineers can reproduce and act on
-* Distinguish genuine safety improvements from superficial prompt changes
-* Translate messy model behavior into structured technical evidence
+These are intentionally not featured until the public links, evidence, and summaries are as complete as the two projects above.
 
 ## Contact
 
-* **GitHub:** `[GitHub profile URL]`
-* **Email:** `[Professional email]`
-* **LinkedIn:** `[LinkedIn URL, if available]`
+* **GitHub:** [donCannoli-burns](https://github.com/donCannoli-burns)
+* **Email:** [e.sawtelle358@gmail.com](mailto:e.sawtelle358@gmail.com)
 * **Location:** United States — seeking remote work
 
 ## Availability
 
 Open to remote contract, part-time, project-based, and full-time opportunities involving LLM evaluation, AI QA, model safety, red-teaming, data annotation, or AI training.
+
+## Reuse Terms
+
+Reuse terms are defined in [`LICENSE.md`](LICENSE.md).

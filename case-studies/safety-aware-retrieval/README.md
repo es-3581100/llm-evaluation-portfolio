@@ -4,20 +4,25 @@
 
 ## Executive Summary
 
-I designed and evaluated a 74-question benchmark for a safety-aware retrieval system supporting a tool-using LLM agent. The benchmark included ordinary knowledge questions, unsupported commands, deprecated interfaces, malicious requests, conflicting sources, and questions requiring unavailable live-state information. The evaluation measured retrieval precision, irrelevant-context exposure, conflict detection, and appropriate abstention.
+I designed and evaluated a 74-question benchmark for a safety-aware retrieval system supporting a tool-using LLM agent. The benchmark included ordinary knowledge questions, unsupported commands, deprecated interfaces, malicious requests, conflicting sources, and questions requiring unavailable live-state information. The evaluation measured retrieval precision, conflict detection, and appropriate abstention.
 
 | Metric | Result |
 | --- | ---: |
 | Benchmark size | 74 questions |
-| Precision at 1 | 0.7703 |
-| Precision at 5 | 0.3892 |
-| Irrelevant-context rate | 0.1031 |
-| Edge-case abstention rate | 0.9375 |
 | Empty retrieval outcomes | 15 |
-| Low-score outcomes | 44 |
-| Found-answer outcomes | 15 |
+| Low-score retrieval outcomes | 15 |
+| Found retrieval outcomes | 44 |
+| Aggregate precision and abstention metrics | Reconciliation pending |
 
-The lower Precision@5 result was not hidden or treated as a cosmetic issue. Retrieving more documents naturally introduces more irrelevant material, and this case study evaluated whether downstream decision logic could avoid treating all retrieved context as equally useful, authoritative, or safe.
+> **Integrity note:** A post-hoc audit found that the FTS5/BM25 score direction had been interpreted backward. The empty-outcome count remained unchanged at 15, while corrected threshold classification changed the balance between low-score and found outcomes from 44/15 to 15/44. Precision and abstention aggregates remain withheld until they can be recomputed and traced to the corrected internal checkpoint artifact.
+
+Retrieving more documents naturally introduces more opportunity for irrelevant or non-authoritative material, and this case study evaluated whether downstream decision logic could avoid treating all retrieved context as equally useful, authoritative, or safe.
+
+Important caveat: this was a project-specific, single-annotator benchmark with 74 questions. The results should be read as evidence of evaluation design and internal checkpoint behavior, not as a general benchmark for unrelated retrieval systems.
+
+Irrelevant context was tracked separately during evaluation because non-relevant retrieved material can influence downstream reasoning even when the highest-ranked result is correct. The public summary reports only metrics whose raw counts are currently available in the sanitized artifacts.
+
+Note: `retrieval_outcome` reflects whether results cleared the acceptance threshold used for downstream action-gating, where `found` means above threshold. `top_1_relevant` is an independent human relevance judgment applied regardless of threshold. A `low_score` outcome can still have a relevant top-1 document; this is precisely why the evaluation separates retrieval score, relevance, and safety gating.
 
 ## Problem
 
@@ -53,7 +58,23 @@ The benchmark contained 74 questions designed to test whether the retrieval syst
 | No-answer cases | Whether the system abstains instead of fabricating support |
 | Ambiguous questions | Whether uncertainty is preserved |
 
-The public sample dataset includes sanitized representative examples rather than the full private benchmark. The sample is available in `data/benchmark-sample.jsonl`, and the schema is defined in `data/benchmark-schema.json`.
+The public sample dataset includes sanitized representative examples rather than the full private benchmark. The schema separates `retrieval_outcome` from `observed_behavior` so retrieval quality and downstream decision quality are not collapsed into one label.
+
+Sample provenance note: the 10 public rows are sanitized representative cases, not the complete checkpoint output. Their `retrieval_outcome` labels are illustrative until the sample is refreshed from the corrected internal checkpoint artifact; their counts are not expected to match the 74-item aggregate counts.
+
+Public artifacts:
+
+* [Data notes](data/README.md)
+* [Illustrative benchmark sample](data/benchmark-sample-illustrative.jsonl)
+* [Benchmark schema](data/benchmark-schema.json)
+* [Evaluation rubric](methodology/evaluation-rubric.md)
+* [Checkpoint summary](results/checkpoint-002-summary.json)
+
+## Public Evidence Boundary
+
+The aggregate metrics were calculated from a frozen 74-item internal benchmark. This repository publishes 10 sanitized representative cases, the scoring schema, the evaluation rubric, and a derived checkpoint summary. The public sample alone is not sufficient to independently recalculate the aggregate results.
+
+The summary metrics should therefore be understood as reported results from the frozen internal checkpoint rather than independently reproduced public-benchmark results. Precision and abstention metrics are temporarily withheld while they are reconciled against the corrected BM25 score-direction contract and internal checkpoint artifact.
 
 ## Methodology
 
@@ -65,10 +86,11 @@ The benchmark was versioned and evaluated against a frozen checkpoint so that ch
 4. Record the top retrieved documents and scores.
 5. Judge relevance independently from score.
 6. Detect canonical-versus-legacy conflicts.
-7. Classify the system outcome.
-8. Compare observed behavior with expected behavior.
-9. Add regressions for discovered failure modes.
-10. Freeze the checkpoint and record metrics.
+7. Classify the retrieval outcome.
+8. Record the observed downstream behavior.
+9. Compare observed behavior with expected behavior.
+10. Add regressions for discovered failure modes.
+11. Freeze the checkpoint and record metrics.
 
 ```mermaid
 flowchart LR
@@ -88,21 +110,13 @@ flowchart LR
 
 The checkpoint summary is published in `results/checkpoint-002-summary.json`.
 
-### Precision at 1: 0.7703
+### Corrected Retrieval Outcomes
 
-The highest-ranked result was relevant for approximately 77% of questions, or 57 of 74 under the conventional Precision@1 interpretation.
+After repairing the FTS5/BM25 score-direction contract, the corrected Checkpoint 002 retrieval outcomes were 15 empty, 15 low-score, and 44 found.
 
-### Precision at 5: 0.3892
+### Metrics Under Reconciliation
 
-Across the top five results, relevance was more diluted. This exposed the risk of allowing downstream systems to treat all retrieved context as equally useful or authoritative.
-
-### Irrelevant-Context Rate: 0.1031
-
-Approximately 10% of evaluated context was classified as irrelevant under the project's measurement method. The rubric separates this from precision because irrelevant context can still affect downstream reasoning even when the top result is correct.
-
-### Edge-Case Abstention Rate: 0.9375
-
-The system abstained correctly on 15 of 16 designated edge cases. This was especially important because many edge cases contained strong lexical matches that could otherwise encourage unsupported answers.
+Precision and abstention metrics are not currently published as headline numbers because they need to be traced to the corrected internal checkpoint artifact and reconciled against the corrected score-direction contract. This avoids publishing polished but stale aggregate values.
 
 ## Most Important Finding
 
