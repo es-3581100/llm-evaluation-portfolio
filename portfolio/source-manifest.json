@@ -1,0 +1,200 @@
+{
+  "source_repo": "https://github.com/es-3581100/llm-evaluation-portfolio",
+  "head": "b369c47882a1ca85108962ed5c109791300107fc",
+  "generated_at": "2026-08-08T00:00:00Z",
+  "candidates": [
+    {
+      "id": "safety-aware-retrieval-evaluation",
+      "title": "Safety-Aware Retrieval Evaluation",
+      "summary": "Designed and evaluated a 74-question safety-aware retrieval benchmark with corrected retrieval-outcome reporting and withheld aggregate precision/abstention metrics pending reconciliation.",
+      "problem": "A retrieval system supporting a tool-using LLM agent needed to distinguish factual support, authority, policy compatibility, live-state dependency, source conflicts, and safe abstention rather than relying only on similarity scores.",
+      "contribution": "Defined the evaluation problem, success and failure criteria, adversarial benchmark categories, rubric, public schema, checkpoint summary, regression findings, and corrected public claim boundaries.",
+      "skills": [
+        "LLM evaluation",
+        "RAG evaluation",
+        "grounding verification",
+        "adversarial dataset design",
+        "abstention testing",
+        "retrieval metrics",
+        "schema design",
+        "evidence-based threshold calibration"
+      ],
+      "evidence": [
+        {
+          "type": "readme",
+          "path": "README.md",
+          "description": "Public portfolio overview lists the Safety-Aware Retrieval Evaluation as featured work and states the corrected outcome caveat."
+        },
+        {
+          "type": "readme",
+          "path": "case-studies/safety-aware-retrieval/README.md",
+          "description": "Case study records the benchmark design, public evidence boundary, corrected outcome counts, withheld metrics, role, lessons, and limitations."
+        },
+        {
+          "type": "machine_artifact",
+          "path": "case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json",
+          "description": "Checkpoint summary reports 74 questions, corrected retrieval outcomes, withheld precision/abstention metrics, primary finding, and limitations."
+        },
+        {
+          "type": "design_doc",
+          "path": "case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md",
+          "description": "Rubric defines answerability, authority, policy compatibility, state dependency, retrieval outcomes, observed behaviors, and reviewer guidance."
+        },
+        {
+          "type": "source",
+          "path": "case-studies/safety-aware-retrieval/data/benchmark-schema.json",
+          "description": "Public schema separates retrieval outcome from observed behavior and related evaluation fields."
+        }
+      ],
+      "metrics": [
+        {
+          "name": "benchmark_questions",
+          "value": "74",
+          "context": "frozen internal benchmark summarized in public checkpoint artifact",
+          "basis": "reported"
+        },
+        {
+          "name": "corrected_empty_retrieval_outcomes",
+          "value": "15",
+          "context": "Checkpoint 002 after BM25 score-direction correction",
+          "basis": "reported"
+        },
+        {
+          "name": "corrected_low_score_retrieval_outcomes",
+          "value": "15",
+          "context": "Checkpoint 002 after BM25 score-direction correction",
+          "basis": "reported"
+        },
+        {
+          "name": "corrected_found_retrieval_outcomes",
+          "value": "44",
+          "context": "Checkpoint 002 after BM25 score-direction correction",
+          "basis": "reported"
+        }
+      ],
+      "claim_status": "CORRECTED",
+      "claim_boundary": "Corrected retrieval-outcome counts are public, but aggregate precision and abstention metrics are withheld until recomputed and traced to the corrected internal checkpoint artifact. The benchmark is project-specific, single-annotator, N=74, and not a general benchmark for unrelated retrieval systems.",
+      "portfolio_grade": true,
+      "confidence": "medium",
+      "source_repo": "case-studies/safety-aware-retrieval/",
+      "tags": [
+        "retrieval evaluation",
+        "grounding",
+        "abstention",
+        "safety-aware retrieval",
+        "corrected claim"
+      ],
+      "recommended_wording": "Designed a 74-question safety-aware retrieval benchmark and published corrected retrieval-outcome counts with explicit caveats and withheld aggregate precision/abstention metrics pending reconciliation.",
+      "warnings": [
+        "Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.",
+        "Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.",
+        "Results are project-specific and single-annotator."
+      ],
+      "visibility": "public",
+      "corrected_from": "A post-hoc audit found the FTS5/BM25 score direction had been interpreted backward; corrected threshold classification changed low-score/found balance while the empty count remained 15"
+    },
+    {
+      "id": "belief-lifecycle-engine",
+      "title": "Belief Lifecycle Engine",
+      "summary": "Designed and evaluated a preliminary working-paper architecture for temporal authority management in long-lived agents, with reported deterministic simulator results and explicit public reproducibility limits.",
+      "problem": "Long-lived agents can retain formerly correct beliefs that no longer describe the current environment while those beliefs continue to authorize action.",
+      "contribution": "Defined the former-knowns failure mode, specified the Belief Lifecycle Engine architecture, established evaluation questions and measurable outcomes, directed implementation/testing, reviewed statistical reporting, and preserved claim boundaries for public release.",
+      "skills": [
+        "experimental design",
+        "AI-agent safety evaluation",
+        "lifecycle-state modeling",
+        "baseline construction",
+        "regression analysis",
+        "statistical testing",
+        "Python simulation",
+        "reproducibility discipline",
+        "technical reporting"
+      ],
+      "evidence": [
+        {
+          "type": "readme",
+          "path": "README.md",
+          "description": "Public portfolio overview lists the Belief Lifecycle Engine as featured work and records its preliminary working-paper caveats."
+        },
+        {
+          "type": "readme",
+          "path": "research/belief-lifecycle-engine/README.md",
+          "description": "Project README states working-paper status, public artifacts, reported evaluation highlights, role, key results, and limitations."
+        },
+        {
+          "type": "design_doc",
+          "path": "research/belief-lifecycle-engine/former-knowns-ble-working-paper.md",
+          "description": "Working paper describes the architecture, deterministic simulator, frozen validation design, reported statistics, results, limitations, and ethics/public-release notes."
+        },
+        {
+          "type": "machine_artifact",
+          "path": "research/belief-lifecycle-engine/former-knowns-ble-working-paper.pdf",
+          "description": "Public working-paper PDF mirrors the manuscript artifact."
+        },
+        {
+          "type": "runbook",
+          "path": "research/belief-lifecycle-engine/reproducibility/README.md",
+          "description": "Reproducibility notes state that high-level claims are public while the full source-and-results archive is not yet public, and list release requirements."
+        }
+      ],
+      "metrics": [
+        {
+          "name": "frozen_validation_runs",
+          "value": "750",
+          "context": "reported deterministic simulator validation design",
+          "basis": "reported"
+        },
+        {
+          "name": "system_variants",
+          "value": "5",
+          "context": "reported comparison design",
+          "basis": "reported"
+        },
+        {
+          "name": "controlled_scenarios",
+          "value": "5",
+          "context": "reported comparison design",
+          "basis": "reported"
+        },
+        {
+          "name": "valid_action_rejection_reduction",
+          "value": "75.11%",
+          "context": "reported across recoverable scenarios",
+          "basis": "reported"
+        },
+        {
+          "name": "unsafe_actions_by_drift_recovery_candidate",
+          "value": "0/150",
+          "context": "reported candidate runs; bounded observation, not proof of universal safety",
+          "basis": "reported"
+        },
+        {
+          "name": "one_sided_exact_95_percent_upper_bound_run_level_unsafe_action_probability",
+          "value": "1.98%",
+          "context": "reported for zero observed unsafe actions in candidate runs",
+          "basis": "reported"
+        }
+      ],
+      "claim_status": "PRELIMINARY",
+      "claim_boundary": "Independent working paper, not peer reviewed or submitted for publication. Public artifacts establish reported internal mechanism validity for a deterministic synthetic simulator configuration only; the full source-and-results archive is not yet public here, external-agent validation and parameter sensitivity remain future work, and zero observed unsafe actions is not proof of universal safety.",
+      "portfolio_grade": true,
+      "confidence": "medium",
+      "source_repo": "research/belief-lifecycle-engine/",
+      "tags": [
+        "agent memory",
+        "temporal authority",
+        "AI safety evaluation",
+        "working paper",
+        "preliminary claim"
+      ],
+      "recommended_wording": "Developed a preliminary Belief Lifecycle Engine working paper evaluating temporal authority in long-lived agents, with reported deterministic simulator results and explicit reproducibility/public-release limits.",
+      "warnings": [
+        "Independent working paper; not peer reviewed or submitted for publication.",
+        "Full source-and-results archive is not yet public in this repository.",
+        "Results are from a deterministic synthetic simulator and should not be treated as broad external-agent safety evidence.",
+        "Independent replication and parameter sensitivity testing remain future work."
+      ],
+      "visibility": "public"
+    }
+  ]
+}

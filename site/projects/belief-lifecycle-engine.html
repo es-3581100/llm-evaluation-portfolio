@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Belief Lifecycle Engine</title>
+<style>
+:root{--ink:#1a1a2e;--accent:#0f4c81;--muted:#5a5a6e;--bg:#f7f7fb;}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header.site{background:#fff;border-bottom:1px solid #e2e2ea;padding:0.8rem 1.2rem}
+header.site nav{max-width:960px;margin:0 auto;display:flex;gap:1rem;flex-wrap:wrap}
+header.site a{color:var(--accent);text-decoration:none;font-weight:600}
+main{max-width:960px;margin:0 auto;padding:1.4rem 1.2rem 3rem}
+footer.site{max-width:960px;margin:0 auto;padding:1rem 1.2rem;color:var(--muted);font-size:0.85rem;border-top:1px solid #e2e2ea}
+h1,h2,h3{line-height:1.2}
+.card{background:#fff;border:1px solid #e2e2ea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+.badge{display:inline-block;padding:0.15rem 0.6rem;border-radius:999px;font-size:0.8rem;font-weight:600;background:#eef2ff;color:var(--accent);margin-right:0.3rem}
+.badge.warn{background:#fff4e0;color:#7a5a00}
+.badge.private{background:#fdeaea;color:#8b0000}
+.badge.review{background:#eef6ee;color:#1e6b2e}
+table{border-collapse:collapse;width:100%;background:#fff}
+th,td{border:1px solid #e2e2ea;padding:0.5rem 0.7rem;text-align:left;vertical-align:top}
+th{background:#f2f2f8}
+pre{background:#fff;border:1px solid #e2e2ea;border-radius:6px;padding:0.8rem 1rem;overflow-x:auto}
+.note{background:#fff8e1;border-left:4px solid #e0b400;padding:0.6rem 0.9rem;margin:1rem 0}
+.boundary{background:#eef6ee;border-left:4px solid #2e7d32;padding:0.6rem 0.9rem;margin:1rem 0}
+.meta{color:var(--muted);font-size:0.9rem}
+ul.tags li{display:inline-block}
+</style>
+</head>
+<body>
+<header class="site"><nav>
+<a href="/llm-evaluation-portfolio/">Home</a>
+<a href="/llm-evaluation-portfolio/projects/index.html">Projects</a>
+<a href="/llm-evaluation-portfolio/skills.html">Skills</a>
+<a href="/llm-evaluation-portfolio/case-studies.html">Case studies</a>
+<a href="/llm-evaluation-portfolio/experience.html">Experience</a>
+<a href="/llm-evaluation-portfolio/about.html">About</a>
+<a href="/llm-evaluation-portfolio/contact.html">Contact</a>
+</nav></header>
+<main>
+<nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Projects</a></nav>
+<h1>Belief Lifecycle Engine</h1>
+<span class="badge warn">Preliminary</span>
+
+<span class="badge warn">Preliminary — not finalized</span>
+
+
+
+
+
+<div class="note"><strong>Preliminary — not finalized.</strong> Evidence exists, but important validation remains.</div>
+
+
+<h2>Summary</h2>
+<p>Designed and evaluated a preliminary working-paper architecture for temporal authority management in long-lived agents, with reported deterministic simulator results and explicit public reproducibility limits.</p>
+
+<h2>Problem</h2>
+<p>Long-lived agents can retain formerly correct beliefs that no longer describe the current environment while those beliefs continue to authorize action.</p>
+
+<h2>Contribution</h2>
+<p>Defined the former-knowns failure mode, specified the Belief Lifecycle Engine architecture, established evaluation questions and measurable outcomes, directed implementation/testing, reviewed statistical reporting, and preserved claim boundaries for public release.</p>
+
+<h2>Evidence</h2>
+
+<table>
+<tr><th>Type</th><th>Description</th><th>Path</th></tr>
+
+<tr><td>readme</td><td>Public portfolio overview lists the Belief Lifecycle Engine as featured work and records its preliminary working-paper caveats.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/README.md"><code>README.md</code></a></td></tr>
+
+<tr><td>readme</td><td>Project README states working-paper status, public artifacts, reported evaluation highlights, role, key results, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/README.md"><code>research/belief-lifecycle-engine/README.md</code></a></td></tr>
+
+<tr><td>design_doc</td><td>Working paper describes the architecture, deterministic simulator, frozen validation design, reported statistics, results, limitations, and ethics/public-release notes.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/former-knowns-ble-working-paper.md"><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.md</code></a></td></tr>
+
+<tr><td>machine_artifact</td><td>Public working-paper PDF mirrors the manuscript artifact.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/former-knowns-ble-working-paper.pdf"><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.pdf</code></a></td></tr>
+
+<tr><td>runbook</td><td>Reproducibility notes state that high-level claims are public while the full source-and-results archive is not yet public, and list release requirements.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/reproducibility/README.md"><code>research/belief-lifecycle-engine/reproducibility/README.md</code></a></td></tr>
+
+</table>
+
+
+<h2>Metrics</h2>
+
+<table>
+<tr><th>Name</th><th>Value</th><th>Context</th><th>Basis</th></tr>
+
+<tr><td>frozen_validation_runs</td><td>750</td><td>reported deterministic simulator validation design</td><td>reported</td></tr>
+
+<tr><td>system_variants</td><td>5</td><td>reported comparison design</td><td>reported</td></tr>
+
+<tr><td>controlled_scenarios</td><td>5</td><td>reported comparison design</td><td>reported</td></tr>
+
+<tr><td>valid_action_rejection_reduction</td><td>75.11%</td><td>reported across recoverable scenarios</td><td>reported</td></tr>
+
+<tr><td>unsafe_actions_by_drift_recovery_candidate</td><td>0/150</td><td>reported candidate runs; bounded observation, not proof of universal safety</td><td>reported</td></tr>
+
+<tr><td>one_sided_exact_95_percent_upper_bound_run_level_unsafe_action_probability</td><td>1.98%</td><td>reported for zero observed unsafe actions in candidate runs</td><td>reported</td></tr>
+
+</table>
+<p class="meta">Basis is preserved exactly: measured vs observed vs reported.</p>
+
+
+<h2>Claim boundary</h2>
+<div class="boundary">Independent working paper, not peer reviewed or submitted for publication. Public artifacts establish reported internal mechanism validity for a deterministic synthetic simulator configuration only; the full source-and-results archive is not yet public here, external-agent validation and parameter sensitivity remain future work, and zero observed unsafe actions is not proof of universal safety.</div>
+
+<h2>Skills</h2>
+<p><span class="badge">experimental design</span> <span class="badge">AI-agent safety evaluation</span> <span class="badge">lifecycle-state modeling</span> <span class="badge">baseline construction</span> <span class="badge">regression analysis</span> <span class="badge">statistical testing</span> <span class="badge">Python simulation</span> <span class="badge">reproducibility discipline</span> <span class="badge">technical reporting</span> </p>
+
+<h2>Tags</h2>
+<p><span class="badge">agent memory</span> <span class="badge">temporal authority</span> <span class="badge">AI safety evaluation</span> <span class="badge">working paper</span> <span class="badge">preliminary claim</span> </p>
+
+<h2>Source</h2>
+<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/research/belief-lifecycle-engine/"><code>research/belief-lifecycle-engine/</code></a></p>
+
+<h2>Warnings</h2>
+
+<ul>
+<li>Independent working paper; not peer reviewed or submitted for publication.</li><li>Full source-and-results archive is not yet public in this repository.</li><li>Results are from a deterministic synthetic simulator and should not be treated as broad external-agent safety evidence.</li><li>Independent replication and parameter sensitivity testing remain future work.</li>
+</ul>
+
+
+
+<h2>Recommended portfolio wording</h2>
+<p>Developed a preliminary Belief Lifecycle Engine working paper evaluating temporal authority in long-lived agents, with reported deterministic simulator results and explicit reproducibility/public-release limits.</p>
+
+</main>
+<footer class="site">Evidence-first portfolio. Every claim is rendered with its recorded status; no uncertainty is upgraded into certainty.</footer>
+</body>
+</html>

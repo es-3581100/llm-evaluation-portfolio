@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Safety-Aware Retrieval Evaluation</title>
+<style>
+:root{--ink:#1a1a2e;--accent:#0f4c81;--muted:#5a5a6e;--bg:#f7f7fb;}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header.site{background:#fff;border-bottom:1px solid #e2e2ea;padding:0.8rem 1.2rem}
+header.site nav{max-width:960px;margin:0 auto;display:flex;gap:1rem;flex-wrap:wrap}
+header.site a{color:var(--accent);text-decoration:none;font-weight:600}
+main{max-width:960px;margin:0 auto;padding:1.4rem 1.2rem 3rem}
+footer.site{max-width:960px;margin:0 auto;padding:1rem 1.2rem;color:var(--muted);font-size:0.85rem;border-top:1px solid #e2e2ea}
+h1,h2,h3{line-height:1.2}
+.card{background:#fff;border:1px solid #e2e2ea;border-radius:8px;padding:1rem 1.2rem;margin:1rem 0}
+.badge{display:inline-block;padding:0.15rem 0.6rem;border-radius:999px;font-size:0.8rem;font-weight:600;background:#eef2ff;color:var(--accent);margin-right:0.3rem}
+.badge.warn{background:#fff4e0;color:#7a5a00}
+.badge.private{background:#fdeaea;color:#8b0000}
+.badge.review{background:#eef6ee;color:#1e6b2e}
+table{border-collapse:collapse;width:100%;background:#fff}
+th,td{border:1px solid #e2e2ea;padding:0.5rem 0.7rem;text-align:left;vertical-align:top}
+th{background:#f2f2f8}
+pre{background:#fff;border:1px solid #e2e2ea;border-radius:6px;padding:0.8rem 1rem;overflow-x:auto}
+.note{background:#fff8e1;border-left:4px solid #e0b400;padding:0.6rem 0.9rem;margin:1rem 0}
+.boundary{background:#eef6ee;border-left:4px solid #2e7d32;padding:0.6rem 0.9rem;margin:1rem 0}
+.meta{color:var(--muted);font-size:0.9rem}
+ul.tags li{display:inline-block}
+</style>
+</head>
+<body>
+<header class="site"><nav>
+<a href="/llm-evaluation-portfolio/">Home</a>
+<a href="/llm-evaluation-portfolio/projects/index.html">Projects</a>
+<a href="/llm-evaluation-portfolio/skills.html">Skills</a>
+<a href="/llm-evaluation-portfolio/case-studies.html">Case studies</a>
+<a href="/llm-evaluation-portfolio/experience.html">Experience</a>
+<a href="/llm-evaluation-portfolio/about.html">About</a>
+<a href="/llm-evaluation-portfolio/contact.html">Contact</a>
+</nav></header>
+<main>
+<nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Projects</a></nav>
+<h1>Safety-Aware Retrieval Evaluation</h1>
+<span class="badge warn">Corrected</span>
+<span class="badge warn">Corrected</span>
+
+
+
+
+
+<div class="note"><strong>Corrected:</strong> an earlier interpretation was wrong and a corrected account exists. The correction: A post-hoc audit found the FTS5/BM25 score direction had been interpreted backward; corrected threshold classification changed low-score/found balance while the empty count remained 15.</div>
+
+
+
+<h2>Summary</h2>
+<p>Designed and evaluated a 74-question safety-aware retrieval benchmark with corrected retrieval-outcome reporting and withheld aggregate precision/abstention metrics pending reconciliation.</p>
+
+<h2>Problem</h2>
+<p>A retrieval system supporting a tool-using LLM agent needed to distinguish factual support, authority, policy compatibility, live-state dependency, source conflicts, and safe abstention rather than relying only on similarity scores.</p>
+
+<h2>Contribution</h2>
+<p>Defined the evaluation problem, success and failure criteria, adversarial benchmark categories, rubric, public schema, checkpoint summary, regression findings, and corrected public claim boundaries.</p>
+
+<h2>Evidence</h2>
+
+<table>
+<tr><th>Type</th><th>Description</th><th>Path</th></tr>
+
+<tr><td>readme</td><td>Public portfolio overview lists the Safety-Aware Retrieval Evaluation as featured work and states the corrected outcome caveat.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/README.md"><code>README.md</code></a></td></tr>
+
+<tr><td>readme</td><td>Case study records the benchmark design, public evidence boundary, corrected outcome counts, withheld metrics, role, lessons, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/README.md"><code>case-studies/safety-aware-retrieval/README.md</code></a></td></tr>
+
+<tr><td>machine_artifact</td><td>Checkpoint summary reports 74 questions, corrected retrieval outcomes, withheld precision/abstention metrics, primary finding, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json"><code>case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json</code></a></td></tr>
+
+<tr><td>design_doc</td><td>Rubric defines answerability, authority, policy compatibility, state dependency, retrieval outcomes, observed behaviors, and reviewer guidance.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md"><code>case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md</code></a></td></tr>
+
+<tr><td>source</td><td>Public schema separates retrieval outcome from observed behavior and related evaluation fields.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/data/benchmark-schema.json"><code>case-studies/safety-aware-retrieval/data/benchmark-schema.json</code></a></td></tr>
+
+</table>
+
+
+<h2>Metrics</h2>
+
+<table>
+<tr><th>Name</th><th>Value</th><th>Context</th><th>Basis</th></tr>
+
+<tr><td>benchmark_questions</td><td>74</td><td>frozen internal benchmark summarized in public checkpoint artifact</td><td>reported</td></tr>
+
+<tr><td>corrected_empty_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+
+<tr><td>corrected_low_score_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+
+<tr><td>corrected_found_retrieval_outcomes</td><td>44</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+
+</table>
+<p class="meta">Basis is preserved exactly: measured vs observed vs reported.</p>
+
+
+<h2>Claim boundary</h2>
+<div class="boundary">Corrected retrieval-outcome counts are public, but aggregate precision and abstention metrics are withheld until recomputed and traced to the corrected internal checkpoint artifact. The benchmark is project-specific, single-annotator, N=74, and not a general benchmark for unrelated retrieval systems.</div>
+
+<h2>Skills</h2>
+<p><span class="badge">LLM evaluation</span> <span class="badge">RAG evaluation</span> <span class="badge">grounding verification</span> <span class="badge">adversarial dataset design</span> <span class="badge">abstention testing</span> <span class="badge">retrieval metrics</span> <span class="badge">schema design</span> <span class="badge">evidence-based threshold calibration</span> </p>
+
+<h2>Tags</h2>
+<p><span class="badge">retrieval evaluation</span> <span class="badge">grounding</span> <span class="badge">abstention</span> <span class="badge">safety-aware retrieval</span> <span class="badge">corrected claim</span> </p>
+
+<h2>Source</h2>
+<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/case-studies/safety-aware-retrieval/"><code>case-studies/safety-aware-retrieval/</code></a></p>
+
+<h2>Warnings</h2>
+
+<ul>
+<li>Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.</li><li>Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.</li><li>Results are project-specific and single-annotator.</li>
+</ul>
+
+
+
+<h2>Recommended portfolio wording</h2>
+<p>Designed a 74-question safety-aware retrieval benchmark and published corrected retrieval-outcome counts with explicit caveats and withheld aggregate precision/abstention metrics pending reconciliation.</p>
+
+</main>
+<footer class="site">Evidence-first portfolio. Every claim is rendered with its recorded status; no uncertainty is upgraded into certainty.</footer>
+</body>
+</html>
