@@ -2,17 +2,17 @@
 
 Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: `https://github.com/es-3581100/llm-evaluation-portfolio` | Head: `b369c47882a1ca85108962ed5c109791300107fc` | Generated at: `2026-08-08T00:00:00Z`
 
-## Candidate 1: Safety-Aware Retrieval Evaluation
+## Candidate 1: Safety-Aware RAG/Retrieval Evaluation
 
 - **ID:** safety-aware-retrieval-evaluation
 - **Portfolio-grade status:** yes
 - **Claim status:** CORRECTED
 - **Corrected from:** A post-hoc audit found the FTS5/BM25 score direction had been interpreted backward; corrected threshold classification changed low-score/found balance while the empty count remained 15
-- **Why it matters:** Designed and evaluated a 74-question safety-aware retrieval benchmark with corrected retrieval-outcome reporting and withheld aggregate precision/abstention metrics pending reconciliation.
+- **Why it matters:** 74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.
 - **Problem:** A retrieval system supporting a tool-using LLM agent needed to distinguish factual support, authority, policy compatibility, live-state dependency, source conflicts, and safe abstention rather than relying only on similarity scores.
 - **Contribution:** Defined the evaluation problem, success and failure criteria, adversarial benchmark categories, rubric, public schema, checkpoint summary, regression findings, and corrected public claim boundaries.
 - **Evidence:**
-  - `README.md` (readme) — Public portfolio overview lists the Safety-Aware Retrieval Evaluation as featured work and states the corrected outcome caveat.
+  - `README.md` (readme) — Public portfolio overview lists the Safety-Aware RAG/Retrieval Evaluation as featured work and states the corrected outcome caveat.
   - `case-studies/safety-aware-retrieval/README.md` (readme) — Case study records the benchmark design, public evidence boundary, corrected outcome counts, withheld metrics, role, lessons, and limitations.
   - `case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json` (machine_artifact) — Checkpoint summary reports 74 questions, corrected retrieval outcomes, withheld precision/abstention metrics, primary finding, and limitations.
   - `case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md` (design_doc) — Rubric defines answerability, authority, policy compatibility, state dependency, retrieval outcomes, observed behaviors, and reviewer guidance.
@@ -23,9 +23,9 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
   - corrected_low_score_retrieval_outcomes = 15 (basis: reported, context: Checkpoint 002 after BM25 score-direction correction)
   - corrected_found_retrieval_outcomes = 44 (basis: reported, context: Checkpoint 002 after BM25 score-direction correction)
 - **Skills:** LLM evaluation, RAG evaluation, grounding verification, adversarial dataset design, abstention testing, retrieval metrics, schema design, evidence-based threshold calibration
-- **Claim boundary:** Corrected retrieval-outcome counts are public, but aggregate precision and abstention metrics are withheld until recomputed and traced to the corrected internal checkpoint artifact. The benchmark is project-specific, single-annotator, N=74, and not a general benchmark for unrelated retrieval systems.
+- **Claim boundary:** The evaluation tracked retrieval relevance, source conflict, authority, live-state dependency, policy compatibility, and expected abstention behavior. Aggregate precision and abstention metrics remain withheld until recomputed against the corrected BM25/FTS5 score-direction contract.
 - **Source paths:** `case-studies/safety-aware-retrieval/`
-- **Public summary:** Designed a 74-question safety-aware retrieval benchmark and published corrected retrieval-outcome counts with explicit caveats and withheld aggregate precision/abstention metrics pending reconciliation.
+- **Public summary:** 74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.
 - **Warnings:**
   - Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.
   - Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.
@@ -37,7 +37,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
 - **Portfolio-grade status:** yes
 - **Claim status:** PRELIMINARY
 - **Positioning line:** Agentic AI Architecture · State Management · Evaluation · Reliability
-- **Why it matters:** Designed and evaluated a preliminary working-paper architecture for temporal authority management in long-lived agents, with reported deterministic simulator results and explicit public reproducibility limits.
+- **Why it matters:** Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.
 - **Problem:** Long-lived agents can retain formerly correct beliefs that no longer describe the current environment while those beliefs continue to authorize action.
 - **Contribution:** Defined the former-knowns failure mode, specified the Belief Lifecycle Engine architecture, established evaluation questions and measurable outcomes, directed implementation/testing, reviewed statistical reporting, and preserved claim boundaries for public release.
 - **Evidence:**
@@ -56,7 +56,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
 - **Skills:** experimental design, AI-agent safety evaluation, lifecycle-state modeling, baseline construction, regression analysis, statistical testing, Python simulation, reproducibility discipline, technical reporting
 - **Claim boundary:** Independent working paper, not peer reviewed or submitted for publication. Public artifacts establish reported internal mechanism validity for a deterministic synthetic simulator configuration only; the full source-and-results archive is not yet public here, external-agent validation and parameter sensitivity remain future work, and zero observed unsafe actions is not proof of universal safety.
 - **Source paths:** `research/belief-lifecycle-engine/`
-- **Public summary:** Developed a preliminary Belief Lifecycle Engine working paper evaluating temporal authority in long-lived agents, with reported deterministic simulator results and explicit reproducibility/public-release limits.
+- **Public summary:** Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.
 - **Warnings:**
   - Independent working paper; not peer reviewed or submitted for publication.
   - Full source-and-results archive is not yet public in this repository.

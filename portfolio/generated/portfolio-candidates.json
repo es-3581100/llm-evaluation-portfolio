@@ -19,8 +19,8 @@
   "candidates": [
     {
       "id": "safety-aware-retrieval-evaluation",
-      "title": "Safety-Aware Retrieval Evaluation",
-      "summary": "Designed and evaluated a 74-question safety-aware retrieval benchmark with corrected retrieval-outcome reporting and withheld aggregate precision/abstention metrics pending reconciliation.",
+      "title": "Safety-Aware RAG/Retrieval Evaluation",
+      "summary": "74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.",
       "problem": "A retrieval system supporting a tool-using LLM agent needed to distinguish factual support, authority, policy compatibility, live-state dependency, source conflicts, and safe abstention rather than relying only on similarity scores.",
       "contribution": "Defined the evaluation problem, success and failure criteria, adversarial benchmark categories, rubric, public schema, checkpoint summary, regression findings, and corrected public claim boundaries.",
       "skills": [
@@ -37,7 +37,7 @@
         {
           "type": "readme",
           "path": "README.md",
-          "description": "Public portfolio overview lists the Safety-Aware Retrieval Evaluation as featured work and states the corrected outcome caveat."
+          "description": "Public portfolio overview lists the Safety-Aware RAG/Retrieval Evaluation as featured work and states the corrected outcome caveat."
         },
         {
           "type": "readme",
@@ -87,7 +87,7 @@
         }
       ],
       "claim_status": "CORRECTED",
-      "claim_boundary": "Corrected retrieval-outcome counts are public, but aggregate precision and abstention metrics are withheld until recomputed and traced to the corrected internal checkpoint artifact. The benchmark is project-specific, single-annotator, N=74, and not a general benchmark for unrelated retrieval systems.",
+      "claim_boundary": "The evaluation tracked retrieval relevance, source conflict, authority, live-state dependency, policy compatibility, and expected abstention behavior. Aggregate precision and abstention metrics remain withheld until recomputed against the corrected BM25/FTS5 score-direction contract.",
       "portfolio_grade": true,
       "confidence": "medium",
       "source_repo": "case-studies/safety-aware-retrieval/",
@@ -98,7 +98,7 @@
         "safety-aware retrieval",
         "corrected claim"
       ],
-      "recommended_wording": "Designed a 74-question safety-aware retrieval benchmark and published corrected retrieval-outcome counts with explicit caveats and withheld aggregate precision/abstention metrics pending reconciliation.",
+      "recommended_wording": "74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.",
       "warnings": [
         "Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.",
         "Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.",
@@ -111,7 +111,7 @@
       "id": "belief-lifecycle-engine",
       "title": "Belief Lifecycle Engine",
       "positioning_line": "Agentic AI Architecture · State Management · Evaluation · Reliability",
-      "summary": "Designed and evaluated a preliminary working-paper architecture for temporal authority management in long-lived agents, with reported deterministic simulator results and explicit public reproducibility limits.",
+      "summary": "Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.",
       "problem": "Long-lived agents can retain formerly correct beliefs that no longer describe the current environment while those beliefs continue to authorize action.",
       "contribution": "Defined the former-knowns failure mode, specified the Belief Lifecycle Engine architecture, established evaluation questions and measurable outcomes, directed implementation/testing, reviewed statistical reporting, and preserved claim boundaries for public release.",
       "skills": [
@@ -202,7 +202,7 @@
         "working paper",
         "preliminary claim"
       ],
-      "recommended_wording": "Developed a preliminary Belief Lifecycle Engine working paper evaluating temporal authority in long-lived agents, with reported deterministic simulator results and explicit reproducibility/public-release limits.",
+      "recommended_wording": "Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.",
       "warnings": [
         "Independent working paper; not peer reviewed or submitted for publication.",
         "Full source-and-results archive is not yet public in this repository.",
