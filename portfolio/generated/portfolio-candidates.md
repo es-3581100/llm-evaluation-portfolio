@@ -25,7 +25,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
 - **Skills:** LLM evaluation, RAG evaluation, grounding verification, adversarial dataset design, abstention testing, retrieval metrics, schema design, evidence-based threshold calibration
 - **Claim boundary:** Corrected retrieval-outcome counts are public, but aggregate precision and abstention metrics are withheld until recomputed and traced to the corrected internal checkpoint artifact. The benchmark is project-specific, single-annotator, N=74, and not a general benchmark for unrelated retrieval systems.
 - **Source paths:** `case-studies/safety-aware-retrieval/`
-- **Recommended portfolio wording:** Designed a 74-question safety-aware retrieval benchmark and published corrected retrieval-outcome counts with explicit caveats and withheld aggregate precision/abstention metrics pending reconciliation.
+- **Public summary:** Designed a 74-question safety-aware retrieval benchmark and published corrected retrieval-outcome counts with explicit caveats and withheld aggregate precision/abstention metrics pending reconciliation.
 - **Warnings:**
   - Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.
   - Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.
@@ -56,7 +56,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
 - **Skills:** experimental design, AI-agent safety evaluation, lifecycle-state modeling, baseline construction, regression analysis, statistical testing, Python simulation, reproducibility discipline, technical reporting
 - **Claim boundary:** Independent working paper, not peer reviewed or submitted for publication. Public artifacts establish reported internal mechanism validity for a deterministic synthetic simulator configuration only; the full source-and-results archive is not yet public here, external-agent validation and parameter sensitivity remain future work, and zero observed unsafe actions is not proof of universal safety.
 - **Source paths:** `research/belief-lifecycle-engine/`
-- **Recommended portfolio wording:** Developed a preliminary Belief Lifecycle Engine working paper evaluating temporal authority in long-lived agents, with reported deterministic simulator results and explicit reproducibility/public-release limits.
+- **Public summary:** Developed a preliminary Belief Lifecycle Engine working paper evaluating temporal authority in long-lived agents, with reported deterministic simulator results and explicit reproducibility/public-release limits.
 - **Warnings:**
   - Independent working paper; not peer reviewed or submitted for publication.
   - Full source-and-results archive is not yet public in this repository.
