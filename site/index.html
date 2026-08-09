@@ -35,6 +35,8 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
+.positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
+.detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
@@ -111,12 +113,14 @@ th,td{padding:0.7rem;min-width:8rem}
 
 <article class="card project-card">
 <div class="card-title"><h3><a href="/llm-evaluation-portfolio/projects/safety-aware-retrieval-evaluation.html">Safety-Aware Retrieval Evaluation</a></h3> <span class="badge status corrected">Corrected</span></div>
+
 <p class="result">74-question adversarial/safety-aware retrieval benchmark; corrected caveats preserved and aggregate precision/abstention metrics withheld pending reconciliation.</p>
 <p class="meta">Designed and evaluated a 74-question safety-aware retrieval benchmark with corrected retrieval-outcome reporting and withheld aggregate precision/abstention metrics pending reconciliation.</p>
 </article>
 
 <article class="card project-card">
 <div class="card-title"><h3><a href="/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html">Belief Lifecycle Engine</a></h3> <span class="badge status preliminary">Preliminary</span></div>
+<p class="positioning-line">Agentic AI Architecture · State Management · Evaluation · Reliability</p>
 <p class="result">750 validation runs across 5 variants and 5 scenarios; preliminary working-paper/reporting caveats preserved.</p>
 <p class="meta">Designed and evaluated a preliminary working-paper architecture for temporal authority management in long-lived agents, with reported deterministic simulator results and explicit public reproducibility limits.</p>
 </article>

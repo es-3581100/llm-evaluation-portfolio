@@ -36,6 +36,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
 - **ID:** belief-lifecycle-engine
 - **Portfolio-grade status:** yes
 - **Claim status:** PRELIMINARY
+- **Positioning line:** Agentic AI Architecture · State Management · Evaluation · Reliability
 - **Why it matters:** Designed and evaluated a preliminary working-paper architecture for temporal authority management in long-lived agents, with reported deterministic simulator results and explicit public reproducibility limits.
 - **Problem:** Long-lived agents can retain formerly correct beliefs that no longer describe the current environment while those beliefs continue to authorize action.
 - **Contribution:** Defined the former-knowns failure mode, specified the Belief Lifecycle Engine architecture, established evaluation questions and measurable outcomes, directed implementation/testing, reviewed statistical reporting, and preserved claim boundaries for public release.
