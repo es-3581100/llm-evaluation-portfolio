@@ -2,7 +2,7 @@
 <html lang="en">
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Safety-Aware RAG/Retrieval Evaluation</title>
+<title>Goal Hijacking in State-Exploration Agents</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
 <style>
 :root{--bg:#f6f1e8;--surface:#fffdf8;--ink:#17212b;--muted:#5e6872;--accent:#22475e;--line:#ded6ca;--soft:#efe7da;}
@@ -92,42 +92,38 @@ th,td{padding:0.7rem;min-width:8rem}
 </nav></header>
 <main>
 <nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
-<h1>Safety-Aware RAG/Retrieval Evaluation</h1>
+<h1>Goal Hijacking in State-Exploration Agents</h1>
 <div class="status-row">
-<span class="badge status corrected">Corrected</span>
+<span class="badge status preliminary">Preliminary</span>
 </div>
 
 
 
-<div class="note"><strong>Corrected:</strong> an earlier interpretation was wrong and a corrected account exists. The correction: A post-hoc audit found the FTS5/BM25 score direction had been interpreted backward; corrected threshold classification changed low-score/found balance while the empty count remained 15.</div>
+
+<div class="note"><strong>Preliminary — not finalized.</strong> Evidence exists, but important validation remains.</div>
 
 
-
-
+<p class="positioning-line detail-positioning">Agentic AI Security · Tool Boundaries · Goal Integrity · Secure Architecture</p>
 
 <h2>Summary</h2>
-<p>74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.</p>
+<p>Wrote a case-study research essay analyzing how a benign observe-probe-execute agent can become dual-use when task scope and execution authority are too general.</p>
 
 <h2>Problem</h2>
-<p>A retrieval system supporting a tool-using LLM agent needed to distinguish factual support, authority, policy compatibility, live-state dependency, source conflicts, and safe abstention rather than relying only on similarity scores.</p>
+<p>A general state-exploration loop can accept harmful actions when those actions are semantically reframed as legitimate task steps, especially if untrusted language can expand what the agent&#39;s action schema is allowed to express.</p>
 
 <h2>Contribution</h2>
-<p>Defined the evaluation problem, success and failure criteria, adversarial benchmark categories, rubric, public schema, checkpoint summary, regression findings, and corrected public claim boundaries.</p>
+<p>Identified the goal-reframing/metaphor-laundering failure mode, mapped a puzzle-solving control loop to reconnaissance-style architecture, and proposed typed action schemas plus code-enforced capability boundaries as a structural mitigation.</p>
 
 <h2>Evidence</h2>
 
 <table>
 <tr><th>Type</th><th>Description</th><th>Path</th></tr>
 
-<tr><td>readme</td><td>Public portfolio overview lists the Safety-Aware RAG/Retrieval Evaluation as featured work and states the corrected outcome caveat.</td><td><code>README.md</code></td></tr>
+<tr><td>design_doc</td><td>Draft research essay defining goal reframing/metaphor laundering and arguing for schema-level capability boundaries over prompt-level permission checks.</td><td><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></td></tr>
 
-<tr><td>readme</td><td>Case study records the benchmark design, public evidence boundary, corrected outcome counts, withheld metrics, role, lessons, and limitations.</td><td><code>case-studies/safety-aware-retrieval/README.md</code></td></tr>
+<tr><td>design_doc</td><td>Includes a concrete narrow-schema versus generic-execution-schema comparison showing why bounded typed actions are safer than arbitrary target/command/payload interfaces.</td><td><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></td></tr>
 
-<tr><td>machine_artifact</td><td>Checkpoint summary reports 74 questions, corrected retrieval outcomes, withheld precision/abstention metrics, primary finding, and limitations.</td><td><code>case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json</code></td></tr>
-
-<tr><td>design_doc</td><td>Rubric defines answerability, authority, policy compatibility, state dependency, retrieval outcomes, observed behaviors, and reviewer guidance.</td><td><code>case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md</code></td></tr>
-
-<tr><td>source</td><td>Public schema separates retrieval outcome from observed behavior and related evaluation fields.</td><td><code>case-studies/safety-aware-retrieval/data/benchmark-schema.json</code></td></tr>
+<tr><td>design_doc</td><td>Documents a public/private release split: publish recorded-state analysis, offline graph construction, synthetic fixtures, and recommendation-only output while withholding live closed-loop execution.</td><td><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></td></tr>
 
 </table>
 
@@ -137,40 +133,38 @@ th,td{padding:0.7rem;min-width:8rem}
 <table>
 <tr><th>Name</th><th>Value</th><th>Context</th><th>Basis</th></tr>
 
-<tr><td>benchmark_questions</td><td>74</td><td>frozen internal benchmark summarized in public checkpoint artifact</td><td>reported</td></tr>
+<tr><td>status</td><td>draft research essay v0.1</td><td>August 2026 document status</td><td>reported</td></tr>
 
-<tr><td>corrected_empty_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+<tr><td>core_loop_stages</td><td>7</td><td>observe, infer, select_probe, execute, classify, update, repeat</td><td>reported</td></tr>
 
-<tr><td>corrected_low_score_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
-
-<tr><td>corrected_found_retrieval_outcomes</td><td>44</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+<tr><td>validated_adversarial_tests</td><td>0</td><td>essay explicitly states no adversarial testing has been performed</td><td>reported</td></tr>
 
 </table>
 <p class="meta">Basis is preserved exactly: measured vs observed vs reported.</p>
 
 
 <h2>Claim boundary</h2>
-<div class="boundary">The evaluation tracked retrieval relevance, source conflict, authority, live-state dependency, policy compatibility, and expected abstention behavior. Aggregate precision and abstention metrics remain withheld until recomputed against the corrected BM25/FTS5 score-direction contract.</div>
+<div class="boundary">This is a single-project draft case-study essay and design argument. The taxonomy has not been validated across other agent architectures or domains, no adversarial benchmark has been run, and claims about the mitigation holding are not measured results.</div>
 
 <h2>Skills</h2>
-<p><span class="badge">LLM evaluation</span> <span class="badge">RAG evaluation</span> <span class="badge">grounding verification</span> <span class="badge">adversarial dataset design</span> <span class="badge">abstention testing</span> <span class="badge">retrieval metrics</span> <span class="badge">schema design</span> <span class="badge">evidence-based threshold calibration</span> </p>
+<p><span class="badge">agentic AI security</span> <span class="badge">secure architecture</span> <span class="badge">tool-schema design</span> <span class="badge">threat modeling</span> <span class="badge">failure-mode analysis</span> <span class="badge">dual-use risk analysis</span> <span class="badge">technical writing</span> </p>
 
 <h2>Tags</h2>
-<p><span class="badge">retrieval evaluation</span> <span class="badge">grounding</span> <span class="badge">abstention</span> <span class="badge">safety-aware retrieval</span> <span class="badge">corrected claim</span> </p>
+<p><span class="badge">ai-security</span> <span class="badge">agents</span> <span class="badge">tool-use</span> <span class="badge">goal-integrity</span> <span class="badge">secure-architecture</span> <span class="badge">dual-use-risk</span> </p>
 
 <h2>Source</h2>
-<p><code>case-studies/safety-aware-retrieval/</code></p>
+<p><code>research/goal-hijacking-state-exploration-agents/</code></p>
 
 <h2>Limitations</h2>
 
 <ul>
-<li>Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.</li><li>Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.</li><li>Results are project-specific and single-annotator.</li>
+<li>This is a draft case-study essay, not published or validated empirical research.</li><li>Empirical security effectiveness still requires adversarial tests or a benchmark.</li><li>Public artifacts should remain recommendation-only, synthetic, or recorded-state based rather than exposing a live general-purpose executor.</li>
 </ul>
 
 
 
 <h2>Public summary</h2>
-<p>74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.</p>
+<p>Analyzed goal reframing in observe-probe-execute agents and proposed typed action schemas plus code-enforced capability boundaries to keep untrusted language from expanding execution authority.</p>
 
 </main>
 <footer class="site">Built evidence-first. Claims are bounded by their supporting artifacts.</footer>

@@ -94,40 +94,38 @@ th,td{padding:0.7rem;min-width:8rem}
 <nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
 <h1>Belief Lifecycle Engine</h1>
 <div class="status-row">
-<span class="badge status preliminary">Preliminary</span>
+<span class="badge status ">Observed in tested runs</span>
 </div>
 
 
 
 
-<div class="note"><strong>Preliminary — not finalized.</strong> Evidence exists, but important validation remains.</div>
 
-
-<p class="positioning-line detail-positioning">Agentic AI Architecture · State Management · Evaluation · Reliability</p>
+<p class="positioning-line detail-positioning">Agentic AI · Persistent Memory · Temporal Authority · Safety Gating · Evaluation</p>
 
 <h2>Summary</h2>
-<p>Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.</p>
+<p>Designed and evaluated an auditable belief-lifecycle architecture for long-lived AI agents, testing how stale or contradictory information should lose and later regain authority over actions.</p>
 
 <h2>Problem</h2>
-<p>Long-lived agents can retain formerly correct beliefs that no longer describe the current environment while those beliefs continue to authorize action.</p>
+<p>Persistent AI agents can retain information that was historically correct, well-supported, and easily retrievable while no longer being valid enough to authorize present-day action.</p>
 
 <h2>Contribution</h2>
-<p>Defined the former-knowns failure mode, specified the Belief Lifecycle Engine architecture, established evaluation questions and measurable outcomes, directed implementation/testing, reviewed statistical reporting, and preserved claim boundaries for public release.</p>
+<p>Defined the former-known failure mode, built the deterministic Python BLE simulator, used staged failure analysis to repair false invalidation, collateral dependency blocking, metric errors, and sticky recovery, then froze a 750-run validation protocol and packaged the manuscript, figures, supplement, and reproducibility materials.</p>
 
 <h2>Evidence</h2>
 
 <table>
 <tr><th>Type</th><th>Description</th><th>Path</th></tr>
 
-<tr><td>readme</td><td>Public portfolio overview lists the Belief Lifecycle Engine as featured work and records its preliminary working-paper caveats.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/README.md"><code>README.md</code></a></td></tr>
+<tr><td>readme</td><td>Project README states manuscript status, public artifacts, evaluation highlights, role, key results, and limitations.</td><td><code>research/belief-lifecycle-engine/README.md</code></td></tr>
 
-<tr><td>readme</td><td>Project README states working-paper status, public artifacts, reported evaluation highlights, role, key results, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/README.md"><code>research/belief-lifecycle-engine/README.md</code></a></td></tr>
+<tr><td>design_doc</td><td>Working paper describes the former-knowns problem, BLE architecture, staged development, evaluation design, results, and limitations.</td><td><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.md</code></td></tr>
 
-<tr><td>design_doc</td><td>Working paper describes the architecture, deterministic simulator, frozen validation design, reported statistics, results, limitations, and ethics/public-release notes.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/former-knowns-ble-working-paper.md"><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.md</code></a></td></tr>
+<tr><td>machine_artifact</td><td>Revised 20-page review manuscript with 14 tables, four figures, frozen Pilot 0.3.2 validation results, statistical analysis, and reproducibility checklist.</td><td><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.pdf</code></td></tr>
 
-<tr><td>machine_artifact</td><td>Public working-paper PDF mirrors the manuscript artifact.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/former-knowns-ble-working-paper.pdf"><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.pdf</code></a></td></tr>
+<tr><td>design_doc</td><td>Editable revised manuscript source corresponding to the public PDF artifact.</td><td><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.docx</code></td></tr>
 
-<tr><td>runbook</td><td>Reproducibility notes state that high-level claims are public while the full source-and-results archive is not yet public, and list release requirements.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/reproducibility/README.md"><code>research/belief-lifecycle-engine/reproducibility/README.md</code></a></td></tr>
+<tr><td>runbook</td><td>Reproducibility notes document public evidence boundaries, release requirements, and limitations.</td><td><code>research/belief-lifecycle-engine/reproducibility/README.md</code></td></tr>
 
 </table>
 
@@ -137,44 +135,50 @@ th,td{padding:0.7rem;min-width:8rem}
 <table>
 <tr><th>Name</th><th>Value</th><th>Context</th><th>Basis</th></tr>
 
-<tr><td>frozen_validation_runs</td><td>750</td><td>reported deterministic simulator validation design</td><td>reported</td></tr>
+<tr><td>validation_runs</td><td>750</td><td>5 systems x 5 scenarios x 30 frozen seeds in Pilot 0.3.2</td><td>measured</td></tr>
 
-<tr><td>system_variants</td><td>5</td><td>reported comparison design</td><td>reported</td></tr>
+<tr><td>system_scenario_seed_design</td><td>5 systems x 5 scenarios x 30 seeds</td><td>frozen deterministic Pilot 0.3.2 validation design</td><td>measured</td></tr>
 
-<tr><td>controlled_scenarios</td><td>5</td><td>reported comparison design</td><td>reported</td></tr>
+<tr><td>valid_action_rejection_reduction</td><td>75.11%</td><td>four recoverable scenarios, paired seed-level comparison against BLE Authority control</td><td>measured</td></tr>
 
-<tr><td>valid_action_rejection_reduction</td><td>75.11%</td><td>reported across recoverable scenarios</td><td>reported</td></tr>
+<tr><td>unsafe_actions_observed</td><td>0/150 candidate runs</td><td>primary drift-recovery candidate validation runs; one-sided exact 95% upper bound on run-level event probability reported as 1.98%</td><td>observed</td></tr>
 
-<tr><td>unsafe_actions_by_drift_recovery_candidate</td><td>0/150</td><td>reported candidate runs; bounded observation, not proof of universal safety</td><td>reported</td></tr>
+<tr><td>false_invalidation_events_observed</td><td>0/150 candidate runs</td><td>primary drift-recovery candidate validation runs</td><td>observed</td></tr>
 
-<tr><td>one_sided_exact_95_percent_upper_bound_run_level_unsafe_action_probability</td><td>1.98%</td><td>reported for zero observed unsafe actions in candidate runs</td><td>reported</td></tr>
+<tr><td>permanent_change_gating_latency</td><td>5.10 intervals</td><td>mean operational gating latency matched the BLE Authority control during abrupt permanent change</td><td>measured</td></tr>
+
+<tr><td>typed_dependency_repair</td><td>15.33 to 1.00 false blocks per run</td><td>earlier Pilot 0.2.1 repair reduced collateral dependency blocking while preserving zero observed unsafe actions in that stage</td><td>reported</td></tr>
+
+<tr><td>simulator_test_result</td><td>11 passed</td><td>validation report for the isolated Python simulator package</td><td>reported</td></tr>
+
+<tr><td>manuscript_package</td><td>20 pages, 14 tables, 4 figures</td><td>Former Knowns / BLE Manuscript v1.1 review package</td><td>reported</td></tr>
 
 </table>
 <p class="meta">Basis is preserved exactly: measured vs observed vs reported.</p>
 
 
 <h2>Claim boundary</h2>
-<div class="boundary">Independent working paper, not peer reviewed or submitted for publication. Public artifacts establish reported internal mechanism validity for a deterministic synthetic simulator configuration only; the full source-and-results archive is not yet public here, external-agent validation and parameter sensitivity remain future work, and zero observed unsafe actions is not proof of universal safety.</div>
+<div class="boundary">Results evaluate a preregistered reference configuration in a deterministic synthetic simulator. They do not establish general or production-agent safety; primary-candidate safety observations are limited to 150 frozen candidate runs, parameter sensitivity was not evaluated, and independent replication remains future work.</div>
 
 <h2>Skills</h2>
-<p><span class="badge">experimental design</span> <span class="badge">AI-agent safety evaluation</span> <span class="badge">lifecycle-state modeling</span> <span class="badge">baseline construction</span> <span class="badge">regression analysis</span> <span class="badge">statistical testing</span> <span class="badge">Python simulation</span> <span class="badge">reproducibility discipline</span> <span class="badge">technical reporting</span> </p>
+<p><span class="badge">ai-agent safety evaluation</span> <span class="badge">experimental design</span> <span class="badge">python simulation</span> <span class="badge">belief-state modeling</span> <span class="badge">statistical testing</span> <span class="badge">reproducibility discipline</span> <span class="badge">technical writing</span> <span class="badge">root-cause analysis</span> <span class="badge">safety gating</span> </p>
 
 <h2>Tags</h2>
-<p><span class="badge">agent memory</span> <span class="badge">temporal authority</span> <span class="badge">AI safety evaluation</span> <span class="badge">working paper</span> <span class="badge">preliminary claim</span> </p>
+<p><span class="badge">ai-safety</span> <span class="badge">agents</span> <span class="badge">evaluation</span> <span class="badge">simulation</span> <span class="badge">belief-revision</span> <span class="badge">agent-memory</span> <span class="badge">evaluation-design</span> </p>
 
 <h2>Source</h2>
-<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/research/belief-lifecycle-engine/"><code>research/belief-lifecycle-engine/</code></a></p>
+<p><code>research/belief-lifecycle-engine/</code></p>
 
-<h2>Warnings</h2>
+<h2>Limitations</h2>
 
 <ul>
-<li>Independent working paper; not peer reviewed or submitted for publication.</li><li>Full source-and-results archive is not yet public in this repository.</li><li>Results are from a deterministic synthetic simulator and should not be treated as broad external-agent safety evidence.</li><li>Independent replication and parameter sensitivity testing remain future work.</li>
+<li>Current status is an independent research manuscript unless external submission or review status is separately confirmed.</li><li>Zero unsafe actions were observed in the 150 primary-candidate validation runs; this is not a universal safety guarantee.</li><li>Public archive URLs, licensing choices, parameter-sensitivity testing, and independent replication remain future work.</li>
 </ul>
 
 
 
 <h2>Public summary</h2>
-<p>Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.</p>
+<p>Built a 750-run deterministic evaluation of belief authority in long-lived AI agents; the selected recovery policy reduced unnecessary valid-action rejection by 75.11% while preserving the tested safety behavior.</p>
 
 </main>
 <footer class="site">Built evidence-first. Claims are bounded by their supporting artifacts.</footer>

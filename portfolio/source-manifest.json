@@ -1,7 +1,7 @@
 {
   "source_repo": "https://github.com/es-3581100/llm-evaluation-portfolio",
   "head": "b369c47882a1ca85108962ed5c109791300107fc",
-  "generated_at": "2026-08-08T00:00:00Z",
+  "generated_at": "2026-08-10T00:00:00Z",
   "candidates": [
     {
       "id": "safety-aware-retrieval-evaluation",
@@ -96,104 +96,292 @@
     {
       "id": "belief-lifecycle-engine",
       "title": "Belief Lifecycle Engine",
-      "positioning_line": "Agentic AI Architecture · State Management · Evaluation · Reliability",
-      "summary": "Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.",
-      "problem": "Long-lived agents can retain formerly correct beliefs that no longer describe the current environment while those beliefs continue to authorize action.",
-      "contribution": "Defined the former-knowns failure mode, specified the Belief Lifecycle Engine architecture, established evaluation questions and measurable outcomes, directed implementation/testing, reviewed statistical reporting, and preserved claim boundaries for public release.",
+      "positioning_line": "Agentic AI · Persistent Memory · Temporal Authority · Safety Gating · Evaluation",
+      "summary": "Designed and evaluated an auditable belief-lifecycle architecture for long-lived AI agents, testing how stale or contradictory information should lose and later regain authority over actions.",
+      "problem": "Persistent AI agents can retain information that was historically correct, well-supported, and easily retrievable while no longer being valid enough to authorize present-day action.",
+      "contribution": "Defined the former-known failure mode, built the deterministic Python BLE simulator, used staged failure analysis to repair false invalidation, collateral dependency blocking, metric errors, and sticky recovery, then froze a 750-run validation protocol and packaged the manuscript, figures, supplement, and reproducibility materials.",
       "skills": [
+        "ai-agent safety evaluation",
         "experimental design",
-        "AI-agent safety evaluation",
-        "lifecycle-state modeling",
-        "baseline construction",
-        "regression analysis",
+        "python simulation",
+        "belief-state modeling",
         "statistical testing",
-        "Python simulation",
         "reproducibility discipline",
-        "technical reporting"
+        "technical writing",
+        "root-cause analysis",
+        "safety gating"
       ],
       "evidence": [
         {
           "type": "readme",
-          "path": "README.md",
-          "description": "Public portfolio overview lists the Belief Lifecycle Engine as featured work and records its preliminary working-paper caveats."
-        },
-        {
-          "type": "readme",
           "path": "research/belief-lifecycle-engine/README.md",
-          "description": "Project README states working-paper status, public artifacts, reported evaluation highlights, role, key results, and limitations."
+          "description": "Project README states manuscript status, public artifacts, evaluation highlights, role, key results, and limitations."
         },
         {
           "type": "design_doc",
           "path": "research/belief-lifecycle-engine/former-knowns-ble-working-paper.md",
-          "description": "Working paper describes the architecture, deterministic simulator, frozen validation design, reported statistics, results, limitations, and ethics/public-release notes."
+          "description": "Working paper describes the former-knowns problem, BLE architecture, staged development, evaluation design, results, and limitations."
         },
         {
           "type": "machine_artifact",
-          "path": "research/belief-lifecycle-engine/former-knowns-ble-working-paper.pdf",
-          "description": "Public working-paper PDF mirrors the manuscript artifact."
+          "path": "research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.pdf",
+          "description": "Revised 20-page review manuscript with 14 tables, four figures, frozen Pilot 0.3.2 validation results, statistical analysis, and reproducibility checklist."
+        },
+        {
+          "type": "design_doc",
+          "path": "research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.docx",
+          "description": "Editable revised manuscript source corresponding to the public PDF artifact."
         },
         {
           "type": "runbook",
           "path": "research/belief-lifecycle-engine/reproducibility/README.md",
-          "description": "Reproducibility notes state that high-level claims are public while the full source-and-results archive is not yet public, and list release requirements."
+          "description": "Reproducibility notes document public evidence boundaries, release requirements, and limitations."
         }
       ],
       "metrics": [
         {
-          "name": "frozen_validation_runs",
+          "name": "validation_runs",
           "value": "750",
-          "context": "reported deterministic simulator validation design",
-          "basis": "reported"
+          "context": "5 systems x 5 scenarios x 30 frozen seeds in Pilot 0.3.2",
+          "basis": "measured"
         },
         {
-          "name": "system_variants",
-          "value": "5",
-          "context": "reported comparison design",
-          "basis": "reported"
-        },
-        {
-          "name": "controlled_scenarios",
-          "value": "5",
-          "context": "reported comparison design",
-          "basis": "reported"
+          "name": "system_scenario_seed_design",
+          "value": "5 systems x 5 scenarios x 30 seeds",
+          "context": "frozen deterministic Pilot 0.3.2 validation design",
+          "basis": "measured"
         },
         {
           "name": "valid_action_rejection_reduction",
           "value": "75.11%",
-          "context": "reported across recoverable scenarios",
+          "context": "four recoverable scenarios, paired seed-level comparison against BLE Authority control",
+          "basis": "measured"
+        },
+        {
+          "name": "unsafe_actions_observed",
+          "value": "0/150 candidate runs",
+          "context": "primary drift-recovery candidate validation runs; one-sided exact 95% upper bound on run-level event probability reported as 1.98%",
+          "basis": "observed"
+        },
+        {
+          "name": "false_invalidation_events_observed",
+          "value": "0/150 candidate runs",
+          "context": "primary drift-recovery candidate validation runs",
+          "basis": "observed"
+        },
+        {
+          "name": "permanent_change_gating_latency",
+          "value": "5.10 intervals",
+          "context": "mean operational gating latency matched the BLE Authority control during abrupt permanent change",
+          "basis": "measured"
+        },
+        {
+          "name": "typed_dependency_repair",
+          "value": "15.33 to 1.00 false blocks per run",
+          "context": "earlier Pilot 0.2.1 repair reduced collateral dependency blocking while preserving zero observed unsafe actions in that stage",
           "basis": "reported"
         },
         {
-          "name": "unsafe_actions_by_drift_recovery_candidate",
-          "value": "0/150",
-          "context": "reported candidate runs; bounded observation, not proof of universal safety",
+          "name": "simulator_test_result",
+          "value": "11 passed",
+          "context": "validation report for the isolated Python simulator package",
           "basis": "reported"
         },
         {
-          "name": "one_sided_exact_95_percent_upper_bound_run_level_unsafe_action_probability",
-          "value": "1.98%",
-          "context": "reported for zero observed unsafe actions in candidate runs",
+          "name": "manuscript_package",
+          "value": "20 pages, 14 tables, 4 figures",
+          "context": "Former Knowns / BLE Manuscript v1.1 review package",
+          "basis": "reported"
+        }
+      ],
+      "claim_status": "OBSERVED",
+      "claim_boundary": "Results evaluate a preregistered reference configuration in a deterministic synthetic simulator. They do not establish general or production-agent safety; primary-candidate safety observations are limited to 150 frozen candidate runs, parameter sensitivity was not evaluated, and independent replication remains future work.",
+      "portfolio_grade": true,
+      "confidence": "high",
+      "source_repo": "research/belief-lifecycle-engine/",
+      "tags": [
+        "ai-safety",
+        "agents",
+        "evaluation",
+        "simulation",
+        "belief-revision",
+        "agent-memory",
+        "evaluation-design"
+      ],
+      "recommended_wording": "Built a 750-run deterministic evaluation of belief authority in long-lived AI agents; the selected recovery policy reduced unnecessary valid-action rejection by 75.11% while preserving the tested safety behavior.",
+      "warnings": [
+        "Current status is an independent research manuscript unless external submission or review status is separately confirmed.",
+        "Zero unsafe actions were observed in the 150 primary-candidate validation runs; this is not a universal safety guarantee.",
+        "Public archive URLs, licensing choices, parameter-sensitivity testing, and independent replication remain future work."
+      ],
+      "visibility": "public"
+    },
+    {
+      "id": "ai-agent-red-team-evaluation-guide-ed2",
+      "title": "AI Agent Red-Team Evaluation Guide",
+      "positioning_line": "AI Security · Agent Red Teaming · Prompt Injection · MCP · Evaluation Design",
+      "summary": "Developed a sanitized defensive methodology for evaluating tool-using AI agents, converting unsafe offensive concepts into inert canary tests, structured evidence capture, and deterministic scoring criteria.",
+      "problem": "Agent red-team material often mixes live payloads, claimed jailbreaks, simulated results, and real system failures, making it hard to separate model behavior from authorization, execution, persistence, and recovery failures.",
+      "contribution": "Audited a large private security corpus, deduplicated repeated material, classified evidence quality, quarantined live or near-live payloads, designed non-destructive canary tests, and wrote a peer-review draft methodology covering threat modeling, MCP/tool risk, memory persistence, scoring, claim verification, and standards alignment.",
+      "skills": [
+        "ai security evaluation",
+        "agent red teaming",
+        "prompt-injection testing",
+        "MCP security analysis",
+        "threat modeling",
+        "sanitized test design",
+        "evidence handling",
+        "security methodology",
+        "technical writing"
+      ],
+      "evidence": [
+        {
+          "type": "design_doc",
+          "path": "research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx",
+          "description": "Sanitized Peer Review Edition 2 guide covering authorized testing, corpus audit methodology, tool/MCP risk, memory persistence, safe lab design, scoring, claim verification, and standards crosswalk."
+        },
+        {
+          "type": "machine_artifact",
+          "path": "research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx",
+          "description": "Document records corpus statistics: 2,252 heading-based sections, 212 normalized duplicate groups, 19,831 total source lines, and approximately 134,500 source words."
+        },
+        {
+          "type": "runbook",
+          "path": "research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx",
+          "description": "Includes safe lab architecture, canary design rules, evidence-chain requirements, finding template, release gate, and best-practice protocol baseline for authorized agent testing."
+        },
+        {
+          "type": "design_doc",
+          "path": "research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Edition_1.docx",
+          "description": "Earlier edition retained as provenance only; Edition 2 supersedes it with peer-review framing, logic validation, claim controls, and standards crosswalk."
+        }
+      ],
+      "metrics": [
+        {
+          "name": "source_sections_audited",
+          "value": "2,252",
+          "context": "heading-based sections identified across two private source corpora",
+          "basis": "measured"
+        },
+        {
+          "name": "duplicate_groups_identified",
+          "value": "212",
+          "context": "normalized duplicate groups identified during corpus audit",
+          "basis": "measured"
+        },
+        {
+          "name": "source_corpus_size",
+          "value": "19,831 lines / approximately 134,500 words",
+          "context": "combined private source corpus used for sanitized methodology development",
+          "basis": "measured"
+        },
+        {
+          "name": "scoring_dimensions",
+          "value": "6",
+          "context": "goal integrity, tool behavior, data exposure, persistence, transparency, and recovery",
+          "basis": "reported"
+        },
+        {
+          "name": "control_layers",
+          "value": "10",
+          "context": "source intake through recovery in the defense-in-depth architecture",
           "basis": "reported"
         }
       ],
       "claim_status": "PRELIMINARY",
-      "claim_boundary": "Independent working paper, not peer reviewed or submitted for publication. Public artifacts establish reported internal mechanism validity for a deterministic synthetic simulator configuration only; the full source-and-results archive is not yet public here, external-agent validation and parameter sensitivity remain future work, and zero observed unsafe actions is not proof of universal safety.",
+      "claim_boundary": "This is a sanitized peer-review draft for technical validation, not a certification, authorization, compliance claim, or production security guarantee. Raw offensive payloads remain quarantined and are not reproduced; the methodology requires independent review and live-system validation before stronger claims.",
+      "portfolio_grade": true,
+      "confidence": "high",
+      "source_repo": "research/ai-agent-red-team-evaluation-guide/",
+      "tags": [
+        "ai-security",
+        "agents",
+        "red-team",
+        "prompt-injection",
+        "mcp",
+        "evaluation-design",
+        "security-methodology"
+      ],
+      "recommended_wording": "Built a defensive evaluation methodology for tool-using AI agents; audited 2,252 source sections and converted unsafe concepts into inert canary tests, trace requirements, and six-dimension scoring.",
+      "warnings": [
+        "Peer Review Edition 2 is a draft for technical validation, not a certification or production security guarantee.",
+        "Raw operational payloads remain quarantined; the public artifact is a sanitized defensive methodology.",
+        "Edition 1 is provenance only; Edition 2 is the current public-facing version.",
+        "Claims about real security outcomes require implementation, execution traces, and independent validation."
+      ],
+      "visibility": "public"
+    },
+    {
+      "id": "goal-hijacking-state-exploration-agents",
+      "title": "Goal Hijacking in State-Exploration Agents",
+      "positioning_line": "Agentic AI Security · Tool Boundaries · Goal Integrity · Secure Architecture",
+      "summary": "Wrote a case-study research essay analyzing how a benign observe-probe-execute agent can become dual-use when task scope and execution authority are too general.",
+      "problem": "A general state-exploration loop can accept harmful actions when those actions are semantically reframed as legitimate task steps, especially if untrusted language can expand what the agent's action schema is allowed to express.",
+      "contribution": "Identified the goal-reframing/metaphor-laundering failure mode, mapped a puzzle-solving control loop to reconnaissance-style architecture, and proposed typed action schemas plus code-enforced capability boundaries as a structural mitigation.",
+      "skills": [
+        "agentic AI security",
+        "secure architecture",
+        "tool-schema design",
+        "threat modeling",
+        "failure-mode analysis",
+        "dual-use risk analysis",
+        "technical writing"
+      ],
+      "evidence": [
+        {
+          "type": "design_doc",
+          "path": "research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx",
+          "description": "Draft research essay defining goal reframing/metaphor laundering and arguing for schema-level capability boundaries over prompt-level permission checks."
+        },
+        {
+          "type": "design_doc",
+          "path": "research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx",
+          "description": "Includes a concrete narrow-schema versus generic-execution-schema comparison showing why bounded typed actions are safer than arbitrary target/command/payload interfaces."
+        },
+        {
+          "type": "design_doc",
+          "path": "research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx",
+          "description": "Documents a public/private release split: publish recorded-state analysis, offline graph construction, synthetic fixtures, and recommendation-only output while withholding live closed-loop execution."
+        }
+      ],
+      "metrics": [
+        {
+          "name": "status",
+          "value": "draft research essay v0.1",
+          "context": "August 2026 document status",
+          "basis": "reported"
+        },
+        {
+          "name": "core_loop_stages",
+          "value": "7",
+          "context": "observe, infer, select_probe, execute, classify, update, repeat",
+          "basis": "reported"
+        },
+        {
+          "name": "validated_adversarial_tests",
+          "value": "0",
+          "context": "essay explicitly states no adversarial testing has been performed",
+          "basis": "reported"
+        }
+      ],
+      "claim_status": "PRELIMINARY",
+      "claim_boundary": "This is a single-project draft case-study essay and design argument. The taxonomy has not been validated across other agent architectures or domains, no adversarial benchmark has been run, and claims about the mitigation holding are not measured results.",
       "portfolio_grade": true,
       "confidence": "medium",
-      "source_repo": "research/belief-lifecycle-engine/",
+      "source_repo": "research/goal-hijacking-state-exploration-agents/",
       "tags": [
-        "agent memory",
-        "temporal authority",
-        "AI safety evaluation",
-        "working paper",
-        "preliminary claim"
+        "ai-security",
+        "agents",
+        "tool-use",
+        "goal-integrity",
+        "secure-architecture",
+        "dual-use-risk"
       ],
-      "recommended_wording": "Preliminary agent-memory authority study evaluating how long-lived agents should retire, quarantine, recover, or preserve beliefs as operating conditions change. Reports 750 deterministic simulator runs with explicit reproducibility limits.",
+      "recommended_wording": "Analyzed goal reframing in observe-probe-execute agents and proposed typed action schemas plus code-enforced capability boundaries to keep untrusted language from expanding execution authority.",
       "warnings": [
-        "Independent working paper; not peer reviewed or submitted for publication.",
-        "Full source-and-results archive is not yet public in this repository.",
-        "Results are from a deterministic synthetic simulator and should not be treated as broad external-agent safety evidence.",
-        "Independent replication and parameter sensitivity testing remain future work."
+        "This is a draft case-study essay, not published or validated empirical research.",
+        "Empirical security effectiveness still requires adversarial tests or a benchmark.",
+        "Public artifacts should remain recommendation-only, synthetic, or recorded-state based rather than exposing a live general-purpose executor."
       ],
       "visibility": "public"
     }

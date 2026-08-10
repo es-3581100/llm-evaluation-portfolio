@@ -2,7 +2,7 @@
 <html lang="en">
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Safety-Aware RAG/Retrieval Evaluation</title>
+<title>AI Agent Red-Team Evaluation Guide</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
 <style>
 :root{--bg:#f6f1e8;--surface:#fffdf8;--ink:#17212b;--muted:#5e6872;--accent:#22475e;--line:#ded6ca;--soft:#efe7da;}
@@ -92,42 +92,40 @@ th,td{padding:0.7rem;min-width:8rem}
 </nav></header>
 <main>
 <nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
-<h1>Safety-Aware RAG/Retrieval Evaluation</h1>
+<h1>AI Agent Red-Team Evaluation Guide</h1>
 <div class="status-row">
-<span class="badge status corrected">Corrected</span>
+<span class="badge status preliminary">Preliminary</span>
 </div>
 
 
 
-<div class="note"><strong>Corrected:</strong> an earlier interpretation was wrong and a corrected account exists. The correction: A post-hoc audit found the FTS5/BM25 score direction had been interpreted backward; corrected threshold classification changed low-score/found balance while the empty count remained 15.</div>
+
+<div class="note"><strong>Preliminary — not finalized.</strong> Evidence exists, but important validation remains.</div>
 
 
-
-
+<p class="positioning-line detail-positioning">AI Security · Agent Red Teaming · Prompt Injection · MCP · Evaluation Design</p>
 
 <h2>Summary</h2>
-<p>74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.</p>
+<p>Developed a sanitized defensive methodology for evaluating tool-using AI agents, converting unsafe offensive concepts into inert canary tests, structured evidence capture, and deterministic scoring criteria.</p>
 
 <h2>Problem</h2>
-<p>A retrieval system supporting a tool-using LLM agent needed to distinguish factual support, authority, policy compatibility, live-state dependency, source conflicts, and safe abstention rather than relying only on similarity scores.</p>
+<p>Agent red-team material often mixes live payloads, claimed jailbreaks, simulated results, and real system failures, making it hard to separate model behavior from authorization, execution, persistence, and recovery failures.</p>
 
 <h2>Contribution</h2>
-<p>Defined the evaluation problem, success and failure criteria, adversarial benchmark categories, rubric, public schema, checkpoint summary, regression findings, and corrected public claim boundaries.</p>
+<p>Audited a large private security corpus, deduplicated repeated material, classified evidence quality, quarantined live or near-live payloads, designed non-destructive canary tests, and wrote a peer-review draft methodology covering threat modeling, MCP/tool risk, memory persistence, scoring, claim verification, and standards alignment.</p>
 
 <h2>Evidence</h2>
 
 <table>
 <tr><th>Type</th><th>Description</th><th>Path</th></tr>
 
-<tr><td>readme</td><td>Public portfolio overview lists the Safety-Aware RAG/Retrieval Evaluation as featured work and states the corrected outcome caveat.</td><td><code>README.md</code></td></tr>
+<tr><td>design_doc</td><td>Sanitized Peer Review Edition 2 guide covering authorized testing, corpus audit methodology, tool/MCP risk, memory persistence, safe lab design, scoring, claim verification, and standards crosswalk.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></td></tr>
 
-<tr><td>readme</td><td>Case study records the benchmark design, public evidence boundary, corrected outcome counts, withheld metrics, role, lessons, and limitations.</td><td><code>case-studies/safety-aware-retrieval/README.md</code></td></tr>
+<tr><td>machine_artifact</td><td>Document records corpus statistics: 2,252 heading-based sections, 212 normalized duplicate groups, 19,831 total source lines, and approximately 134,500 source words.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></td></tr>
 
-<tr><td>machine_artifact</td><td>Checkpoint summary reports 74 questions, corrected retrieval outcomes, withheld precision/abstention metrics, primary finding, and limitations.</td><td><code>case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json</code></td></tr>
+<tr><td>runbook</td><td>Includes safe lab architecture, canary design rules, evidence-chain requirements, finding template, release gate, and best-practice protocol baseline for authorized agent testing.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></td></tr>
 
-<tr><td>design_doc</td><td>Rubric defines answerability, authority, policy compatibility, state dependency, retrieval outcomes, observed behaviors, and reviewer guidance.</td><td><code>case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md</code></td></tr>
-
-<tr><td>source</td><td>Public schema separates retrieval outcome from observed behavior and related evaluation fields.</td><td><code>case-studies/safety-aware-retrieval/data/benchmark-schema.json</code></td></tr>
+<tr><td>design_doc</td><td>Earlier edition retained as provenance only; Edition 2 supersedes it with peer-review framing, logic validation, claim controls, and standards crosswalk.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Edition_1.docx</code></td></tr>
 
 </table>
 
@@ -137,40 +135,42 @@ th,td{padding:0.7rem;min-width:8rem}
 <table>
 <tr><th>Name</th><th>Value</th><th>Context</th><th>Basis</th></tr>
 
-<tr><td>benchmark_questions</td><td>74</td><td>frozen internal benchmark summarized in public checkpoint artifact</td><td>reported</td></tr>
+<tr><td>source_sections_audited</td><td>2,252</td><td>heading-based sections identified across two private source corpora</td><td>measured</td></tr>
 
-<tr><td>corrected_empty_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+<tr><td>duplicate_groups_identified</td><td>212</td><td>normalized duplicate groups identified during corpus audit</td><td>measured</td></tr>
 
-<tr><td>corrected_low_score_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+<tr><td>source_corpus_size</td><td>19,831 lines / approximately 134,500 words</td><td>combined private source corpus used for sanitized methodology development</td><td>measured</td></tr>
 
-<tr><td>corrected_found_retrieval_outcomes</td><td>44</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+<tr><td>scoring_dimensions</td><td>6</td><td>goal integrity, tool behavior, data exposure, persistence, transparency, and recovery</td><td>reported</td></tr>
+
+<tr><td>control_layers</td><td>10</td><td>source intake through recovery in the defense-in-depth architecture</td><td>reported</td></tr>
 
 </table>
 <p class="meta">Basis is preserved exactly: measured vs observed vs reported.</p>
 
 
 <h2>Claim boundary</h2>
-<div class="boundary">The evaluation tracked retrieval relevance, source conflict, authority, live-state dependency, policy compatibility, and expected abstention behavior. Aggregate precision and abstention metrics remain withheld until recomputed against the corrected BM25/FTS5 score-direction contract.</div>
+<div class="boundary">This is a sanitized peer-review draft for technical validation, not a certification, authorization, compliance claim, or production security guarantee. Raw offensive payloads remain quarantined and are not reproduced; the methodology requires independent review and live-system validation before stronger claims.</div>
 
 <h2>Skills</h2>
-<p><span class="badge">LLM evaluation</span> <span class="badge">RAG evaluation</span> <span class="badge">grounding verification</span> <span class="badge">adversarial dataset design</span> <span class="badge">abstention testing</span> <span class="badge">retrieval metrics</span> <span class="badge">schema design</span> <span class="badge">evidence-based threshold calibration</span> </p>
+<p><span class="badge">ai security evaluation</span> <span class="badge">agent red teaming</span> <span class="badge">prompt-injection testing</span> <span class="badge">MCP security analysis</span> <span class="badge">threat modeling</span> <span class="badge">sanitized test design</span> <span class="badge">evidence handling</span> <span class="badge">security methodology</span> <span class="badge">technical writing</span> </p>
 
 <h2>Tags</h2>
-<p><span class="badge">retrieval evaluation</span> <span class="badge">grounding</span> <span class="badge">abstention</span> <span class="badge">safety-aware retrieval</span> <span class="badge">corrected claim</span> </p>
+<p><span class="badge">ai-security</span> <span class="badge">agents</span> <span class="badge">red-team</span> <span class="badge">prompt-injection</span> <span class="badge">mcp</span> <span class="badge">evaluation-design</span> <span class="badge">security-methodology</span> </p>
 
 <h2>Source</h2>
-<p><code>case-studies/safety-aware-retrieval/</code></p>
+<p><code>research/ai-agent-red-team-evaluation-guide/</code></p>
 
 <h2>Limitations</h2>
 
 <ul>
-<li>Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.</li><li>Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.</li><li>Results are project-specific and single-annotator.</li>
+<li>Peer Review Edition 2 is a draft for technical validation, not a certification or production security guarantee.</li><li>Raw operational payloads remain quarantined; the public artifact is a sanitized defensive methodology.</li><li>Edition 1 is provenance only; Edition 2 is the current public-facing version.</li><li>Claims about real security outcomes require implementation, execution traces, and independent validation.</li>
 </ul>
 
 
 
 <h2>Public summary</h2>
-<p>74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.</p>
+<p>Built a defensive evaluation methodology for tool-using AI agents; audited 2,252 source sections and converted unsafe concepts into inert canary tests, trace requirements, and six-dimension scoring.</p>
 
 </main>
 <footer class="site">Built evidence-first. Claims are bounded by their supporting artifacts.</footer>
