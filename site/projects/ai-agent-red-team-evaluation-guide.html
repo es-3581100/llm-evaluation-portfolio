@@ -32,12 +32,17 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
 .hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
+.hero h1{max-width:100%;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
 .positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
 .detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
+.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
+.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
+.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
+.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
 .card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
@@ -119,13 +124,13 @@ th,td{padding:0.7rem;min-width:8rem}
 <table>
 <tr><th>Type</th><th>Description</th><th>Path</th></tr>
 
-<tr><td>design_doc</td><td>Sanitized Peer Review Edition 2 guide covering authorized testing, corpus audit methodology, tool/MCP risk, memory persistence, safe lab design, scoring, claim verification, and standards crosswalk.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></td></tr>
+<tr><td>design_doc</td><td>Sanitized Peer Review Edition 2 guide covering authorized testing, corpus audit methodology, tool/MCP risk, memory persistence, safe lab design, scoring, claim verification, and standards crosswalk.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx"><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></a></td></tr>
 
-<tr><td>machine_artifact</td><td>Document records corpus statistics: 2,252 heading-based sections, 212 normalized duplicate groups, 19,831 total source lines, and approximately 134,500 source words.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></td></tr>
+<tr><td>machine_artifact</td><td>Document records corpus statistics: 2,252 heading-based sections, 212 normalized duplicate groups, 19,831 total source lines, and approximately 134,500 source words.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx"><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></a></td></tr>
 
-<tr><td>runbook</td><td>Includes safe lab architecture, canary design rules, evidence-chain requirements, finding template, release gate, and best-practice protocol baseline for authorized agent testing.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></td></tr>
+<tr><td>runbook</td><td>Includes safe lab architecture, canary design rules, evidence-chain requirements, finding template, release gate, and best-practice protocol baseline for authorized agent testing.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx"><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Peer_Review_Edition_2.docx</code></a></td></tr>
 
-<tr><td>design_doc</td><td>Earlier edition retained as provenance only; Edition 2 supersedes it with peer-review framing, logic validation, claim controls, and standards crosswalk.</td><td><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Edition_1.docx</code></td></tr>
+<tr><td>design_doc</td><td>Earlier edition retained as provenance only; Edition 2 supersedes it with peer-review framing, logic validation, claim controls, and standards crosswalk.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Edition_1.docx"><code>research/ai-agent-red-team-evaluation-guide/AI_Agent_Red_Team_Training_Guide_Edition_1.docx</code></a></td></tr>
 
 </table>
 
@@ -153,13 +158,13 @@ th,td{padding:0.7rem;min-width:8rem}
 <div class="boundary">This is a sanitized peer-review draft for technical validation, not a certification, authorization, compliance claim, or production security guarantee. Raw offensive payloads remain quarantined and are not reproduced; the methodology requires independent review and live-system validation before stronger claims.</div>
 
 <h2>Skills</h2>
-<p><span class="badge">ai security evaluation</span> <span class="badge">agent red teaming</span> <span class="badge">prompt-injection testing</span> <span class="badge">MCP security analysis</span> <span class="badge">threat modeling</span> <span class="badge">sanitized test design</span> <span class="badge">evidence handling</span> <span class="badge">security methodology</span> <span class="badge">technical writing</span> </p>
+<p><span class="badge">ai security evaluation</span> <span class="badge">Agentic AI Security</span> <span class="badge">agent red teaming</span> <span class="badge">AI red-team methodology</span> <span class="badge">prompt-injection testing</span> <span class="badge">Prompt Injection Analysis</span> <span class="badge">MCP security analysis</span> <span class="badge">MCP / Tool Security</span> <span class="badge">threat modeling</span> <span class="badge">Canary Test Design</span> <span class="badge">Authorization / Tool-Gating Analysis</span> <span class="badge">sanitized test design</span> <span class="badge">evidence handling</span> <span class="badge">security methodology</span> <span class="badge">technical writing</span> </p>
 
 <h2>Tags</h2>
 <p><span class="badge">ai-security</span> <span class="badge">agents</span> <span class="badge">red-team</span> <span class="badge">prompt-injection</span> <span class="badge">mcp</span> <span class="badge">evaluation-design</span> <span class="badge">security-methodology</span> </p>
 
 <h2>Source</h2>
-<p><code>research/ai-agent-red-team-evaluation-guide/</code></p>
+<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/research/ai-agent-red-team-evaluation-guide/"><code>research/ai-agent-red-team-evaluation-guide/</code></a></p>
 
 <h2>Limitations</h2>
 

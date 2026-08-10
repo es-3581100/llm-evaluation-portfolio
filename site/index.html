@@ -32,12 +32,17 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
 .hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
+.hero h1{max-width:100%;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
 .positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
 .detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
+.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
+.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
+.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
+.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
 .card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
@@ -92,11 +97,12 @@ th,td{padding:0.7rem;min-width:8rem}
 </nav></header>
 <main>
 <section class="hero">
-<p class="eyebrow">Independent AI systems builder and LLM evaluator</p>
-<h1>Applied LLM Evaluation, RAG Reliability &amp; Agent-Safety QA</h1>
-<p class="subtitle">I design evidence-bounded benchmarks, rubrics, schemas, simulations, and audit trails for LLM systems, retrieval pipelines, and tool-using agents.</p>
+<p class="eyebrow">Applied LLM Evaluation &amp; Agent Reliability</p>
+<h1>Eric Sawtelle</h1>
+<p class="subtitle">Independent LLM evaluator and AI systems builder focused on retrieval quality, adversarial testing, persistent-agent reliability, safe tool use, and evidence-backed engineering.</p>
 <p class="positioning">Evaluation · RAG · Agent Safety · Prompt Engineering · Automation</p>
-<p class="meta">I build evaluation frameworks, adversarial test cases, regression suites, audit records, and safety controls for LLM-based systems.</p>
+<p class="meta">Evidence-first engineering: claims are bounded by the artifacts that support them.</p>
+<div class="actions"><a class="button" href="/llm-evaluation-portfolio/projects/index.html">View Projects</a><a class="button secondary" href="https://github.com/es-3581100/llm-evaluation-portfolio">GitHub</a><a class="button secondary" href="/llm-evaluation-portfolio/contact.html">Contact</a></div>
 </section>
 
 <h2>What I Do</h2>
@@ -109,7 +115,9 @@ th,td{padding:0.7rem;min-width:8rem}
 
 <h2>Selected Work</h2>
 
+<h3>Evaluation &amp; Reliability</h3>
 <div class="grid">
+
 
 <article class="card project-card">
 <div class="card-title"><h3><a href="/llm-evaluation-portfolio/projects/safety-aware-rag-retrieval-evaluation.html">Safety-Aware RAG/Retrieval Evaluation</a></h3> <span class="badge status corrected">Corrected</span></div>
@@ -117,11 +125,28 @@ th,td{padding:0.7rem;min-width:8rem}
 <p class="result">74-question adversarial/safety-aware retrieval benchmark; corrected caveats preserved and aggregate precision/abstention metrics withheld pending reconciliation.</p>
 </article>
 
+
+
 <article class="card project-card">
-<div class="card-title"><h3><a href="/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html">Belief Lifecycle Engine</a></h3> <span class="badge status ">Observed in tested runs</span></div>
+<div class="card-title"><h3><a href="/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html">Belief Lifecycle Engine</a></h3> <span class="badge status ">Research Manuscript · Simulator-Validated</span></div>
 <p class="positioning-line">Agentic AI · Persistent Memory · Temporal Authority · Safety Gating · Evaluation</p>
-<p class="result">Built a 750-run deterministic evaluation of belief authority in long-lived AI agents; the selected recovery policy reduced unnecessary valid-action rejection by 75.11% while preserving the tested safety behavior.</p>
+<p class="result">750-run deterministic evaluation comparing 5 systems across 5 scenarios; selected recovery reduced unnecessary valid-action rejection by 75.11%.</p>
 </article>
+
+
+
+
+
+
+</div>
+
+<h3>Agent Security</h3>
+<div class="grid">
+
+
+
+
+
 
 <article class="card project-card">
 <div class="card-title"><h3><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></h3> <span class="badge status preliminary">Preliminary</span></div>
@@ -129,11 +154,14 @@ th,td{padding:0.7rem;min-width:8rem}
 <p class="result">Built a defensive evaluation methodology for tool-using AI agents; audited 2,252 source sections and converted unsafe concepts into inert canary tests, trace requirements, and six-dimension scoring.</p>
 </article>
 
+
+
 <article class="card project-card">
 <div class="card-title"><h3><a href="/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html">Goal Hijacking in State-Exploration Agents</a></h3> <span class="badge status preliminary">Preliminary</span></div>
 <p class="positioning-line">Agentic AI Security · Tool Boundaries · Goal Integrity · Secure Architecture</p>
 <p class="result">Analyzed goal reframing in observe-probe-execute agents and proposed typed action schemas plus code-enforced capability boundaries to keep untrusted language from expanding execution authority.</p>
 </article>
+
 
 </div>
 

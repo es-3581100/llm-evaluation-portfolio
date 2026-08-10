@@ -32,12 +32,17 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
 .hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
+.hero h1{max-width:100%;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
 .positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
 .detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
+.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
+.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
+.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
+.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
 .card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
@@ -94,15 +99,36 @@ th,td{padding:0.7rem;min-width:8rem}
 <h1>Work</h1>
 <p class="meta">Each project links to its detail page with evidence, metrics, and claim boundary.</p>
 
+<h2>Evaluation &amp; Reliability</h2>
 <ul class="project-list">
+
 
 <li class="card project-card"><div class="card-title"><span><a href="/llm-evaluation-portfolio/projects/safety-aware-rag-retrieval-evaluation.html">Safety-Aware RAG/Retrieval Evaluation</a> — <span class="badge status corrected">Corrected</span></span></div></li>
 
-<li class="card project-card"><div class="card-title"><span><a href="/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html">Belief Lifecycle Engine</a> — <span class="badge status ">Observed in tested runs</span></span></div></li>
+
+
+<li class="card project-card"><div class="card-title"><span><a href="/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html">Belief Lifecycle Engine</a> — <span class="badge status ">Research Manuscript · Simulator-Validated</span></span></div></li>
+
+
+
+
+
+
+</ul>
+<h2>Agent Security</h2>
+<ul class="project-list">
+
+
+
+
+
 
 <li class="card project-card"><div class="card-title"><span><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a> — <span class="badge status preliminary">Preliminary</span></span></div></li>
 
+
+
 <li class="card project-card"><div class="card-title"><span><a href="/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html">Goal Hijacking in State-Exploration Agents</a> — <span class="badge status preliminary">Preliminary</span></span></div></li>
+
 
 </ul>
 

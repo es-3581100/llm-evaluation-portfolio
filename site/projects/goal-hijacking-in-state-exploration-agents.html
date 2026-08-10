@@ -32,12 +32,17 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
 .hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
+.hero h1{max-width:100%;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
 .positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
 .detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
+.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
+.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
+.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
+.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
 .card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
@@ -119,11 +124,11 @@ th,td{padding:0.7rem;min-width:8rem}
 <table>
 <tr><th>Type</th><th>Description</th><th>Path</th></tr>
 
-<tr><td>design_doc</td><td>Draft research essay defining goal reframing/metaphor laundering and arguing for schema-level capability boundaries over prompt-level permission checks.</td><td><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></td></tr>
+<tr><td>design_doc</td><td>Draft research essay defining goal reframing/metaphor laundering and arguing for schema-level capability boundaries over prompt-level permission checks.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx"><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></a></td></tr>
 
-<tr><td>design_doc</td><td>Includes a concrete narrow-schema versus generic-execution-schema comparison showing why bounded typed actions are safer than arbitrary target/command/payload interfaces.</td><td><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></td></tr>
+<tr><td>design_doc</td><td>Includes a concrete narrow-schema versus generic-execution-schema comparison showing why bounded typed actions are safer than arbitrary target/command/payload interfaces.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx"><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></a></td></tr>
 
-<tr><td>design_doc</td><td>Documents a public/private release split: publish recorded-state analysis, offline graph construction, synthetic fixtures, and recommendation-only output while withholding live closed-loop execution.</td><td><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></td></tr>
+<tr><td>design_doc</td><td>Documents a public/private release split: publish recorded-state analysis, offline graph construction, synthetic fixtures, and recommendation-only output while withholding live closed-loop execution.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx"><code>research/goal-hijacking-state-exploration-agents/goal_hijacking_essay.docx</code></a></td></tr>
 
 </table>
 
@@ -147,13 +152,13 @@ th,td{padding:0.7rem;min-width:8rem}
 <div class="boundary">This is a single-project draft case-study essay and design argument. The taxonomy has not been validated across other agent architectures or domains, no adversarial benchmark has been run, and claims about the mitigation holding are not measured results.</div>
 
 <h2>Skills</h2>
-<p><span class="badge">agentic AI security</span> <span class="badge">secure architecture</span> <span class="badge">tool-schema design</span> <span class="badge">threat modeling</span> <span class="badge">failure-mode analysis</span> <span class="badge">dual-use risk analysis</span> <span class="badge">technical writing</span> </p>
+<p><span class="badge">agentic AI security</span> <span class="badge">Agentic AI Security</span> <span class="badge">secure architecture</span> <span class="badge">tool-schema design</span> <span class="badge">Capability Boundary Design</span> <span class="badge">Authorization / Tool-Gating Analysis</span> <span class="badge">threat modeling</span> <span class="badge">failure-mode analysis</span> <span class="badge">dual-use risk analysis</span> <span class="badge">technical writing</span> </p>
 
 <h2>Tags</h2>
 <p><span class="badge">ai-security</span> <span class="badge">agents</span> <span class="badge">tool-use</span> <span class="badge">goal-integrity</span> <span class="badge">secure-architecture</span> <span class="badge">dual-use-risk</span> </p>
 
 <h2>Source</h2>
-<p><code>research/goal-hijacking-state-exploration-agents/</code></p>
+<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/research/goal-hijacking-state-exploration-agents/"><code>research/goal-hijacking-state-exploration-agents/</code></a></p>
 
 <h2>Limitations</h2>
 

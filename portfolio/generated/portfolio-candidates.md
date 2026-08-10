@@ -37,7 +37,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
 - **Portfolio-grade status:** yes
 - **Claim status:** OBSERVED
 - **Positioning line:** Agentic AI · Persistent Memory · Temporal Authority · Safety Gating · Evaluation
-- **Why it matters:** Designed and evaluated an auditable belief-lifecycle architecture for long-lived AI agents, testing how stale or contradictory information should lose and later regain authority over actions.
+- **Why it matters:** Designed and evaluated an auditable temporal-authority architecture for long-lived AI agents. A frozen 750-run study compared five systems across five scenarios, with the selected recovery mechanism reducing unnecessary valid-action rejection by 75.11%.
 - **Problem:** Persistent AI agents can retain information that was historically correct, well-supported, and easily retrievable while no longer being valid enough to authorize present-day action.
 - **Contribution:** Defined the former-known failure mode, built the deterministic Python BLE simulator, used staged failure analysis to repair false invalidation, collateral dependency blocking, metric errors, and sticky recovery, then froze a 750-run validation protocol and packaged the manuscript, figures, supplement, and reproducibility materials.
 - **Evidence:**
@@ -85,7 +85,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
   - source_corpus_size = 19,831 lines / approximately 134,500 words (basis: measured, context: combined private source corpus used for sanitized methodology development)
   - scoring_dimensions = 6 (basis: reported, context: goal integrity, tool behavior, data exposure, persistence, transparency, and recovery)
   - control_layers = 10 (basis: reported, context: source intake through recovery in the defense-in-depth architecture)
-- **Skills:** ai security evaluation, agent red teaming, prompt-injection testing, MCP security analysis, threat modeling, sanitized test design, evidence handling, security methodology, technical writing
+- **Skills:** ai security evaluation, Agentic AI Security, agent red teaming, AI red-team methodology, prompt-injection testing, Prompt Injection Analysis, MCP security analysis, MCP / Tool Security, threat modeling, Canary Test Design, Authorization / Tool-Gating Analysis, sanitized test design, evidence handling, security methodology, technical writing
 - **Claim boundary:** This is a sanitized peer-review draft for technical validation, not a certification, authorization, compliance claim, or production security guarantee. Raw offensive payloads remain quarantined and are not reproduced; the methodology requires independent review and live-system validation before stronger claims.
 - **Source paths:** `research/ai-agent-red-team-evaluation-guide/`
 - **Public summary:** Built a defensive evaluation methodology for tool-using AI agents; audited 2,252 source sections and converted unsafe concepts into inert canary tests, trace requirements, and six-dimension scoring.
@@ -112,7 +112,7 @@ Schema: `portfolio-candidates` v1 | Generator: `portfolio-miner` | Source repo: 
   - status = draft research essay v0.1 (basis: reported, context: August 2026 document status)
   - core_loop_stages = 7 (basis: reported, context: observe, infer, select_probe, execute, classify, update, repeat)
   - validated_adversarial_tests = 0 (basis: reported, context: essay explicitly states no adversarial testing has been performed)
-- **Skills:** agentic AI security, secure architecture, tool-schema design, threat modeling, failure-mode analysis, dual-use risk analysis, technical writing
+- **Skills:** agentic AI security, Agentic AI Security, secure architecture, tool-schema design, Capability Boundary Design, Authorization / Tool-Gating Analysis, threat modeling, failure-mode analysis, dual-use risk analysis, technical writing
 - **Claim boundary:** This is a single-project draft case-study essay and design argument. The taxonomy has not been validated across other agent architectures or domains, no adversarial benchmark has been run, and claims about the mitigation holding are not measured results.
 - **Source paths:** `research/goal-hijacking-state-exploration-agents/`
 - **Public summary:** Analyzed goal reframing in observe-probe-execute agents and proposed typed action schemas plus code-enforced capability boundaries to keep untrusted language from expanding execution authority.

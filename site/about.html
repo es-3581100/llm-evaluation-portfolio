@@ -32,12 +32,17 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
 .hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
+.hero h1{max-width:100%;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
 .positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
 .detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
+.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
+.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
+.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
+.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
 .card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
@@ -92,10 +97,10 @@ th,td{padding:0.7rem;min-width:8rem}
 </nav></header>
 <main>
 <h1>About Eric</h1>
-<p>I'm Eric Sawtelle, an independent AI systems builder and LLM evaluator.</p>
-<p>I focus on model reliability, adversarial testing, grounded reasoning, retrieval quality, and safe tool use.</p>
-<p>My portfolio work includes a 74-question safety-aware retrieval benchmark, an agent-memory authority working paper with 750 reported simulator runs, and draft audits of code-enforced safety gates for tool-using agents.</p>
-<p>My operations, troubleshooting, training, and systems background became an evaluation approach: identify the failure mode, separate what is known from what is inferred, test the edge cases, preserve the evidence trail, and report only the claims the artifacts can support.</p>
+<p>I'm Eric Sawtelle, an applied AI systems builder and evaluator with an unconventional path into software.</p>
+<p>My background spans operations, technical troubleshooting, process improvement, laboratory and biotech work, logistics, and team training. I brought that systems-oriented approach into AI: understand the machinery, measure what it actually does, find where it fails, repair the process, and verify the result.</p>
+<p>My current work focuses on LLM evaluation, retrieval quality, persistent-agent reliability, adversarial testing, and safe tool use.</p>
+<p>My portfolio work includes a 74-question safety-aware retrieval benchmark, a 750-run belief-lifecycle simulation study for long-lived agents, a defensive AI agent red-team methodology, and a goal-hijacking design analysis for state-exploration agents.</p>
 <p>This portfolio presents selected technical work as evidence-first case studies. Each project shows the problem, contribution, structured evidence, metrics, and an explicit claim boundary.</p>
 </main>
 <footer class="site">Built evidence-first. Claims are bounded by their supporting artifacts.</footer>

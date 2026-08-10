@@ -32,12 +32,17 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
 .hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
+.hero h1{max-width:100%;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
 .positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
 .detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
+.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
+.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
+.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
+.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
 .card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
@@ -94,7 +99,7 @@ th,td{padding:0.7rem;min-width:8rem}
 <nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
 <h1>Belief Lifecycle Engine</h1>
 <div class="status-row">
-<span class="badge status ">Observed in tested runs</span>
+<span class="badge status ">Research Manuscript · Simulator-Validated</span>
 </div>
 
 
@@ -104,7 +109,7 @@ th,td{padding:0.7rem;min-width:8rem}
 <p class="positioning-line detail-positioning">Agentic AI · Persistent Memory · Temporal Authority · Safety Gating · Evaluation</p>
 
 <h2>Summary</h2>
-<p>Designed and evaluated an auditable belief-lifecycle architecture for long-lived AI agents, testing how stale or contradictory information should lose and later regain authority over actions.</p>
+<p>Designed and evaluated an auditable temporal-authority architecture for long-lived AI agents. A frozen 750-run study compared five systems across five scenarios, with the selected recovery mechanism reducing unnecessary valid-action rejection by 75.11%.</p>
 
 <h2>Problem</h2>
 <p>Persistent AI agents can retain information that was historically correct, well-supported, and easily retrievable while no longer being valid enough to authorize present-day action.</p>
@@ -117,15 +122,15 @@ th,td{padding:0.7rem;min-width:8rem}
 <table>
 <tr><th>Type</th><th>Description</th><th>Path</th></tr>
 
-<tr><td>readme</td><td>Project README states manuscript status, public artifacts, evaluation highlights, role, key results, and limitations.</td><td><code>research/belief-lifecycle-engine/README.md</code></td></tr>
+<tr><td>readme</td><td>Project README states manuscript status, public artifacts, evaluation highlights, role, key results, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/README.md"><code>research/belief-lifecycle-engine/README.md</code></a></td></tr>
 
-<tr><td>design_doc</td><td>Working paper describes the former-knowns problem, BLE architecture, staged development, evaluation design, results, and limitations.</td><td><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.md</code></td></tr>
+<tr><td>design_doc</td><td>Working paper describes the former-knowns problem, BLE architecture, staged development, evaluation design, results, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/former-knowns-ble-working-paper.md"><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.md</code></a></td></tr>
 
-<tr><td>machine_artifact</td><td>Revised 20-page review manuscript with 14 tables, four figures, frozen Pilot 0.3.2 validation results, statistical analysis, and reproducibility checklist.</td><td><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.pdf</code></td></tr>
+<tr><td>machine_artifact</td><td>Revised 20-page review manuscript with 14 tables, four figures, frozen Pilot 0.3.2 validation results, statistical analysis, and reproducibility checklist.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.pdf"><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.pdf</code></a></td></tr>
 
-<tr><td>design_doc</td><td>Editable revised manuscript source corresponding to the public PDF artifact.</td><td><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.docx</code></td></tr>
+<tr><td>design_doc</td><td>Editable revised manuscript source corresponding to the public PDF artifact.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.docx"><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.docx</code></a></td></tr>
 
-<tr><td>runbook</td><td>Reproducibility notes document public evidence boundaries, release requirements, and limitations.</td><td><code>research/belief-lifecycle-engine/reproducibility/README.md</code></td></tr>
+<tr><td>runbook</td><td>Reproducibility notes document public evidence boundaries, release requirements, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/reproducibility/README.md"><code>research/belief-lifecycle-engine/reproducibility/README.md</code></a></td></tr>
 
 </table>
 
@@ -167,7 +172,7 @@ th,td{padding:0.7rem;min-width:8rem}
 <p><span class="badge">ai-safety</span> <span class="badge">agents</span> <span class="badge">evaluation</span> <span class="badge">simulation</span> <span class="badge">belief-revision</span> <span class="badge">agent-memory</span> <span class="badge">evaluation-design</span> </p>
 
 <h2>Source</h2>
-<p><code>research/belief-lifecycle-engine/</code></p>
+<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/research/belief-lifecycle-engine/"><code>research/belief-lifecycle-engine/</code></a></p>
 
 <h2>Limitations</h2>
 

@@ -32,12 +32,17 @@ code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono
 .card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
 .hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;text-transform:uppercase;letter-spacing:-0.045em}
+.hero h1{max-width:100%;letter-spacing:-0.045em}
 .subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
 .positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
 .positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
 .detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
 .result{font-weight:700;color:var(--accent)}
+.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
+.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
+.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
+.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
 .card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
@@ -93,6 +98,10 @@ th,td{padding:0.7rem;min-width:8rem}
 <main>
 <h1>Skills</h1>
 <p class="meta">Each skill lists the projects that record it as demonstrated.</p>
+<div class="grid">
+<article class="card"><h2>Evaluation &amp; Reliability</h2><p>LLM evaluation, RAG evaluation, grounding verification, adversarial dataset design, abstention testing, statistical testing, reproducibility discipline, and agent-memory safety evaluation.</p></article>
+<article class="card"><h2>Agent Security</h2><p>Agentic AI security, prompt-injection analysis, threat modeling, MCP/tool security, capability-boundary design, AI red-team methodology, canary test design, and authorization/tool-gating analysis.</p></article>
+</div>
 
 
 <h2>LLM evaluation</h2>
@@ -185,7 +194,17 @@ th,td{padding:0.7rem;min-width:8rem}
 <li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
 </ul>
 
+<h2>Agentic AI Security</h2>
+<ul>
+<li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li><li><a href="/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html">Goal Hijacking in State-Exploration Agents</a></li>
+</ul>
+
 <h2>agent red teaming</h2>
+<ul>
+<li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
+</ul>
+
+<h2>AI red-team methodology</h2>
 <ul>
 <li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
 </ul>
@@ -195,12 +214,32 @@ th,td{padding:0.7rem;min-width:8rem}
 <li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
 </ul>
 
+<h2>Prompt Injection Analysis</h2>
+<ul>
+<li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
+</ul>
+
 <h2>MCP security analysis</h2>
 <ul>
 <li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
 </ul>
 
+<h2>MCP / Tool Security</h2>
+<ul>
+<li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
+</ul>
+
 <h2>threat modeling</h2>
+<ul>
+<li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li><li><a href="/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html">Goal Hijacking in State-Exploration Agents</a></li>
+</ul>
+
+<h2>Canary Test Design</h2>
+<ul>
+<li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li>
+</ul>
+
+<h2>Authorization / Tool-Gating Analysis</h2>
 <ul>
 <li><a href="/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html">AI Agent Red-Team Evaluation Guide</a></li><li><a href="/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html">Goal Hijacking in State-Exploration Agents</a></li>
 </ul>
@@ -231,6 +270,11 @@ th,td{padding:0.7rem;min-width:8rem}
 </ul>
 
 <h2>tool-schema design</h2>
+<ul>
+<li><a href="/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html">Goal Hijacking in State-Exploration Agents</a></li>
+</ul>
+
+<h2>Capability Boundary Design</h2>
 <ul>
 <li><a href="/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html">Goal Hijacking in State-Exploration Agents</a></li>
 </ul>
