@@ -2,8 +2,8 @@
 <html lang="en">
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3C/svg%3E" />
+<title>Safety-Aware RAG/Retrieval Evaluation</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
 <style>
 :root{--bg:#f6f1e8;--surface:#fffdf8;--ink:#17212b;--muted:#5e6872;--accent:#22475e;--line:#ded6ca;--soft:#efe7da;}
 *{box-sizing:border-box}
@@ -89,21 +89,94 @@ th,td{padding:0.7rem;min-width:8rem}
 <body>
 <header class="site"><nav>
 <a class="brand" href="/llm-evaluation-portfolio/">ERIC SAWTELLE</a>
-<a class="nav-link " href="/llm-evaluation-portfolio/projects/index.html">Work</a>
+<a class="nav-link is-active" href="/llm-evaluation-portfolio/projects/index.html">Work</a>
 <a class="nav-link " href="/llm-evaluation-portfolio/case-studies.html">Case Studies</a>
 <a class="nav-link " href="/llm-evaluation-portfolio/skills.html">Skills</a>
 <a class="nav-link " href="/llm-evaluation-portfolio/about.html">About</a>
-<a class="nav-link is-active" href="/llm-evaluation-portfolio/contact.html">Contact</a>
+<a class="nav-link " href="/llm-evaluation-portfolio/contact.html">Contact</a>
 </nav></header>
 <main>
-<h1>Contact</h1>
-<p>Open to remote contract, part-time, project-based, and full-time opportunities involving LLM evaluation, AI QA, model safety, red-teaming, data annotation, or AI training.</p>
-<div class="actions"><a class="button" href="/llm-evaluation-portfolio/resume/Eric_Sawtelle.pdf">Download Resume</a><a class="button secondary" href="mailto:e.sawtelle358@gmail.com">Email Eric</a><a class="button secondary" href="https://www.linkedin.com/in/eric-sawtelle-0b021226b/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="button secondary" href="https://www.upwork.com/freelancers/~01c30f3352887fb789" target="_blank" rel="noopener noreferrer">Upwork</a></div>
+<nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
+<h1>Safety-Aware RAG/Retrieval Evaluation</h1>
+<div class="status-row">
+<span class="badge status corrected">Corrected</span>
+</div>
+
+
+
+<div class="note"><strong>Corrected:</strong> an earlier interpretation was wrong and a corrected account exists. The correction: A post-hoc audit found the FTS5/BM25 score direction had been interpreted backward; corrected threshold classification changed low-score/found balance while the empty count remained 15.</div>
+
+
+
+
+
+<h2>Summary</h2>
+<p>74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.</p>
+
+<h2>Problem</h2>
+<p>A retrieval system supporting a tool-using LLM agent needed to distinguish factual support, authority, policy compatibility, live-state dependency, source conflicts, and safe abstention rather than relying only on similarity scores.</p>
+
+<h2>Contribution</h2>
+<p>Defined the evaluation problem, success and failure criteria, adversarial benchmark categories, rubric, public schema, checkpoint summary, regression findings, and corrected public claim boundaries.</p>
+
+<h2>Evidence</h2>
+
+<table>
+<tr><th>Type</th><th>Description</th><th>Path</th></tr>
+
+<tr><td>readme</td><td>Public portfolio overview lists the Safety-Aware RAG/Retrieval Evaluation as featured work and states the corrected outcome caveat.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/README.md"><code>README.md</code></a></td></tr>
+
+<tr><td>readme</td><td>Case study records the benchmark design, public evidence boundary, corrected outcome counts, withheld metrics, role, lessons, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/README.md"><code>case-studies/safety-aware-retrieval/README.md</code></a></td></tr>
+
+<tr><td>machine_artifact</td><td>Checkpoint summary reports 74 questions, corrected retrieval outcomes, withheld precision/abstention metrics, primary finding, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json"><code>case-studies/safety-aware-retrieval/results/checkpoint-002-summary.json</code></a></td></tr>
+
+<tr><td>design_doc</td><td>Rubric defines answerability, authority, policy compatibility, state dependency, retrieval outcomes, observed behaviors, and reviewer guidance.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md"><code>case-studies/safety-aware-retrieval/methodology/evaluation-rubric.md</code></a></td></tr>
+
+<tr><td>source</td><td>Public schema separates retrieval outcome from observed behavior and related evaluation fields.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/case-studies/safety-aware-retrieval/data/benchmark-schema.json"><code>case-studies/safety-aware-retrieval/data/benchmark-schema.json</code></a></td></tr>
+
+</table>
+
+
+<h2>Metrics</h2>
+
+<table>
+<tr><th>Name</th><th>Value</th><th>Context</th><th>Basis</th></tr>
+
+<tr><td>benchmark_questions</td><td>74</td><td>frozen internal benchmark summarized in public checkpoint artifact</td><td>reported</td></tr>
+
+<tr><td>corrected_empty_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+
+<tr><td>corrected_low_score_retrieval_outcomes</td><td>15</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+
+<tr><td>corrected_found_retrieval_outcomes</td><td>44</td><td>Checkpoint 002 after BM25 score-direction correction</td><td>reported</td></tr>
+
+</table>
+<p class="meta">Basis is preserved exactly: measured vs observed vs reported.</p>
+
+
+<h2>Claim boundary</h2>
+<div class="boundary">The evaluation tracked retrieval relevance, source conflict, authority, live-state dependency, policy compatibility, and expected abstention behavior. Aggregate precision and abstention metrics remain withheld until recomputed against the corrected BM25/FTS5 score-direction contract.</div>
+
+<h2>Skills</h2>
+<p><span class="badge">LLM evaluation</span> <span class="badge">RAG evaluation</span> <span class="badge">grounding verification</span> <span class="badge">adversarial dataset design</span> <span class="badge">abstention testing</span> <span class="badge">retrieval metrics</span> <span class="badge">schema design</span> <span class="badge">evidence-based threshold calibration</span> </p>
+
+<h2>Tags</h2>
+<p><span class="badge">retrieval evaluation</span> <span class="badge">grounding</span> <span class="badge">abstention</span> <span class="badge">safety-aware retrieval</span> <span class="badge">corrected claim</span> </p>
+
+<h2>Source</h2>
+<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/case-studies/safety-aware-retrieval/"><code>case-studies/safety-aware-retrieval/</code></a></p>
+
+<h2>Limitations</h2>
+
 <ul>
-<li><strong>GitHub:</strong> <a href="https://github.com/es-3581100">es-3581100</a></li>
-<li><strong>Email:</strong> <a href="mailto:e.sawtelle358@gmail.com">e.sawtelle358@gmail.com</a></li>
-<li><strong>Location:</strong> United States — seeking remote work</li>
+<li>Precision and abstention aggregates remain withheld pending corrected internal checkpoint reconciliation.</li><li>Public artifacts include a sanitized subset and derived summary; the public sample alone cannot reproduce aggregate metrics.</li><li>Results are project-specific and single-annotator.</li>
 </ul>
+
+
+
+<h2>Public summary</h2>
+<p>74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.</p>
+
 </main>
 <footer class="site">Built evidence-first. Claims are bounded by their supporting artifacts.</footer>
 </body>

@@ -2,8 +2,8 @@
 <html lang="en">
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3C/svg%3E" />
+<title>Belief Lifecycle Engine</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
 <style>
 :root{--bg:#f6f1e8;--surface:#fffdf8;--ink:#17212b;--muted:#5e6872;--accent:#22475e;--line:#ded6ca;--soft:#efe7da;}
 *{box-sizing:border-box}
@@ -89,21 +89,102 @@ th,td{padding:0.7rem;min-width:8rem}
 <body>
 <header class="site"><nav>
 <a class="brand" href="/llm-evaluation-portfolio/">ERIC SAWTELLE</a>
-<a class="nav-link " href="/llm-evaluation-portfolio/projects/index.html">Work</a>
+<a class="nav-link is-active" href="/llm-evaluation-portfolio/projects/index.html">Work</a>
 <a class="nav-link " href="/llm-evaluation-portfolio/case-studies.html">Case Studies</a>
 <a class="nav-link " href="/llm-evaluation-portfolio/skills.html">Skills</a>
 <a class="nav-link " href="/llm-evaluation-portfolio/about.html">About</a>
-<a class="nav-link is-active" href="/llm-evaluation-portfolio/contact.html">Contact</a>
+<a class="nav-link " href="/llm-evaluation-portfolio/contact.html">Contact</a>
 </nav></header>
 <main>
-<h1>Contact</h1>
-<p>Open to remote contract, part-time, project-based, and full-time opportunities involving LLM evaluation, AI QA, model safety, red-teaming, data annotation, or AI training.</p>
-<div class="actions"><a class="button" href="/llm-evaluation-portfolio/resume/Eric_Sawtelle.pdf">Download Resume</a><a class="button secondary" href="mailto:e.sawtelle358@gmail.com">Email Eric</a><a class="button secondary" href="https://www.linkedin.com/in/eric-sawtelle-0b021226b/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="button secondary" href="https://www.upwork.com/freelancers/~01c30f3352887fb789" target="_blank" rel="noopener noreferrer">Upwork</a></div>
+<nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
+<h1>Belief Lifecycle Engine</h1>
+<div class="status-row">
+<span class="badge status ">Research Manuscript · Simulator-Validated</span>
+</div>
+
+
+
+
+
+<p class="positioning-line detail-positioning">Agentic AI · Persistent Memory · Temporal Authority · Safety Gating · Evaluation</p>
+
+<h2>Summary</h2>
+<p>Designed and evaluated an auditable temporal-authority architecture for long-lived AI agents. A frozen 750-run study compared five systems across five scenarios, with the selected recovery mechanism reducing unnecessary valid-action rejection by 75.11%.</p>
+
+<h2>Problem</h2>
+<p>Persistent AI agents can retain information that was historically correct, well-supported, and easily retrievable while no longer being valid enough to authorize present-day action.</p>
+
+<h2>Contribution</h2>
+<p>Defined the former-known failure mode, built the deterministic Python BLE simulator, used staged failure analysis to repair false invalidation, collateral dependency blocking, metric errors, and sticky recovery, then froze a 750-run validation protocol and packaged the manuscript, figures, supplement, and reproducibility materials.</p>
+
+<h2>Evidence</h2>
+
+<table>
+<tr><th>Type</th><th>Description</th><th>Path</th></tr>
+
+<tr><td>readme</td><td>Project README states manuscript status, public artifacts, evaluation highlights, role, key results, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/README.md"><code>research/belief-lifecycle-engine/README.md</code></a></td></tr>
+
+<tr><td>design_doc</td><td>Working paper describes the former-knowns problem, BLE architecture, staged development, evaluation design, results, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/former-knowns-ble-working-paper.md"><code>research/belief-lifecycle-engine/former-knowns-ble-working-paper.md</code></a></td></tr>
+
+<tr><td>machine_artifact</td><td>Revised 20-page review manuscript with 14 tables, four figures, frozen Pilot 0.3.2 validation results, statistical analysis, and reproducibility checklist.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.pdf"><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.pdf</code></a></td></tr>
+
+<tr><td>design_doc</td><td>Editable revised manuscript source corresponding to the public PDF artifact.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.docx"><code>research/belief-lifecycle-engine/Former_Knowns_BLE_Manuscript_v1.1.docx</code></a></td></tr>
+
+<tr><td>runbook</td><td>Reproducibility notes document public evidence boundaries, release requirements, and limitations.</td><td><a href="https://github.com/es-3581100/llm-evaluation-portfolio/blob/main/research/belief-lifecycle-engine/reproducibility/README.md"><code>research/belief-lifecycle-engine/reproducibility/README.md</code></a></td></tr>
+
+</table>
+
+
+<h2>Metrics</h2>
+
+<table>
+<tr><th>Name</th><th>Value</th><th>Context</th><th>Basis</th></tr>
+
+<tr><td>validation_runs</td><td>750</td><td>5 systems x 5 scenarios x 30 frozen seeds in Pilot 0.3.2</td><td>measured</td></tr>
+
+<tr><td>system_scenario_seed_design</td><td>5 systems x 5 scenarios x 30 seeds</td><td>frozen deterministic Pilot 0.3.2 validation design</td><td>measured</td></tr>
+
+<tr><td>valid_action_rejection_reduction</td><td>75.11%</td><td>four recoverable scenarios, paired seed-level comparison against BLE Authority control</td><td>measured</td></tr>
+
+<tr><td>unsafe_actions_observed</td><td>0/150 candidate runs</td><td>primary drift-recovery candidate validation runs; one-sided exact 95% upper bound on run-level event probability reported as 1.98%</td><td>observed</td></tr>
+
+<tr><td>false_invalidation_events_observed</td><td>0/150 candidate runs</td><td>primary drift-recovery candidate validation runs</td><td>observed</td></tr>
+
+<tr><td>permanent_change_gating_latency</td><td>5.10 intervals</td><td>mean operational gating latency matched the BLE Authority control during abrupt permanent change</td><td>measured</td></tr>
+
+<tr><td>typed_dependency_repair</td><td>15.33 to 1.00 false blocks per run</td><td>earlier Pilot 0.2.1 repair reduced collateral dependency blocking while preserving zero observed unsafe actions in that stage</td><td>reported</td></tr>
+
+<tr><td>simulator_test_result</td><td>11 passed</td><td>validation report for the isolated Python simulator package</td><td>reported</td></tr>
+
+<tr><td>manuscript_package</td><td>20 pages, 14 tables, 4 figures</td><td>Former Knowns / BLE Manuscript v1.1 review package</td><td>reported</td></tr>
+
+</table>
+<p class="meta">Basis is preserved exactly: measured vs observed vs reported.</p>
+
+
+<h2>Claim boundary</h2>
+<div class="boundary">Results evaluate a preregistered reference configuration in a deterministic synthetic simulator. They do not establish general or production-agent safety; primary-candidate safety observations are limited to 150 frozen candidate runs, parameter sensitivity was not evaluated, and independent replication remains future work.</div>
+
+<h2>Skills</h2>
+<p><span class="badge">ai-agent safety evaluation</span> <span class="badge">experimental design</span> <span class="badge">python simulation</span> <span class="badge">belief-state modeling</span> <span class="badge">statistical testing</span> <span class="badge">reproducibility discipline</span> <span class="badge">technical writing</span> <span class="badge">root-cause analysis</span> <span class="badge">safety gating</span> </p>
+
+<h2>Tags</h2>
+<p><span class="badge">ai-safety</span> <span class="badge">agents</span> <span class="badge">evaluation</span> <span class="badge">simulation</span> <span class="badge">belief-revision</span> <span class="badge">agent-memory</span> <span class="badge">evaluation-design</span> </p>
+
+<h2>Source</h2>
+<p><a href="https://github.com/es-3581100/llm-evaluation-portfolio/tree/main/research/belief-lifecycle-engine/"><code>research/belief-lifecycle-engine/</code></a></p>
+
+<h2>Limitations</h2>
+
 <ul>
-<li><strong>GitHub:</strong> <a href="https://github.com/es-3581100">es-3581100</a></li>
-<li><strong>Email:</strong> <a href="mailto:e.sawtelle358@gmail.com">e.sawtelle358@gmail.com</a></li>
-<li><strong>Location:</strong> United States — seeking remote work</li>
+<li>Current status is an independent research manuscript unless external submission or review status is separately confirmed.</li><li>Zero unsafe actions were observed in the 150 primary-candidate validation runs; this is not a universal safety guarantee.</li><li>Public archive URLs, licensing choices, parameter-sensitivity testing, and independent replication remain future work.</li>
 </ul>
+
+
+
+<h2>Public summary</h2>
+<p>Built a 750-run deterministic evaluation of belief authority in long-lived AI agents; the selected recovery policy reduced unnecessary valid-action rejection by 75.11% while preserving the tested safety behavior.</p>
+
 </main>
 <footer class="site">Built evidence-first. Claims are bounded by their supporting artifacts.</footer>
 </body>
