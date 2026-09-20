@@ -103,9 +103,15 @@ AI-generated output is treated as material to verify, not as independent evidenc
 
 These are intentionally not featured until the public links, evidence, and summaries are as complete as the two projects above.
 
+<!-- dynamic-build-ledger:start -->
+## Build Ledger Status
+
+Project-local operational ledger: [`build-ledger/`](build-ledger/). Current phase: governance initialized; publication is not authorized. The ledger distinguishes current status from append-only history and does not replace portfolio evidence.
+<!-- dynamic-build-ledger:end -->
+
 ## Contact
 
-* **GitHub:** [donCannoli-burns](https://github.com/donCannoli-burns)
+* **GitHub:** [es-3581100](https://github.com/es-3581100)
 * **Email:** [e.sawtelle358@gmail.com](mailto:e.sawtelle358@gmail.com)
 * **Location:** United States — seeking remote work
 
