@@ -1,0 +1,8 @@
+{
+  "schema_version": "portfolio-resume-status.v1",
+  "as_of": "2026-10-06",
+  "path": "site/resume/Eric_Sawtelle.pdf",
+  "status": "out_of_date",
+  "editable": false,
+  "note": "The tracked resume PDF is intentionally preserved unchanged. It predates the current portfolio expansion into experimental AI systems design, agentic engineering, AI-native applications, technical visualization, provenance systems, and human-centered AI workflows. Treat the portfolio and linked project evidence as the current record of work until a separately authorized resume revision is produced."
+}
