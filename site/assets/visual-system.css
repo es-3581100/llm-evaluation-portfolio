@@ -1,0 +1,350 @@
+/* Structural Green Roles
+   Controlled visual-system refinement:
+   #5C7650 = structural header/footer/opening window
+   #A3B18A = thin breaker/seam highlight
+*/
+:root{
+  --page-field:#202826;
+  --surface-structural-green:#5C7650;
+  --breaker-highlight:#A3B18A;
+  --structural-ink:#FFFFFF;
+  --structural-copy:#F4F7F0;
+  --structural-muted:#E4EADB;
+  --structural-line:rgba(255,255,255,.24);
+  --external-on-structural:#F0F6FF;
+}
+
+/* Shared structural window material */
+.site-header,
+header.site{
+  background:var(--surface-structural-green);
+  color:var(--structural-ink);
+  border-bottom:0;
+  box-shadow:none;
+  position:sticky;
+}
+.site-header::after,
+header.site::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:var(--breaker-highlight);
+  box-shadow:0 1px 0 rgba(23,33,31,.12);
+  pointer-events:none;
+}
+body[data-page="home"] .site-header::after{display:none}
+
+.site-header .brand-copy strong,
+.site-header .brand-copy span,
+.site-header .main-nav a,
+header.site .brand,
+header.site .nav-link{
+  color:var(--structural-copy);
+}
+.site-header .brand-copy span{color:var(--structural-muted)}
+.site-header .brand-mark{
+  background:var(--structural-copy);
+  color:var(--ink);
+  border-color:rgba(255,255,255,.72);
+}
+.site-header .brand-mark::after{background:var(--structural-ink)}
+.site-header .brand-contact:hover,
+.site-header .brand-contact:focus-visible,
+.site-header .brand-contact:hover span,
+.site-header .brand-contact:focus-visible span{
+  color:var(--structural-ink);
+}
+.site-header .main-nav a:hover,
+.site-header .main-nav a:focus-visible,
+.site-header .main-nav a[aria-current="page"]{
+  color:var(--structural-ink);
+  border-color:var(--breaker-highlight);
+}
+header.site .brand:hover,
+header.site .nav-link:hover,
+header.site .nav-link:focus-visible{
+  color:var(--structural-ink);
+}
+header.site .nav-link:hover,
+header.site .nav-link:focus-visible,
+header.site .nav-link.is-active{
+  background:rgba(255,255,255,.10);
+  border-color:var(--breaker-highlight);
+  box-shadow:none;
+}
+.site-header a:focus-visible,
+header.site a:focus-visible,
+.site-footer a:focus-visible,
+footer.site a:focus-visible{
+  outline:2px solid var(--breaker-highlight);
+  outline-offset:3px;
+}
+.site-header .external-link:hover,
+.site-header .external-link:focus-visible,
+header.site a[target="_blank"]:hover,
+header.site a[target="_blank"]:focus-visible{
+  color:var(--external-on-structural);
+  border-color:var(--external-on-structural);
+}
+
+/* Landing opening window: one material, preserved internal hierarchy */
+body[data-page="home"] .hero{
+  position:relative;
+  isolation:isolate;
+  color:var(--structural-ink);
+  background:var(--surface-structural-green);
+  box-shadow:0 0 0 100vmax var(--surface-structural-green);
+  clip-path:inset(0 -100vmax);
+  border-bottom:0;
+}
+body[data-page="home"] .hero h1,
+body[data-page="home"] .hero h1 em{
+  color:var(--structural-ink);
+}
+body[data-page="home"] .hero h1 em{
+  text-decoration-line:underline;
+  text-decoration-color:var(--breaker-highlight);
+  text-decoration-thickness:1px;
+  text-underline-offset:.12em;
+}
+body[data-page="home"] .hero .eyebrow,
+body[data-page="home"] .hero-lede,
+body[data-page="home"] .hero-index-title,
+body[data-page="home"] .hero-index .availability{
+  color:var(--structural-copy);
+}
+body[data-page="home"] .hero .text-link{
+  color:var(--structural-ink);
+  border-color:var(--structural-line);
+}
+body[data-page="home"] .hero .text-link.signal{
+  color:var(--structural-ink);
+  border-color:var(--breaker-highlight);
+}
+body[data-page="home"] .hero-index{
+  border-top:1px solid var(--breaker-highlight);
+}
+body[data-page="home"] .hero-index-title,
+body[data-page="home"] .hero-index li,
+body[data-page="home"] .hero-index .availability{
+  border-color:var(--structural-line);
+}
+body[data-page="home"] .hero-index b{color:var(--structural-ink)}
+
+/* Major breaker bars are cuts, not boxes. */
+.hero,
+.section,
+.about-hero,
+.work-hero,
+.contact-sheet,
+.search-hero,
+.portfolio-search-shell,
+.rights-hero,
+.scene-card{
+  border-bottom:0!important;
+  position:relative;
+}
+.hero::after,
+.section::after,
+.about-hero::after,
+.work-hero::after,
+.contact-sheet::after,
+.search-hero::after,
+.portfolio-search-shell::after,
+.rights-hero::after,
+.scene-card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:var(--breaker-highlight);
+  box-shadow:0 1px 0 rgba(23,33,31,.10);
+  pointer-events:none;
+}
+.scene-page.scene-ready .scene-card::after{display:none}
+
+/* Mechanical deck seam uses the breaker role exclusively. */
+.scene-navline{
+  border-top:0!important;
+  position:relative;
+}
+.scene-navline::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:1px;
+  background:var(--breaker-highlight);
+  box-shadow:0 -1px 0 rgba(23,33,31,.08);
+  pointer-events:none;
+}
+.scene-navline.is-cut{
+  border-color:transparent;
+  box-shadow:none;
+}
+.scene-navline.is-cut::before{
+  height:2px;
+  box-shadow:0 -2px 0 rgba(163,177,138,.22);
+}
+.scene-page.scene-ready .scene-seam{
+  background:var(--breaker-highlight);
+  box-shadow:0 1px 0 rgba(23,33,31,.16);
+}
+
+/* Footer: same machine material, stronger terminal composition. */
+.site-footer,
+footer.site{
+  background:var(--surface-structural-green);
+  color:var(--structural-copy);
+  border-top:1px solid var(--breaker-highlight)!important;
+  box-shadow:0 -4px 0 rgba(23,33,31,.07);
+}
+.site-footer .footer-name,
+.site-footer .footer-nav a,
+footer.site a{
+  color:var(--structural-ink);
+}
+.site-footer .footer-fields,
+.site-footer .footer-legal,
+footer.site{
+  color:var(--structural-copy);
+}
+.site-footer .footer-fields i{color:var(--breaker-highlight)}
+.site-footer .footer-legal{border-color:var(--structural-line)}
+.site-footer .footer-legal a{color:var(--structural-copy);border-color:var(--structural-line)}
+.site-footer .footer-name:hover,
+.site-footer .footer-name:focus-visible,
+.site-footer .footer-nav a:hover,
+.site-footer .footer-nav a:focus-visible,
+.site-footer .footer-legal a:hover,
+.site-footer .footer-legal a:focus-visible,
+footer.site a:hover,
+footer.site a:focus-visible{
+  color:var(--structural-ink);
+  border-color:var(--breaker-highlight);
+}
+.site-footer .external-link:hover,
+.site-footer .external-link:focus-visible,
+footer.site a[target="_blank"]:hover,
+footer.site a[target="_blank"]:focus-visible{
+  color:var(--external-on-structural);
+  border-color:var(--external-on-structural);
+}
+
+/* Legacy evidence/archive pages join the same header/footer family
+   without flattening their existing cards or content styling. */
+header.site{padding:.65rem 1.25rem}
+header.site nav{position:relative;z-index:1}
+footer.site{
+  max-width:none;
+  margin:0;
+  padding-block:1.35rem 2rem;
+  padding-inline:max(1.5rem,calc((100vw - 1040px)/2 + 1.5rem));
+}
+main > h1 + .meta,
+main > .detail-positioning,
+main > .hero{
+  position:relative;
+  padding-bottom:1.55rem;
+  margin-bottom:2rem;
+}
+main > h1 + .meta::after,
+main > .detail-positioning::after,
+main > .hero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:var(--breaker-highlight);
+  box-shadow:0 1px 0 rgba(23,33,31,.08);
+}
+
+/* Preserve non-structural green accents and component borders.
+   The new green roles do not recolor cards, buttons, tags, or ordinary rules. */
+
+@media(max-width:680px){
+  body[data-page="home"] .hero{
+    box-shadow:0 0 0 100vmax var(--surface-structural-green);
+  }
+  header.site{padding-inline:.75rem}
+  footer.site{padding-inline:1rem}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .scene-navline.is-cut::before{height:1px;box-shadow:none}
+}
+
+
+/* Dark field retained around the paper record. */
+body{
+  background:var(--page-field);
+}
+.page-shell,
+.about-machine{
+  background:
+    linear-gradient(rgba(23,33,31,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(23,33,31,.018) 1px,transparent 1px),
+    var(--paper);
+  background-size:42px 42px,42px 42px,auto;
+}
+body:not([data-page]) main{
+  background:var(--bg,#f6f1e8);
+}
+
+/* Two-view gallery artifact: real screenshots, no browser chrome. */
+.gallery-artifact--feature-duo{grid-column:1/-1}
+.gallery-media-duo{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:12px;
+}
+.gallery-media-duo figure{
+  margin:0;
+  min-width:0;
+  border:1px solid var(--ink);
+  background:var(--well);
+  box-shadow:7px 7px 0 rgba(23,33,31,.14);
+  overflow:hidden;
+}
+.gallery-media-duo img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:220px;
+  object-fit:cover;
+  object-position:center top;
+}
+.gallery-media-duo figure:first-child{aspect-ratio:16/9}
+.gallery-media-duo figure:last-child{aspect-ratio:16/9}
+.gallery-media-duo figcaption{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);
+  white-space:nowrap;border:0;
+}
+@media(hover:hover) and (pointer:fine){
+  .gallery-media-duo figure{
+    transition:transform .22s var(--paper-ease),box-shadow .22s var(--paper-ease),border-color .2s ease;
+  }
+  .gallery-artifact--feature-duo:hover .gallery-media-duo figure{
+    transform:translate(-2px,-2px);
+    box-shadow:10px 10px 0 rgba(23,33,31,.15);
+    border-color:var(--breaker-highlight);
+  }
+}
+@media(max-width:760px){
+  .gallery-media-duo{grid-template-columns:1fr}
+  .gallery-media-duo figure{aspect-ratio:16/9!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .gallery-media-duo figure{transition:none!important;transform:none!important}
+}

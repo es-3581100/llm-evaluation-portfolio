@@ -1,0 +1,87 @@
+{
+  "schema_version": "ui-design-draft.v1",
+  "design_id": "portfolio",
+  "draft_id": "20261007T014500Z-dual-green-structural-system",
+  "visual_example_name": "Branchwork Atlas / Dual-Green Structural System",
+  "created_at_utc": "2026-10-07T01:45:00Z",
+  "direction": "Controlled visual-system refinement only: separate structural window green from breaker/seam green across both portfolio page families, preserve the existing typography/motion/content model, and add two real Sacred Computations views to the rendered appendix.",
+  "provenance": {
+    "mode": "derive",
+    "references": [
+      {
+        "name": "Current deployed landing capture",
+        "artifact": "Eric Sawtelle — Experimental AI Systems_20261007-011113Z_quick(1).html",
+        "sha256": "d4465ecff097236a3778bc55b14a345db6de33caeaad6d115c5af10efd2f3158",
+        "used_for": [
+          "current visual truth",
+          "header/hero hierarchy",
+          "section-break placement"
+        ]
+      },
+      {
+        "name": "Branchwork Atlas / After-Hours Shelf",
+        "artifact": "docs/design/portfolio/drafts/20261007T004600Z-after-hours-shelf/design.json",
+        "sha256": "4e45d522ed55342709d5bc9218a07e3cb920baf8843f81958da2996d49f3bd51",
+        "used_for": [
+          "existing gallery composition",
+          "mechanical deck vocabulary",
+          "secondary appendix hierarchy"
+        ]
+      },
+      {
+        "name": "Sacred Computations atlas crop",
+        "artifact": "site/assets/gallery/sacred-computations-atlas.webp",
+        "sha256": "a35b4f75d95e5fadca506403c1e8b3abf83a4234fea5772129df8168e1b1def5",
+        "used_for": [
+          "Rendered-Systems-Gallery real preview"
+        ]
+      },
+      {
+        "name": "Sacred Computations matrix crop",
+        "artifact": "site/assets/gallery/sacred-computations-matrix.webp",
+        "sha256": "86ac0e47d9685baad230ce474deddefffd191aa3cee41044547a8c8f958fb8ac",
+        "used_for": [
+          "Rendered-Systems-Gallery real preview"
+        ]
+      }
+    ],
+    "inherited_moves": [
+      "paper record inside a darker field",
+      "fixed structural shell",
+      "mechanical scene cuts",
+      "serif/sans/mono typography jobs",
+      "hard-shadow artifact depth",
+      "external-link motion"
+    ],
+    "deliberate_departures": [
+      "#5C7650 is reserved for header/footer/opening structural surfaces",
+      "#A3B18A is reserved for thin breaker bars, scene seams, and structural cuts",
+      "ordinary card/tag/button borders remain neutral instead of inheriting breaker green",
+      "home header and hero read as one continuous structural window",
+      "legacy evidence pages join the same structural material through a shared late-loading stylesheet without rewriting their content layouts",
+      "Sacred Computations uses two cropped real application views instead of a generated placeholder"
+    ],
+    "intentional_repeat": true,
+    "repeat_reason": "The user explicitly requested a controlled refinement of the existing portfolio rather than a redesign."
+  },
+  "tokens": {
+    "surface_structural_green": "#5C7650",
+    "breaker_highlight": "#A3B18A",
+    "page_field": "#202826",
+    "signal_green_preserved": "#2d6a59"
+  },
+  "contrast": {
+    "white_on_structural_green": "5.05:1",
+    "structural_copy_on_structural_green": "4.66:1",
+    "ink_on_breaker_highlight": "7.23:1",
+    "note": "Breaker highlight is used as a non-text structural line when placed on structural green."
+  },
+  "implementation": {
+    "shared_stylesheet": "site/assets/visual-system.css",
+    "primary_family": "site/assets/portfolio.css + visual-system.css",
+    "legacy_family": "inline legacy CSS + visual-system.css loaded last",
+    "content_navigation_data_changed": false,
+    "gallery_data_extension_only": true,
+    "reduced_motion_preserved": true
+  }
+}

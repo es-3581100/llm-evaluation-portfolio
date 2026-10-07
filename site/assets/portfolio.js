@@ -32,9 +32,11 @@
     target.innerHTML=gallery.entries.map((entry,i)=>{
       const p=pm.get(entry.project_id);if(!p)return'';
       const link=(p.links||[]).find(x=>/Project page/i.test(x.label))||(p.links||[])[0];
-      const preview=entry.preview_image
-        ?`<img src="${esc(entry.preview_image)}" alt="" loading="lazy">`
-        :`<div class="gallery-visual gallery-visual--${esc(entry.visual||'system')}" aria-hidden="true"><span class="gallery-visual-index">${String(i+1).padStart(2,'0')}</span><span class="gallery-visual-title">${esc(p.title)}</span></div>`;
+      const preview=(entry.preview_images&&entry.preview_images.length)
+        ?`<div class="gallery-media-duo">${entry.preview_images.map(image=>`<figure><img src="${esc(image.src)}" alt="${esc(image.alt||p.title)}" loading="lazy"><figcaption>${esc(image.alt||p.title)}</figcaption></figure>`).join('')}</div>`
+        :(entry.preview_image
+          ?`<img src="${esc(entry.preview_image)}" alt="${esc(entry.preview_alt||p.title)}" loading="lazy">`
+          :`<div class="gallery-visual gallery-visual--${esc(entry.visual||'system')}" aria-hidden="true"><span class="gallery-visual-index">${String(i+1).padStart(2,'0')}</span><span class="gallery-visual-title">${esc(p.title)}</span></div>`);
       return `<article class="gallery-artifact gallery-artifact--${esc(entry.layout||'medium')}">${preview}<div class="gallery-caption"><div><div class="gallery-label">${esc(entry.label)}</div><h2>${esc(p.title)}</h2><p>${esc(entry.descriptor)}</p><div class="gallery-medium">${esc(entry.medium)}</div></div>${link?`<a class="${/^https?:/.test(link.url)?'external-link':''}" href="${esc(link.url)}" ${/^https?:/.test(link.url)?'target="_blank" rel="noreferrer"':''}>view ↗</a>`:''}</div></article>`;
     }).join('');
   }

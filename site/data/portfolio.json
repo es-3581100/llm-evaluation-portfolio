@@ -459,8 +459,19 @@
         "label": "Visual Builds",
         "descriptor": "Symbolic relationship atlas",
         "medium": "SymPy · graph · 3D matrix",
-        "layout": "landscape",
-        "visual": "matrix"
+        "layout": "feature-duo",
+        "visual": "matrix",
+        "preview_images": [
+          {
+            "src": "assets/gallery/sacred-computations-atlas.webp",
+            "alt": "Sacred Computations atlas view with the symbolic relationship graph and concept inspector."
+          },
+          {
+            "src": "assets/gallery/sacred-computations-matrix.webp",
+            "alt": "Sacred Computations computational matrix view with the interactive 3D lattice and signal controls."
+          }
+        ],
+        "source_url": "https://github.com/es-3581100/Kotlin-Studio/tree/main/Sacred-Computations-Map"
       },
       {
         "project_id": "chaos-coding-map",
