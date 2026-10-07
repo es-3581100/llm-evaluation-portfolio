@@ -23,6 +23,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Render shared site shell and discovery metadata
+        run: |
+          node tools/render-site-shell.mjs
+          node tools/render-discovery-metadata.mjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:

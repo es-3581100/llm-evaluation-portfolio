@@ -51,10 +51,10 @@ header.site .nav-link{
   border-color:rgba(255,255,255,.72);
 }
 .site-header .brand-mark::after{background:var(--structural-ink)}
-.site-header .brand-contact:hover,
-.site-header .brand-contact:focus-visible,
-.site-header .brand-contact:hover span,
-.site-header .brand-contact:focus-visible span{
+.site-header .brand-home:hover,
+.site-header .brand-home:focus-visible,
+.site-header .brand-home:hover span,
+.site-header .brand-home:focus-visible span{
   color:var(--structural-ink);
 }
 .site-header .main-nav a:hover,
@@ -282,6 +282,28 @@ main > .hero::after{
   .scene-navline.is-cut::before{height:1px;box-shadow:none}
 }
 
+
+/* Landing title composition + shared document inset. */
+html.js body[data-page="home"] .site-header{
+  position:fixed;top:0;left:0;right:0;width:100%;
+  transition:transform .34s var(--paper-ease),opacity .28s ease;
+}
+html.js body[data-page="home"].landing-header-pending .site-header{
+  opacity:0;transform:translateY(-100%);pointer-events:none;
+}
+html.js body[data-page="home"].landing-header-revealed .site-header{
+  opacity:1;transform:translateY(0);pointer-events:auto;
+}
+.document-shell{
+  padding-left:clamp(24px,3vw,36px);
+  padding-right:clamp(24px,3vw,36px);
+}
+@media(max-width:620px){
+  .document-shell{padding-left:18px;padding-right:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  html.js body[data-page="home"] .site-header{transition:none}
+}
 
 /* Dark field retained around the paper record. */
 body{

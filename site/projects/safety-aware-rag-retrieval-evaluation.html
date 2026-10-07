@@ -2,104 +2,18 @@
 <html lang="en">
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Safety-Aware RAG/Retrieval Evaluation</title>
+<title>Safety-Aware RAG/Retrieval Evaluation — Eric Sawtelle</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
-<style>
-:root{--bg:#f6f1e8;--surface:#fffdf8;--ink:#17212b;--muted:#5e6872;--accent:#22475e;--line:#ded6ca;--soft:#efe7da;}
-*{box-sizing:border-box}
-html{font-size:16px;scroll-behavior:smooth}
-body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:1rem;line-height:1.7;text-rendering:optimizeLegibility}
-a{color:var(--accent);text-decoration-thickness:0.08em;text-underline-offset:0.18em;transition:color 220ms ease,text-decoration-color 220ms ease,background-color 220ms ease,border-color 220ms ease,box-shadow 220ms ease,transform 220ms ease}
-a:hover{color:var(--ink);text-decoration-color:var(--ink)}
-a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:3px;border-radius:0.35rem}
-header.site{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding:0.65rem 1.25rem}
-header.site nav{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:0.25rem;flex-wrap:wrap}
-.brand{margin-right:auto;color:var(--ink);font-weight:840;letter-spacing:0.08em;text-decoration:none;font-size:0.95rem}
-.brand:hover{color:var(--accent)}
-.nav-link{display:inline-flex;align-items:center;min-height:2.75rem;padding:0.55rem 0.8rem;border:1px solid transparent;border-radius:999px;color:var(--muted);text-decoration:none;font-size:0.94rem;font-weight:700;letter-spacing:0.01em}
-.nav-link:hover{color:var(--ink);background:var(--soft);border-color:var(--line);transform:translateY(-1px)}
-.nav-link.is-active{color:var(--ink);background:var(--surface);border-color:var(--line);box-shadow:0 1px 0 rgba(23,33,43,0.06)}
-main{max-width:1040px;margin:0 auto;padding:3.75rem 1.5rem 4.5rem}
-footer.site{max-width:1040px;margin:0 auto;padding:1.4rem 1.5rem 2.25rem;color:var(--muted);font-size:0.9rem;border-top:1px solid var(--line)}
-h1,h2,h3{font-family:"Aptos Display","Segoe UI",ui-sans-serif,system-ui,-apple-system,sans-serif;color:var(--ink);font-weight:760;line-height:1.12;letter-spacing:-0.035em;margin:0 0 0.85rem}
-h1{font-size:clamp(2.25rem,7vw,4.15rem);max-width:13ch;margin-bottom:1rem}
-h2{font-size:clamp(1.45rem,3.5vw,2rem);margin-top:3rem}
-h3{font-size:clamp(1.12rem,2.4vw,1.35rem);letter-spacing:-0.025em}
-p{margin:0 0 1.15rem}
-ul{padding-left:1.25rem;margin:0 0 1.4rem}
-li{margin:0.35rem 0}
-code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono",monospace;font-size:0.92em;background:var(--soft);border:1px solid var(--line);border-radius:0.35rem;padding:0.08rem 0.28rem}
-.card-list{display:grid;gap:1rem;margin:1.25rem 0 0}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 0}
-.hero{padding:1rem 0 1.25rem;max-width:880px}
-.hero h1{max-width:100%;letter-spacing:-0.045em}
-.subtitle{font-size:clamp(1.35rem,3vw,2.1rem);line-height:1.25;margin-bottom:0.8rem;color:var(--accent);font-weight:760}
-.positioning{font-weight:760;color:var(--ink);letter-spacing:0.01em}
-.positioning-line{font-weight:760;color:var(--ink);letter-spacing:0.01em;margin-bottom:0.75rem}
-.detail-positioning{font-size:1.08rem;margin:0.25rem 0 1.4rem}
-.result{font-weight:700;color:var(--accent)}
-.actions{display:flex;gap:0.75rem;flex-wrap:wrap;margin:1.35rem 0}
-.button{display:inline-flex;align-items:center;min-height:2.7rem;padding:0.55rem 0.95rem;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:var(--surface);font-weight:760;text-decoration:none}
-.button:hover{background:var(--ink);border-color:var(--ink);color:var(--surface);transform:translateY(-1px)}
-.button.secondary{background:var(--surface);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
-.button.secondary:hover{background:var(--soft);color:var(--ink);border-color:var(--line)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.35rem 1.45rem;margin:1.15rem 0;box-shadow:0 1px 0 rgba(23,33,43,0.03);transition:transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease,background-color 220ms ease}
-.card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 16px 34px rgba(23,33,43,0.08);transform:translateY(-3px)}
-.card h2,.card h3{margin-top:0;margin-bottom:0.55rem}
-.card-title{display:flex;align-items:flex-start;justify-content:space-between;gap:0.9rem;flex-wrap:wrap}
-.card-title a{text-decoration:none}
-.project-card .meta{margin-bottom:0.75rem}
-.project-list{list-style:none;padding:0;margin:1.25rem 0 0;display:grid;gap:0.9rem}
-.project-list li{margin:0}
-.project-list a{font-weight:700;text-decoration:none}
-.badge{display:inline-flex;align-items:center;gap:0.35rem;min-height:1.75rem;padding:0.25rem 0.7rem;border:1px solid color-mix(in srgb,var(--accent) 24%,var(--line));border-radius:999px;background:color-mix(in srgb,var(--accent) 8%,var(--surface));color:var(--accent);font-size:0.78rem;font-weight:760;letter-spacing:0.025em;line-height:1.1;vertical-align:middle;white-space:nowrap}
-.badge.status{margin:0.05rem 0 0}
-.badge.corrected{background:color-mix(in srgb,var(--accent) 12%,var(--surface));border-color:color-mix(in srgb,var(--accent) 45%,var(--line));color:var(--accent)}
-.badge.preliminary,.badge.warn{background:var(--soft);border-color:var(--line);color:var(--ink);border-style:dashed}
-.badge.private{background:var(--soft);border-color:var(--ink);color:var(--ink)}
-.badge.review{background:var(--surface);border-color:var(--line);color:var(--muted)}
-.status-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin:0.75rem 0 1.7rem}
-table{border-collapse:separate;border-spacing:0;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:1rem 0 1.25rem}
-th,td{border-bottom:1px solid var(--line);padding:0.8rem 0.9rem;text-align:left;vertical-align:top}
-tr:last-child td{border-bottom:0}
-th{background:var(--soft);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted)}
-pre{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;overflow-x:auto}
-.note{background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:0.85rem 1rem;margin:1.15rem 0;color:var(--ink)}
-.boundary{background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:14px;padding:1rem 1.1rem;margin:1rem 0 1.35rem}
-.meta{color:var(--muted);font-size:0.98rem;line-height:1.65}
-.eyebrow{color:var(--muted);font-size:0.83rem;font-weight:760;letter-spacing:0.08em;text-transform:uppercase}
-ul.tags li{display:inline-block}
-@media (max-width:640px){
-header.site{position:static;padding:0.65rem 0.85rem}
-header.site nav{gap:0.35rem}
-.brand{width:100%;margin-right:0;min-height:2rem}
-.nav-link{min-height:2.9rem;padding:0.62rem 0.75rem;font-size:0.95rem}
-main{padding:2.5rem 1rem 3.25rem}
-footer.site{padding-left:1rem;padding-right:1rem}
-h1{font-size:2.35rem;max-width:100%}
-h2{margin-top:2.25rem}
-.grid{grid-template-columns:1fr}
-.card{padding:1.1rem;margin:0.9rem 0;border-radius:16px}
-.card:hover{transform:none;box-shadow:0 1px 0 rgba(23,33,43,0.03)}
-table{display:block;overflow-x:auto;border-radius:12px}
-th,td{padding:0.7rem;min-width:8rem}
-}
-</style>
-<link rel="stylesheet" href="/llm-evaluation-portfolio/assets/visual-system.css"><!-- BEGIN GENERATED DISCOVERY METADATA -->
+
+<link rel="stylesheet" href="/llm-evaluation-portfolio/assets/portfolio.css"><link rel="stylesheet" href="/llm-evaluation-portfolio/assets/evidence.css"><link rel="stylesheet" href="/llm-evaluation-portfolio/assets/visual-system.css"><!-- BEGIN GENERATED DISCOVERY METADATA -->
 <link rel="alternate" type="application/json" href="/llm-evaluation-portfolio/data/discovery-index.json" title="Machine-readable portfolio index">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Safety-Aware RAG/Retrieval Evaluation","url":"https://es-3581100.github.io/llm-evaluation-portfolio/projects/safety-aware-rag-retrieval-evaluation.html","author":{"@id":"https://es-3581100.github.io/llm-evaluation-portfolio/#eric-sawtelle"},"isPartOf":{"@id":"https://es-3581100.github.io/llm-evaluation-portfolio/#website"},"about":["LLM Evaluation","Retrieval-Augmented Generation","Retrieval Evaluation","AI Reliability","Grounded Generation"],"keywords":["LLM Evaluation","RAG","Retrieval Evaluation","Grounding","Abstention","AI Reliability"]}</script>
 <!-- END GENERATED DISCOVERY METADATA --></head>
-<body>
-<header class="site"><nav>
-<a class="brand" href="/llm-evaluation-portfolio/">ERIC SAWTELLE</a>
-<a class="nav-link is-active" href="/llm-evaluation-portfolio/projects/index.html">Work</a>
-<a class="nav-link " href="/llm-evaluation-portfolio/case-studies.html">Case Studies</a>
-<a class="nav-link " href="/llm-evaluation-portfolio/skills.html">Skills</a>
-<a class="nav-link " href="/llm-evaluation-portfolio/about.html">About</a>
-<a class="nav-link " href="/llm-evaluation-portfolio/contact.html">Contact</a>
-</nav></header>
-<main>
+<body class="evidence-page" data-page="research-detail">
+<header class="site-header"><div class="nav-shell"><div class="brand"><a class="brand-mark external-link" href="https://www.linkedin.com/in/eric-sawtelle-0b021226b/" target="_blank" rel="noreferrer" aria-label="Eric Sawtelle on LinkedIn">ES</a><a class="brand-copy brand-home" href="/llm-evaluation-portfolio/"><strong>Eric Sawtelle</strong><span>systems / interfaces / evidence</span></a></div><nav class="main-nav" aria-label="Primary"><a href="/llm-evaluation-portfolio/#branches">Branches</a><a href="/llm-evaluation-portfolio/projects/index.html">Work</a><a href="/llm-evaluation-portfolio/case-studies.html" aria-current="page">Research archive</a><a href="/llm-evaluation-portfolio/about.html">About</a><a href="/llm-evaluation-portfolio/contact.html">Contact</a><a class="external-link" href="https://github.com/es-3581100" target="_blank" rel="noreferrer">GitHub ↗</a></nav></div></header>
+<main class="page-shell evidence-shell evidence-detail">
 <nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
+<div class="eyebrow">Research archive / case study</div>
 <h1>Safety-Aware RAG/Retrieval Evaluation</h1>
 <div class="status-row">
 <span class="badge status corrected">Corrected</span>
