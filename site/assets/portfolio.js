@@ -25,6 +25,19 @@
     filters.addEventListener('click',e=>{const b=e.target.closest('button[data-filter]');if(!b)return;active=b.dataset.filter;draw();});draw();
   }
   function renderAbout(data){fillIdentity(data);const target=document.getElementById('about-branches');if(target)target.innerHTML=data.branches.map(b=>`<div><b>${esc(b.number)} / ${esc(b.label)}</b>${esc(b.short)}</div>`).join('');}
+  function renderRenderedGallery(data){
+    const target=document.getElementById('rendered-gallery'),gallery=data.rendered_gallery;
+    if(!target||!gallery)return;
+    const pm=projectMap(data);
+    target.innerHTML=gallery.entries.map((entry,i)=>{
+      const p=pm.get(entry.project_id);if(!p)return'';
+      const link=(p.links||[]).find(x=>/Project page/i.test(x.label))||(p.links||[])[0];
+      const preview=entry.preview_image
+        ?`<img src="${esc(entry.preview_image)}" alt="" loading="lazy">`
+        :`<div class="gallery-visual gallery-visual--${esc(entry.visual||'system')}" aria-hidden="true"><span class="gallery-visual-index">${String(i+1).padStart(2,'0')}</span><span class="gallery-visual-title">${esc(p.title)}</span></div>`;
+      return `<article class="gallery-artifact gallery-artifact--${esc(entry.layout||'medium')}">${preview}<div class="gallery-caption"><div><div class="gallery-label">${esc(entry.label)}</div><h2>${esc(p.title)}</h2><p>${esc(entry.descriptor)}</p><div class="gallery-medium">${esc(entry.medium)}</div></div>${link?`<a class="${/^https?:/.test(link.url)?'external-link':''}" href="${esc(link.url)}" ${/^https?:/.test(link.url)?'target="_blank" rel="noreferrer"':''}>view ↗</a>`:''}</div></article>`;
+    }).join('');
+  }
   function wireAboutScenes(){
     const stage=document.getElementById('about-stage'),seam=document.getElementById('scene-seam');
     if(!stage||!seam)return;
@@ -60,14 +73,17 @@
       if(cutLine)cutLine.classList.add('is-cut');
       stage.animate([{transform:'translateY(0)'},{transform:'translateY(1px)'},{transform:'translateY(0)'}],{duration:70,easing:'steps(2,end)'});
       to.classList.add('is-transitioning','is-arriving');
-      to.style.transform=dir>0?'translateY(100%)':'translateY(-100%)';
+      const galleryEntry=to.dataset.sceneKind==='gallery'&&dir>0;
+      to.style.transform=galleryEntry?'translateY(100%) rotate(3deg)':(dir>0?'translateY(100%)':'translateY(-100%)');
       to.setAttribute('aria-hidden','false');
       if('inert' in to)to.inert=false;
       await wait(70);
       if(push)history.pushState({scene:to.id},'',location.pathname+location.search+'#'+to.id);
-      const incoming=dir>0
-        ?[{transform:'translateY(100%)',offset:0},{transform:'translateY(98%)',offset:.06},{transform:'translateY(94%)',offset:.11},{transform:'translateY(86%)',offset:.18},{transform:'translateY(0)',offset:.84},{transform:'translateY(-2px)',offset:.93},{transform:'translateY(0)',offset:1}]
-        :[{transform:'translateY(-100%)',offset:0},{transform:'translateY(-98%)',offset:.06},{transform:'translateY(-94%)',offset:.11},{transform:'translateY(-86%)',offset:.18},{transform:'translateY(0)',offset:.84},{transform:'translateY(2px)',offset:.93},{transform:'translateY(0)',offset:1}];
+      const incoming=galleryEntry
+        ?[{transform:'translateY(100%) rotate(3deg)',offset:0},{transform:'translateY(98%) rotate(3deg)',offset:.06},{transform:'translateY(94%) rotate(2.7deg)',offset:.11},{transform:'translateY(86%) rotate(2.2deg)',offset:.18},{transform:'translateY(0) rotate(0deg)',offset:.84},{transform:'translateY(-2px) rotate(0deg)',offset:.93},{transform:'translateY(0) rotate(0deg)',offset:1}]
+        :(dir>0
+          ?[{transform:'translateY(100%)',offset:0},{transform:'translateY(98%)',offset:.06},{transform:'translateY(94%)',offset:.11},{transform:'translateY(86%)',offset:.18},{transform:'translateY(0)',offset:.84},{transform:'translateY(-2px)',offset:.93},{transform:'translateY(0)',offset:1}]
+          :[{transform:'translateY(-100%)',offset:0},{transform:'translateY(-98%)',offset:.06},{transform:'translateY(-94%)',offset:.11},{transform:'translateY(-86%)',offset:.18},{transform:'translateY(0)',offset:.84},{transform:'translateY(2px)',offset:.93},{transform:'translateY(0)',offset:1}]);
       const outgoing=dir>0
         ?[{transform:'translateY(0)'},{transform:'translateY(-100%)'}]
         :[{transform:'translateY(0)'},{transform:'translateY(100%)'}];
@@ -103,6 +119,7 @@
     const [cases,skills]=await Promise.all([getDoc('case-studies.html'),getDoc('skills.html')]);
     if(cases)[...cases.querySelectorAll('article.project-card')].forEach(card=>{const titleLink=card.querySelector('h2 a,h3 a');if(!titleLink)return;entries.push({source:'Case study',title:titleLink.textContent.trim(),body:card.textContent.replace(/\s+/g,' ').trim(),href:titleLink.getAttribute('href')||root+'case-studies.html'});});
     if(skills)[...skills.querySelectorAll('h2[id]')].forEach(h=>{const next=h.nextElementSibling;entries.push({source:'Skill',title:h.textContent.trim(),body:(next?next.textContent:'').replace(/\s+/g,' ').trim(),href:root+'skills.html#'+h.id});});
+    if(data.rendered_gallery)entries.push({source:'Appendix',title:data.rendered_gallery.title,body:[data.rendered_gallery.intro,data.rendered_gallery.coda,...data.rendered_gallery.entries.map(x=>x.descriptor+' '+x.medium)].join(' '),href:root+'about.html#rendered-systems-gallery'});
     entries.push(
       {source:'Contact',title:'Contact Eric Sawtelle',body:'contact email collaboration recruiting hiring github linkedin resume work index Eric Sawtelle e.sawtelle358@gmail.com',href:root+'contact.html#contact-card-title'},
       {source:'Contact',title:'Reference available on request',body:'reference references professional reference available on request request a reference email Eric Sawtelle',href:root+'contact.html#reference'},
@@ -140,5 +157,5 @@
     if(back)back.addEventListener('click',event=>{if(document.referrer&&new URL(document.referrer).origin===location.origin){event.preventDefault();history.back();}});
   }
   async function initSearch(data){const entries=await buildSearchIndex(data);wireSearchInputs(entries);if(page==='search')renderSearchResults(entries);}
-  Promise.all([fetch(dataUrl).then(r=>{if(!r.ok)throw new Error('portfolio data '+r.status);return r.json()}),fetch(resumeUrl).then(r=>r.ok?r.json():null)]).then(([data,resume])=>{if(page==='home')renderHome(data);if(page==='work')renderWork(data);if(page==='about'){renderAbout(data);wireAboutScenes();}if(page==='contact')wireContact(data);if(page==='work'||page==='search')initSearch(data);if(resume)renderResume(resume);document.documentElement.classList.add('data-ready');}).catch(err=>{document.querySelectorAll('[data-dynamic]').forEach(el=>el.innerHTML=`<div class="error-state">The portfolio data could not be loaded. Static navigation and project links remain available. ${esc(err.message)}</div>`);});
+  Promise.all([fetch(dataUrl).then(r=>{if(!r.ok)throw new Error('portfolio data '+r.status);return r.json()}),fetch(resumeUrl).then(r=>r.ok?r.json():null)]).then(([data,resume])=>{if(page==='home')renderHome(data);if(page==='work')renderWork(data);if(page==='about'){renderAbout(data);renderRenderedGallery(data);wireAboutScenes();}if(page==='contact')wireContact(data);if(page==='work'||page==='search')initSearch(data);if(resume)renderResume(resume);document.documentElement.classList.add('data-ready');}).catch(err=>{document.querySelectorAll('[data-dynamic]').forEach(el=>el.innerHTML=`<div class="error-state">The portfolio data could not be loaded. Static navigation and project links remain available. ${esc(err.message)}</div>`);});
 })();

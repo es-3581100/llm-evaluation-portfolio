@@ -10,10 +10,22 @@
     "availability": "Independent builder · open to applied AI systems, agent engineering, developer tooling, and experimental product work"
   },
   "principles": [
-    {"title": "Make invisible systems visible", "body": "Turn model state, software structure, provenance, authority, and mathematical relationships into surfaces people can inspect."},
-    {"title": "Separate reasoning from authority", "body": "A model can propose, search, explain, or plan without silently acquiring permission to execute."},
-    {"title": "Build from evidence outward", "body": "Use hashes, receipts, tests, provenance, deterministic fixtures, and explicit claim boundaries as architecture—not cleanup."},
-    {"title": "Cross boundaries deliberately", "body": "Move between Kotlin, Go, Python, browser systems, native runtimes, symbolic math, and ML when the problem actually benefits from it."}
+    {
+      "title": "Make invisible systems visible",
+      "body": "Turn model state, software structure, provenance, authority, and mathematical relationships into surfaces people can inspect."
+    },
+    {
+      "title": "Separate reasoning from authority",
+      "body": "A model can propose, search, explain, or plan without silently acquiring permission to execute."
+    },
+    {
+      "title": "Build from evidence outward",
+      "body": "Use hashes, receipts, tests, provenance, deterministic fixtures, and explicit claim boundaries as architecture—not cleanup."
+    },
+    {
+      "title": "Cross boundaries deliberately",
+      "body": "Move between Kotlin, Go, Python, browser systems, native runtimes, symbolic math, and ML when the problem actually benefits from it."
+    }
   ],
   "branches": [
     {
@@ -22,7 +34,11 @@
       "label": "Agentic systems",
       "short": "Control planes, model routing, bounded execution, persistent state.",
       "intro": "I design agent systems as operating structures rather than giant prompts: distinct roles, scoped context, explicit handoffs, durable state, verification, and human authority where it matters.",
-      "project_ids": ["don-squad", "kolmaf-ai", "goblin-logic-manager"]
+      "project_ids": [
+        "don-squad",
+        "kolmaf-ai",
+        "goblin-logic-manager"
+      ]
     },
     {
       "id": "ai-native-apps",
@@ -30,7 +46,10 @@
       "label": "AI-native applications",
       "short": "Products that treat model capability as part of the application architecture.",
       "intro": "These projects integrate model and ML capabilities into real application workflows while keeping capability declarations, local state, replay, and failure behavior inspectable.",
-      "project_ids": ["cosmosis", "tokenizer-lab"]
+      "project_ids": [
+        "cosmosis",
+        "tokenizer-lab"
+      ]
     },
     {
       "id": "computational-interfaces",
@@ -38,7 +57,11 @@
       "label": "Computational interfaces",
       "short": "Interactive visual systems for mathematics, models, and complex state.",
       "intro": "A recurring design goal is to turn abstract relationships into something navigable: atlases, matrices, graphs, microscopes, live renderers, and technical workstations.",
-      "project_ids": ["sacred-computations", "fractal-studio", "chaos-coding-map"]
+      "project_ids": [
+        "sacred-computations",
+        "fractal-studio",
+        "chaos-coding-map"
+      ]
     },
     {
       "id": "knowledge-provenance",
@@ -46,7 +69,11 @@
       "label": "Knowledge & provenance",
       "short": "Durable context, source lineage, project intelligence, and reusable evidence.",
       "intro": "I build systems that preserve where information came from, how it changed, what an agent may infer from it, and how humans can inspect the same underlying project model.",
-      "project_ids": ["mm-manager", "ingestwowww", "ash-wiki"]
+      "project_ids": [
+        "mm-manager",
+        "ingestwowww",
+        "ash-wiki"
+      ]
     },
     {
       "id": "evaluation-reliability",
@@ -54,7 +81,11 @@
       "label": "Evaluation & reliability",
       "short": "Adversarial testing, grounded retrieval, temporal authority, and safety boundaries.",
       "intro": "Evaluation was the foundation of my AI work and is now the verification layer underneath the larger systems: measure what actually happened, preserve caveats, and keep claims bounded by evidence.",
-      "project_ids": ["rag-eval", "belief-lifecycle", "red-team-guide"]
+      "project_ids": [
+        "rag-eval",
+        "belief-lifecycle",
+        "red-team-guide"
+      ]
     },
     {
       "id": "human-centered-ai",
@@ -62,7 +93,9 @@
       "label": "Human-centered AI",
       "short": "Practical systems that shrink the knowledge gap between capable models and ordinary users.",
       "intro": "Not every useful AI project should become a full-stack application. I also explore small, repeatable workflows that help people turn model capability into useful everyday outcomes.",
-      "project_ids": ["diy-newsletter"]
+      "project_ids": [
+        "diy-newsletter"
+      ]
     }
   ],
   "projects": [
@@ -74,8 +107,18 @@
       "type": "OpenCode control plane",
       "summary": "A local-first agent family that routes planning, implementation, verification, review, documentation, and deployment across bounded specialist roles.",
       "signal": "1 orchestrator · 14 specialist subagents",
-      "tags": ["orchestration", "model routing", "structured handoff", "verification"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/don-squad"}]
+      "tags": [
+        "orchestration",
+        "model routing",
+        "structured handoff",
+        "verification"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/don-squad"
+        }
+      ]
     },
     {
       "id": "kolmaf-ai",
@@ -85,10 +128,21 @@
       "type": "LLM/runtime control desk",
       "summary": "An experimental local-first control layer that keeps LLM reasoning, evidence, permission, execution, and independent runtime readback as separate responsibilities.",
       "signal": "Reasoning ≠ permission ≠ execution",
-      "tags": ["authority boundaries", "runtime truth", "tool orchestration", "local-first"],
+      "tags": [
+        "authority boundaries",
+        "runtime truth",
+        "tool orchestration",
+        "local-first"
+      ],
       "links": [
-        {"label": "Project page", "url": "https://doncannoli-burns.github.io/kolmaf-ai-desktop/"},
-        {"label": "GitHub", "url": "https://github.com/donCannoli-burns/kolmaf-ai-desktop"}
+        {
+          "label": "Project page",
+          "url": "https://doncannoli-burns.github.io/kolmaf-ai-desktop/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/donCannoli-burns/kolmaf-ai-desktop"
+        }
       ]
     },
     {
@@ -99,10 +153,21 @@
       "type": "Model-aware agent runtime",
       "summary": "A compact development-agent system that separates stable model-neutral behavior from thin model-family overlays and keeps generated agents reproducible and auditable.",
       "signal": "No expansion without validation",
-      "tags": ["OpenCode", "model overlays", "deterministic render", "developer agents"],
+      "tags": [
+        "OpenCode",
+        "model overlays",
+        "deterministic render",
+        "developer agents"
+      ],
       "links": [
-        {"label": "Manual", "url": "https://es-3581100.github.io/Goblin-Logic-Manager/"},
-        {"label": "GitHub", "url": "https://github.com/es-3581100/Goblin-Logic-Manager"}
+        {
+          "label": "Manual",
+          "url": "https://es-3581100.github.io/Goblin-Logic-Manager/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/Goblin-Logic-Manager"
+        }
       ]
     },
     {
@@ -113,8 +178,18 @@
       "type": "AI-native image workstation",
       "summary": "A Kotlin + OPENRNDR image generation and editing workstation with immutable references, non-destructive lineage, capability-driven providers, native ML adapters, and deterministic offline smoke paths.",
       "signal": "Kotlin · OPENRNDR · SQLite · native ML",
-      "tags": ["image generation", "computer vision", "provider adapters", "workstation UI"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/cosmosis-image-studio"}]
+      "tags": [
+        "image generation",
+        "computer vision",
+        "provider adapters",
+        "workstation UI"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/cosmosis-image-studio"
+        }
+      ]
     },
     {
       "id": "tokenizer-lab",
@@ -124,8 +199,18 @@
       "type": "Browser model-inspection tool",
       "summary": "A lightweight visual tokenizer explorer for comparing segmentation and token density across OpenAI-style, DeepSeek, and clearly labeled Claude-proxy workflows.",
       "signal": "One-file browser application",
-      "tags": ["tokenization", "model comparison", "visual inspection", "local processing"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/LLM-Tokenizer-Lab"}]
+      "tags": [
+        "tokenization",
+        "model comparison",
+        "visual inspection",
+        "local processing"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/LLM-Tokenizer-Lab"
+        }
+      ]
     },
     {
       "id": "sacred-computations",
@@ -135,8 +220,18 @@
       "type": "Symbolic relationship atlas",
       "summary": "A provenance-first atlas that connects recurrences, ratios, geometry, SymPy, matrices, numerical kernels, and executable expressions through graph, route, source, and 3D matrix views.",
       "signal": "53 concepts · 85 relations · 245 local capsules",
-      "tags": ["SymPy", "3D matrix", "provenance", "mathematical visualization"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/Kotlin-Studio/tree/main/Sacred-Computations-Map"}]
+      "tags": [
+        "SymPy",
+        "3D matrix",
+        "provenance",
+        "mathematical visualization"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/Kotlin-Studio/tree/main/Sacred-Computations-Map"
+        }
+      ]
     },
     {
       "id": "fractal-studio",
@@ -146,8 +241,18 @@
       "type": "GPU interactive explorer",
       "summary": "A Kotlin + OPENRNDR fractal explorer where Kotlin owns state and orchestration while a GPU shader owns per-pixel complex iteration, with deterministic animation and preset semantics.",
       "signal": "Kotlin state · GPU complex iteration",
-      "tags": ["OPENRNDR", "GLSL", "fractal math", "interactive graphics"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/Kotlin-Studio/tree/main/Fractal-Generator"}]
+      "tags": [
+        "OPENRNDR",
+        "GLSL",
+        "fractal math",
+        "interactive graphics"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/Kotlin-Studio/tree/main/Fractal-Generator"
+        }
+      ]
     },
     {
       "id": "chaos-coding-map",
@@ -157,8 +262,18 @@
       "type": "Computational cartography",
       "summary": "An offline-first map connecting fractal mathematics, chaos, algorithms, rendering, machine models, creative coding, routes, and Q-learning experiments without promoting generated links into truth.",
       "signal": "40 seed nodes · 102 preserved edges",
-      "tags": ["graph UI", "routing", "Q-learning lab", "provenance"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/Kotlin-Studio/tree/main/Chaos-Coding-Map"}]
+      "tags": [
+        "graph UI",
+        "routing",
+        "Q-learning lab",
+        "provenance"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/Kotlin-Studio/tree/main/Chaos-Coding-Map"
+        }
+      ]
     },
     {
       "id": "mm-manager",
@@ -168,8 +283,18 @@
       "type": "Human/agent project intelligence",
       "summary": "A local-first project model that turns repositories, references, notes, structural evidence, semantic overlays, and runtime traces into a shared human-and-agent observatory.",
       "signal": "The project model around the model",
-      "tags": ["project intelligence", "semantic runtime", "context delivery", "provenance"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/MM-manager"}]
+      "tags": [
+        "project intelligence",
+        "semantic runtime",
+        "context delivery",
+        "provenance"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/MM-manager"
+        }
+      ]
     },
     {
       "id": "ingestwowww",
@@ -179,8 +304,18 @@
       "type": "Cross-browser ingest system",
       "summary": "A browser capture pipeline that turns live pages into durable, portable human/agent artifacts with normalized structure, NDJSON records, manifests, hashes, provenance, and inert capsule exports.",
       "signal": "Discover → capture → normalize → package → receipt",
-      "tags": ["browser extension", "agent capsules", "NDJSON", "portable context"],
-      "links": [{"label": "GitHub", "url": "https://github.com/es-3581100/IngestWowww"}]
+      "tags": [
+        "browser extension",
+        "agent capsules",
+        "NDJSON",
+        "portable context"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/IngestWowww"
+        }
+      ]
     },
     {
       "id": "ash-wiki",
@@ -190,10 +325,21 @@
       "type": "Provenance-first static wiki",
       "summary": "A static KoLmafia script compendium that keeps script bytes beside source, hash, credit, license evidence, generated metadata, indexes, and conservative risk signals.",
       "signal": "Archive + machine records + static wiki",
-      "tags": ["Go", "static generation", "license gates", "catalog systems"],
+      "tags": [
+        "Go",
+        "static generation",
+        "license gates",
+        "catalog systems"
+      ],
       "links": [
-        {"label": "Project page", "url": "https://doncannoli-burns.github.io/master-ash-catalog/"},
-        {"label": "GitHub", "url": "https://github.com/donCannoli-burns/master-ash-catalog"}
+        {
+          "label": "Project page",
+          "url": "https://doncannoli-burns.github.io/master-ash-catalog/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/donCannoli-burns/master-ash-catalog"
+        }
       ]
     },
     {
@@ -204,8 +350,18 @@
       "type": "Evaluation benchmark",
       "summary": "A 74-question benchmark for grounding, abstention, authority conflicts, unsupported requests, and live-state dependency with corrected BM25 score-direction caveats preserved publicly.",
       "signal": "74 questions · bounded corrected claims",
-      "tags": ["RAG", "grounding", "abstention", "adversarial evaluation"],
-      "links": [{"label": "Case study", "url": "/llm-evaluation-portfolio/projects/safety-aware-rag-retrieval-evaluation.html"}]
+      "tags": [
+        "RAG",
+        "grounding",
+        "abstention",
+        "adversarial evaluation"
+      ],
+      "links": [
+        {
+          "label": "Case study",
+          "url": "/llm-evaluation-portfolio/projects/safety-aware-rag-retrieval-evaluation.html"
+        }
+      ]
     },
     {
       "id": "belief-lifecycle",
@@ -215,8 +371,18 @@
       "type": "Persistent-agent reliability research",
       "summary": "A deterministic experimental architecture for preventing previously correct but outdated beliefs from continuing to authorize actions in long-lived agents.",
       "signal": "750 frozen validation runs",
-      "tags": ["temporal authority", "agent memory", "simulation", "statistical evaluation"],
-      "links": [{"label": "Case study", "url": "/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html"}]
+      "tags": [
+        "temporal authority",
+        "agent memory",
+        "simulation",
+        "statistical evaluation"
+      ],
+      "links": [
+        {
+          "label": "Case study",
+          "url": "/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html"
+        }
+      ]
     },
     {
       "id": "red-team-guide",
@@ -226,8 +392,18 @@
       "type": "Defensive evaluation methodology",
       "summary": "A defensive framework for testing tool-using AI agents across prompt injection, memory persistence, MCP/tool boundaries, canary design, evidence chains, and claim verification.",
       "signal": "2,252 source sections audited",
-      "tags": ["red teaming", "agent security", "MCP", "canary tests"],
-      "links": [{"label": "Case study", "url": "/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html"}]
+      "tags": [
+        "red teaming",
+        "agent security",
+        "MCP",
+        "canary tests"
+      ],
+      "links": [
+        {
+          "label": "Case study",
+          "url": "/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html"
+        }
+      ]
     },
     {
       "id": "diy-newsletter",
@@ -237,11 +413,79 @@
       "type": "Practical AI literacy",
       "summary": "A step-by-step path for using an accessible coding model and GitHub Pages to create, host, and maintain a useful monthly newsletter without servers, subscriptions, or a full-stack build.",
       "signal": "Small AI workflow → real-world outcome",
-      "tags": ["AI literacy", "Qwen", "GitHub Pages", "human workflow"],
+      "tags": [
+        "AI literacy",
+        "Qwen",
+        "GitHub Pages",
+        "human workflow"
+      ],
       "links": [
-        {"label": "Live", "url": "https://es-3581100.github.io/diy-monthly-newsletter-free/"},
-        {"label": "GitHub", "url": "https://github.com/es-3581100/diy-monthly-newsletter-free"}
+        {
+          "label": "Live",
+          "url": "https://es-3581100.github.io/diy-monthly-newsletter-free/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/es-3581100/diy-monthly-newsletter-free"
+        }
       ]
     }
-  ]
+  ],
+  "rendered_gallery": {
+    "id": "rendered-systems-gallery",
+    "title": "Rendered-Systems-Gallery",
+    "eyebrow": "Appendix / after-hours shelf",
+    "intro": "Not a separate design practice—just a record of the places where systems work crossed into interface, visualization, rendering, and visual experimentation.",
+    "coda": "Some projects end at the architecture. Some keep going until the system has a face.",
+    "entries": [
+      {
+        "project_id": "cosmosis",
+        "label": "Rendered Systems",
+        "descriptor": "Interactive image system",
+        "medium": "Kotlin · OPENRNDR",
+        "layout": "wide",
+        "visual": "studio"
+      },
+      {
+        "project_id": "fractal-studio",
+        "label": "Interactive Studies",
+        "descriptor": "GPU-first complex-plane explorer",
+        "medium": "Kotlin · OPENRNDR · GLSL",
+        "layout": "tall",
+        "visual": "fractal"
+      },
+      {
+        "project_id": "sacred-computations",
+        "label": "Visual Builds",
+        "descriptor": "Symbolic relationship atlas",
+        "medium": "SymPy · graph · 3D matrix",
+        "layout": "landscape",
+        "visual": "matrix"
+      },
+      {
+        "project_id": "chaos-coding-map",
+        "label": "Experiments",
+        "descriptor": "Computational cartography",
+        "medium": "Graph UI · local-first",
+        "layout": "compact",
+        "visual": "map"
+      },
+      {
+        "project_id": "kolmaf-ai",
+        "label": "Tools",
+        "descriptor": "Human-gated runtime control desk",
+        "medium": "Local-first system interface",
+        "layout": "medium",
+        "visual": "control"
+      },
+      {
+        "project_id": "ash-wiki",
+        "label": "Artifacts",
+        "descriptor": "Provenance-first script compendium",
+        "medium": "Go · static system interface",
+        "layout": "wide-short",
+        "visual": "archive"
+      }
+    ]
+  }
 }
