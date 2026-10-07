@@ -1,0 +1,1035 @@
+{
+  "schema_version": "portfolio-discovery.v1",
+  "last_reviewed": "2026-10-06",
+  "market_vocabulary_as_of": "2026-10-06",
+  "canonical_url": "https://es-3581100.github.io/llm-evaluation-portfolio/data/discovery-index.json",
+  "purpose": "Public, machine-readable claims graph for portfolio discovery. Terms marked evidenced are backed by listed portfolio artifacts; market aliases aid discovery and are not additional competency claims.",
+  "person": {
+    "name": "Eric Sawtelle",
+    "canonical_url": "https://es-3581100.github.io/llm-evaluation-portfolio/",
+    "self_described_title": "Experimental AI Systems Designer & Agentic Engineer",
+    "description": "Independent builder working across agentic systems, AI-native applications, evaluation and reliability, knowledge/provenance systems, developer tooling, and technical visualization.",
+    "same_as": [
+      "https://github.com/es-3581100",
+      "https://www.linkedin.com/in/eric-sawtelle-0b021226b/"
+    ]
+  },
+  "role_alignment": [
+    {
+      "label": "AI Systems Engineer",
+      "relationship": "portfolio_alignment",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai",
+        "goblin-logic-manager",
+        "mm-manager"
+      ]
+    },
+    {
+      "label": "Applied AI Engineer",
+      "relationship": "portfolio_alignment",
+      "evidence": [
+        "cosmosis",
+        "don-squad",
+        "rag-eval",
+        "tokenizer-lab"
+      ]
+    },
+    {
+      "label": "Agentic AI Engineer",
+      "relationship": "portfolio_alignment",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "label": "AI Evaluation Engineer",
+      "relationship": "portfolio_alignment",
+      "evidence": [
+        "rag-eval",
+        "belief-lifecycle",
+        "red-team-guide",
+        "goal-hijacking"
+      ]
+    },
+    {
+      "label": "AI Reliability Engineer",
+      "relationship": "portfolio_alignment",
+      "evidence": [
+        "belief-lifecycle",
+        "rag-eval",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "label": "Developer Tools Engineer",
+      "relationship": "portfolio_alignment",
+      "evidence": [
+        "goblin-logic-manager",
+        "don-squad",
+        "mm-manager"
+      ]
+    },
+    {
+      "label": "Generative AI Engineer",
+      "relationship": "portfolio_alignment",
+      "evidence": [
+        "cosmosis",
+        "tokenizer-lab",
+        "don-squad"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "term": "Agentic AI Systems",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Agent Orchestration",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "term": "Multi-Agent Systems",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad"
+      ]
+    },
+    {
+      "term": "Model Routing",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Bounded Execution",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Tool Use",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "kolmaf-ai",
+        "red-team-guide"
+      ]
+    },
+    {
+      "term": "Model Context Protocol (MCP)",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "red-team-guide",
+        "skills-mcp"
+      ]
+    },
+    {
+      "term": "LLM Evaluation",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "rag-eval",
+        "belief-lifecycle",
+        "red-team-guide"
+      ]
+    },
+    {
+      "term": "Retrieval-Augmented Generation",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "rag-eval"
+      ]
+    },
+    {
+      "term": "Retrieval Evaluation",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "rag-eval"
+      ]
+    },
+    {
+      "term": "AI Safety",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "red-team-guide",
+        "goal-hijacking",
+        "belief-lifecycle"
+      ]
+    },
+    {
+      "term": "Safety Gating",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "goal-hijacking",
+        "red-team-guide",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "term": "Human-in-the-Loop Systems",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "kolmaf-ai",
+        "about-principles"
+      ]
+    },
+    {
+      "term": "AI Reliability",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "belief-lifecycle",
+        "rag-eval",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "term": "Agent Memory and Persistent State",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "belief-lifecycle",
+        "don-squad"
+      ]
+    },
+    {
+      "term": "Context Management",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "mm-manager",
+        "ingestwowww",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Provenance",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww",
+        "mm-manager",
+        "ash-wiki",
+        "sacred-computations"
+      ]
+    },
+    {
+      "term": "Data Ingestion",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww"
+      ]
+    },
+    {
+      "term": "Developer Tooling",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "goblin-logic-manager",
+        "don-squad",
+        "mm-manager"
+      ]
+    },
+    {
+      "term": "Technical Visualization",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "sacred-computations",
+        "fractal-studio",
+        "chaos-coding-map"
+      ]
+    },
+    {
+      "term": "Deterministic Verification",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "belief-lifecycle",
+        "don-squad",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Runtime Inspection",
+      "type": "skill",
+      "status": "evidenced",
+      "evidence": [
+        "kolmaf-ai",
+        "mm-manager"
+      ]
+    }
+  ],
+  "technologies": [
+    {
+      "term": "Python",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "skills-python",
+        "belief-lifecycle",
+        "don-squad"
+      ]
+    },
+    {
+      "term": "Kotlin",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "cosmosis",
+        "fractal-studio",
+        "sacred-computations"
+      ]
+    },
+    {
+      "term": "JavaScript",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww",
+        "portfolio-js"
+      ]
+    },
+    {
+      "term": "HTML/CSS",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "portfolio-html",
+        "portfolio-css"
+      ]
+    },
+    {
+      "term": "Go",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "ash-wiki"
+      ]
+    },
+    {
+      "term": "OPENRNDR",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "cosmosis",
+        "fractal-studio"
+      ]
+    },
+    {
+      "term": "GLSL",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "fractal-studio"
+      ]
+    },
+    {
+      "term": "SymPy",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "sacred-computations"
+      ]
+    },
+    {
+      "term": "SQLite",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "cosmosis"
+      ]
+    },
+    {
+      "term": "NDJSON",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww"
+      ]
+    },
+    {
+      "term": "GitHub Pages",
+      "type": "technology",
+      "status": "evidenced",
+      "evidence": [
+        "diy-newsletter",
+        "portfolio-html"
+      ]
+    }
+  ],
+  "ai_concepts": [
+    {
+      "term": "AI Agents",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Agent Control Planes",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "term": "Agent Harnesses / Runtimes",
+      "status": "evidenced",
+      "evidence": [
+        "goblin-logic-manager",
+        "kolmaf-ai",
+        "don-squad"
+      ]
+    },
+    {
+      "term": "Grounded Generation",
+      "status": "evidenced",
+      "evidence": [
+        "rag-eval"
+      ]
+    },
+    {
+      "term": "Prompt Injection Analysis",
+      "status": "evidenced",
+      "evidence": [
+        "red-team-guide",
+        "skills-prompt-injection"
+      ]
+    },
+    {
+      "term": "Capability Boundaries",
+      "status": "evidenced",
+      "evidence": [
+        "goal-hijacking",
+        "skills-capability-boundary"
+      ]
+    },
+    {
+      "term": "Model Comparison",
+      "status": "evidenced",
+      "evidence": [
+        "tokenizer-lab"
+      ]
+    },
+    {
+      "term": "Agent Observability",
+      "status": "evidenced_as_inspectability",
+      "evidence": [
+        "kolmaf-ai",
+        "mm-manager"
+      ]
+    }
+  ],
+  "data_concepts": [
+    {
+      "term": "Document and Web Ingestion",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww"
+      ]
+    },
+    {
+      "term": "Data Lineage / Source Lineage",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww",
+        "ash-wiki",
+        "mm-manager"
+      ]
+    },
+    {
+      "term": "Structured Capture",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww"
+      ]
+    },
+    {
+      "term": "Knowledge Systems",
+      "status": "evidenced",
+      "evidence": [
+        "mm-manager",
+        "ash-wiki"
+      ]
+    },
+    {
+      "term": "Portable Context Artifacts",
+      "status": "evidenced",
+      "evidence": [
+        "ingestwowww",
+        "mm-manager"
+      ]
+    }
+  ],
+  "engineering_concepts": [
+    {
+      "term": "System Design",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai",
+        "sacred-computations",
+        "ingestwowww"
+      ]
+    },
+    {
+      "term": "Local-First Systems",
+      "status": "evidenced",
+      "evidence": [
+        "kolmaf-ai",
+        "mm-manager",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Persistent State",
+      "status": "evidenced",
+      "evidence": [
+        "don-squad",
+        "belief-lifecycle"
+      ]
+    },
+    {
+      "term": "Verification and Reproducibility",
+      "status": "evidenced",
+      "evidence": [
+        "belief-lifecycle",
+        "rag-eval",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "term": "Technical Interfaces",
+      "status": "evidenced",
+      "evidence": [
+        "sacred-computations",
+        "cosmosis",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "term": "Cross-System Integration",
+      "status": "evidenced",
+      "evidence": [
+        "cosmosis",
+        "kolmaf-ai",
+        "ingestwowww"
+      ]
+    }
+  ],
+  "market_aliases": [
+    {
+      "canonical": "Agentic AI Systems",
+      "aliases": [
+        "Agentic AI",
+        "AI Agents",
+        "LLM Agents"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "canonical": "Agent Orchestration",
+      "aliases": [
+        "AI Agent Orchestration",
+        "Agentic Workflows",
+        "Agent Workflow Orchestration",
+        "Multi-Agent Orchestration"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "don-squad",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "canonical": "Agent Harnesses / Runtimes",
+      "aliases": [
+        "Agent Harness",
+        "Agent Runtime",
+        "Agent Infrastructure",
+        "Agent Control Plane"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "goblin-logic-manager",
+        "kolmaf-ai",
+        "don-squad"
+      ]
+    },
+    {
+      "canonical": "LLM Evaluation",
+      "aliases": [
+        "LLM Evals",
+        "AI Evaluation",
+        "Model Evaluation",
+        "Agent Evaluation",
+        "Evaluation Harnesses",
+        "AI Quality Evaluation"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "rag-eval",
+        "belief-lifecycle",
+        "red-team-guide"
+      ]
+    },
+    {
+      "canonical": "Retrieval-Augmented Generation",
+      "aliases": [
+        "RAG",
+        "Retrieval Augmented Generation",
+        "Grounded Generation",
+        "LLM Retrieval"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "rag-eval"
+      ]
+    },
+    {
+      "canonical": "Tool Use",
+      "aliases": [
+        "Tool Calling",
+        "Agent Tool Use",
+        "LLM Tool Use"
+      ],
+      "adjacent_terms": [
+        "Function Calling"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "kolmaf-ai",
+        "red-team-guide"
+      ]
+    },
+    {
+      "canonical": "Model Context Protocol (MCP)",
+      "aliases": [
+        "MCP",
+        "MCP Tooling",
+        "MCP Security"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "red-team-guide",
+        "skills-mcp"
+      ]
+    },
+    {
+      "canonical": "Human-in-the-Loop Systems",
+      "aliases": [
+        "HITL",
+        "Human Handoff",
+        "Human Oversight"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "kolmaf-ai",
+        "about-principles"
+      ]
+    },
+    {
+      "canonical": "Safety Gating",
+      "aliases": [
+        "Guardrails",
+        "AI Guardrails",
+        "Policy Gates",
+        "Capability Boundaries"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "goal-hijacking",
+        "red-team-guide",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "canonical": "Context Management",
+      "aliases": [
+        "Context Engineering",
+        "Context Construction",
+        "Context Delivery"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "mm-manager",
+        "ingestwowww",
+        "goblin-logic-manager"
+      ]
+    },
+    {
+      "canonical": "Agent Memory and Persistent State",
+      "aliases": [
+        "Agent Memory",
+        "Memory",
+        "Persistent Memory",
+        "Stateful Agents",
+        "Belief State"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "belief-lifecycle",
+        "don-squad"
+      ]
+    },
+    {
+      "canonical": "Data Ingestion",
+      "aliases": [
+        "Document Ingestion",
+        "Web Ingestion",
+        "Content Ingestion",
+        "Ingestion Pipeline"
+      ],
+      "adjacent_terms": [
+        "Data Pipelines"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "ingestwowww"
+      ]
+    },
+    {
+      "canonical": "Provenance",
+      "aliases": [
+        "Data Lineage",
+        "Source Lineage",
+        "Evidence Provenance"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "ingestwowww",
+        "mm-manager",
+        "ash-wiki"
+      ]
+    },
+    {
+      "canonical": "AI Reliability",
+      "aliases": [
+        "Agent Reliability",
+        "LLM Reliability",
+        "Production Reliability"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "belief-lifecycle",
+        "rag-eval",
+        "kolmaf-ai"
+      ]
+    },
+    {
+      "canonical": "Runtime Inspection",
+      "aliases": [
+        "AI Observability",
+        "Agent Observability",
+        "LLM Observability"
+      ],
+      "status": "discovery_aliases_only",
+      "evidence": [
+        "kolmaf-ai",
+        "mm-manager"
+      ]
+    }
+  ],
+  "evidence": {
+    "don-squad": {
+      "title": "DonSquad",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-don-squad",
+      "kind": "portfolio_project"
+    },
+    "kolmaf-ai": {
+      "title": "Kolmaf-AI Desktop",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-kolmaf-ai",
+      "kind": "portfolio_project"
+    },
+    "goblin-logic-manager": {
+      "title": "Goblin Logic Manager",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-goblin-logic-manager",
+      "kind": "portfolio_project"
+    },
+    "cosmosis": {
+      "title": "Cosmosis Image Studio",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-cosmosis",
+      "kind": "portfolio_project"
+    },
+    "tokenizer-lab": {
+      "title": "LLM Tokenizer Lab",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-tokenizer-lab",
+      "kind": "portfolio_project"
+    },
+    "sacred-computations": {
+      "title": "Sacred Computations",
+      "url": "/llm-evaluation-portfolio/about.html#rendered-systems-gallery",
+      "kind": "portfolio_gallery_and_project"
+    },
+    "fractal-studio": {
+      "title": "Fractal Studio",
+      "url": "/llm-evaluation-portfolio/about.html#rendered-systems-gallery",
+      "kind": "portfolio_gallery_and_project"
+    },
+    "chaos-coding-map": {
+      "title": "Fractal Chaos Coding Map",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-chaos-coding-map",
+      "kind": "portfolio_project"
+    },
+    "mm-manager": {
+      "title": "MM-manager",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-mm-manager",
+      "kind": "portfolio_project"
+    },
+    "ingestwowww": {
+      "title": "IngestWowww",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-ingestwowww",
+      "kind": "portfolio_project"
+    },
+    "ash-wiki": {
+      "title": "Master ASH Catalog / ASH-WIKI",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-ash-wiki",
+      "kind": "portfolio_project"
+    },
+    "rag-eval": {
+      "title": "Safety-Aware RAG / Retrieval Evaluation",
+      "url": "/llm-evaluation-portfolio/projects/safety-aware-rag-retrieval-evaluation.html",
+      "kind": "case_study"
+    },
+    "belief-lifecycle": {
+      "title": "Belief Lifecycle Engine",
+      "url": "/llm-evaluation-portfolio/projects/belief-lifecycle-engine.html",
+      "kind": "case_study"
+    },
+    "red-team-guide": {
+      "title": "AI Agent Red-Team Evaluation Guide",
+      "url": "/llm-evaluation-portfolio/projects/ai-agent-red-team-evaluation-guide.html",
+      "kind": "case_study"
+    },
+    "goal-hijacking": {
+      "title": "Goal Hijacking in State-Exploration Agents",
+      "url": "/llm-evaluation-portfolio/projects/goal-hijacking-in-state-exploration-agents.html",
+      "kind": "case_study"
+    },
+    "diy-newsletter": {
+      "title": "DIY Monthly Newsletter Free",
+      "url": "/llm-evaluation-portfolio/projects/index.html#project-diy-newsletter",
+      "kind": "portfolio_project"
+    },
+    "skills-mcp": {
+      "title": "MCP / Tool Security skill record",
+      "url": "/llm-evaluation-portfolio/skills.html#skill-mcp-tool-security",
+      "kind": "skill_record"
+    },
+    "skills-python": {
+      "title": "Python simulation skill record",
+      "url": "/llm-evaluation-portfolio/skills.html#skill-python-simulation",
+      "kind": "skill_record"
+    },
+    "skills-prompt-injection": {
+      "title": "Prompt Injection Analysis skill record",
+      "url": "/llm-evaluation-portfolio/skills.html#skill-prompt-injection-analysis",
+      "kind": "skill_record"
+    },
+    "skills-capability-boundary": {
+      "title": "Capability Boundary Design skill record",
+      "url": "/llm-evaluation-portfolio/skills.html#skill-capability-boundary-design",
+      "kind": "skill_record"
+    },
+    "about-principles": {
+      "title": "About / working principles",
+      "url": "/llm-evaluation-portfolio/about.html#principles",
+      "kind": "portfolio_section"
+    },
+    "portfolio-js": {
+      "title": "Portfolio shared JavaScript",
+      "url": "/llm-evaluation-portfolio/assets/portfolio.js",
+      "kind": "public_source"
+    },
+    "portfolio-css": {
+      "title": "Portfolio visual system CSS",
+      "url": "/llm-evaluation-portfolio/assets/visual-system.css",
+      "kind": "public_source"
+    },
+    "portfolio-html": {
+      "title": "Portfolio landing page",
+      "url": "/llm-evaluation-portfolio/index.html",
+      "kind": "public_source"
+    }
+  },
+  "market_sources": [
+    {
+      "id": "openai-ai-systems-engineer-codex-agents",
+      "organization": "OpenAI",
+      "title": "AI Systems Engineer, Codex Agents",
+      "url": "https://openai.com/careers/ai-systems-engineer-codex-agents-san-francisco/",
+      "reviewed": "2026-10-06",
+      "observed_terms": [
+        "AI Systems Engineer",
+        "agent harness",
+        "orchestration",
+        "evals",
+        "state",
+        "tool use",
+        "context construction",
+        "observability",
+        "production reliability"
+      ]
+    },
+    {
+      "id": "openai-applied-ai-engineer-codex",
+      "organization": "OpenAI",
+      "title": "Applied AI Engineer, Codex Core Agent",
+      "url": "https://openai.com/careers/applied-ai-engineer-codex-core-agent-san-francisco/",
+      "reviewed": "2026-10-06",
+      "observed_terms": [
+        "Applied AI Engineer",
+        "agents",
+        "reliability",
+        "real-world software engineering tasks"
+      ]
+    },
+    {
+      "id": "openai-presence",
+      "organization": "OpenAI",
+      "title": "Software Engineer, OpenAI Presence",
+      "url": "https://openai.com/careers/software-engineer-openai-presence-san-francisco/",
+      "reviewed": "2026-10-06",
+      "observed_terms": [
+        "AI agents",
+        "evaluation",
+        "deployment",
+        "guardrails",
+        "human handoffs",
+        "reliable workflows"
+      ]
+    },
+    {
+      "id": "apple-generative-ai-ml",
+      "organization": "Apple",
+      "title": "Software Engineer - Generative AI & ML",
+      "url": "https://jobs.apple.com/en-us/details/200675445/software-engineer-generative-ai-ml",
+      "reviewed": "2026-10-06",
+      "observed_terms": [
+        "agentic LLM applications",
+        "multi-agent platform",
+        "retrieval strategies",
+        "RAG",
+        "monitoring",
+        "data engineering"
+      ]
+    },
+    {
+      "id": "apple-generative-ai-agents",
+      "organization": "Apple",
+      "title": "Machine Learning Engineer - Generative AI & Agents",
+      "url": "https://jobs.apple.com/en-gb/details/200670613-0351/machine-learning-engineer-generative-ai-agents",
+      "reviewed": "2026-10-06",
+      "observed_terms": [
+        "AI Agents",
+        "multi-agent systems",
+        "tool use",
+        "evaluation harnesses",
+        "monitoring",
+        "state",
+        "memory",
+        "APIs"
+      ]
+    },
+    {
+      "id": "anthropic-ai-research-engineering",
+      "organization": "Anthropic",
+      "title": "AI Research & Engineering roles",
+      "url": "https://www.anthropic.com/careers/jobs?team=4002065008",
+      "reviewed": "2026-10-06",
+      "observed_terms": [
+        "Multi-Agent",
+        "Model Evaluations",
+        "Research Tools",
+        "Search",
+        "Research Data Platform"
+      ]
+    }
+  ],
+  "rejected_market_terms": [
+    {
+      "term": "Embeddings",
+      "reason": "Not sufficiently evidenced in the current public portfolio record."
+    },
+    {
+      "term": "Vector Search",
+      "reason": "Appears in current hiring language but is not sufficiently evidenced in the current public portfolio record."
+    },
+    {
+      "term": "Vector Databases",
+      "reason": "Not sufficiently evidenced in the current public portfolio record."
+    },
+    {
+      "term": "Docker",
+      "reason": "Not sufficiently evidenced in the current public portfolio presentation."
+    },
+    {
+      "term": "Kubernetes",
+      "reason": "Not sufficiently evidenced in the current public portfolio presentation."
+    },
+    {
+      "term": "Cloud Platforms",
+      "reason": "Not sufficiently evidenced in the current public portfolio presentation."
+    },
+    {
+      "term": "CI/CD",
+      "reason": "Not sufficiently evidenced in the current public portfolio presentation."
+    },
+    {
+      "term": "Fine-tuning",
+      "reason": "Not sufficiently evidenced in the current public portfolio presentation."
+    },
+    {
+      "term": "PyTorch / TensorFlow / JAX",
+      "reason": "Not sufficiently evidenced in the current public portfolio presentation."
+    },
+    {
+      "term": "Rust",
+      "reason": "Not sufficiently evidenced in the current public portfolio presentation."
+    }
+  ],
+  "policy": {
+    "content_usage": "/llm-evaluation-portfolio/content-usage.html",
+    "automated_use_preference": "Public metadata is intended for search/indexing and human-directed discovery; it does not waive the portfolio's content and automated-use notice.",
+    "resume_locator_included": false
+  }
+}

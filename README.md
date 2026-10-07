@@ -57,6 +57,12 @@ AI-assisted coding and review are used heavily, but generated output is not trea
 - GitHub: <https://github.com/es-3581100>
 - Email: <e.sawtelle358@gmail.com>
 
+## Machine-readable portfolio discovery
+
+The public site exposes a reviewed, evidence-backed discovery graph at `site/data/discovery-index.json` (published as `/llm-evaluation-portfolio/data/discovery-index.json`). It separates evidenced claims from hiring-market aliases and role alignment, links important claims to portfolio evidence, excludes the résumé locator, and points back to the portfolio content/automated-use notice.
+
+Static Schema.org JSON-LD and `rel="alternate"` discovery links are rendered from that canonical dataset by `tools/render-discovery-metadata.mjs`. Market vocabulary is curated and date-stamped rather than automatically ingested.
+
 ## Licensing and portfolio content
 
 This repository does not currently use a blanket MIT license. Existing reuse terms remain in [`LICENSE.md`](LICENSE.md). Authored portfolio presentation/content and automated-use preferences are documented separately in [`CONTENT_USAGE.md`](CONTENT_USAGE.md). Crawler-policy topology and the intended origin-root robots configuration are documented in [`CRAWLER_POLICY.md`](CRAWLER_POLICY.md).
