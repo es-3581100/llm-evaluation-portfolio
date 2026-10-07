@@ -101,12 +101,12 @@
   }
   function wireContact(data){
     const snippet=document.getElementById('contact-snippet');
-    if(snippet)snippet.textContent=[data.identity.name,data.identity.role,'e.sawtelle358@gmail.com','https://www.linkedin.com/in/eric-sawtelle-0b021226b/','https://es-3581100.github.io/llm-evaluation-portfolio/resume/Eric_Sawtelle.pdf'].join('\n');
+    if(snippet)snippet.textContent=[data.identity.name,data.identity.role,'e.sawtelle358@gmail.com','https://www.linkedin.com/in/eric-sawtelle-0b021226b/','Résumé: available on request'].join('\n');
     const copy=document.querySelector('[data-copy-contact]');
     if(copy&&snippet)copy.addEventListener('click',async()=>{const value=snippet.textContent;try{await navigator.clipboard.writeText(value);}catch(_){const ta=document.createElement('textarea');ta.value=value;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}copy.dataset.copied='true';copy.textContent='Copied';window.setTimeout(()=>{copy.dataset.copied='false';copy.textContent='Copy snippet';},1400);});
     const dialog=document.getElementById('resume-dialog'),open=document.querySelector('[data-resume-open]');
-    if(open&&dialog)open.addEventListener('click',()=>{if(typeof dialog.showModal==='function')dialog.showModal();else window.open('resume/Eric_Sawtelle.pdf','_blank','noopener');});
-    if(dialog)dialog.querySelectorAll('[data-resume-choice]').forEach(a=>a.addEventListener('click',()=>window.setTimeout(()=>dialog.close(),0)));
+    if(open&&dialog)open.addEventListener('click',()=>{if(typeof dialog.showModal==='function')dialog.showModal();else location.href='mailto:e.sawtelle358@gmail.com?subject=Résumé%20request%20for%20Eric%20Sawtelle';});
+    if(dialog&&location.hash==='#resume-availability'&&typeof dialog.showModal==='function')dialog.showModal();
     const referenceDialog=document.getElementById('reference-dialog'),referenceOpen=document.querySelector('[data-reference-open]');
     if(referenceOpen&&referenceDialog)referenceOpen.addEventListener('click',()=>{if(typeof referenceDialog.showModal==='function')referenceDialog.showModal();else location.href='mailto:e.sawtelle358@gmail.com?subject=Reference%20request%20for%20Eric%20Sawtelle';});
     if(referenceDialog&&location.hash==='#reference'&&typeof referenceDialog.showModal==='function')referenceDialog.showModal();
@@ -123,7 +123,7 @@
     entries.push(
       {source:'Contact',title:'Contact Eric Sawtelle',body:'contact email collaboration recruiting hiring github linkedin resume work index Eric Sawtelle e.sawtelle358@gmail.com',href:root+'contact.html#contact-card-title'},
       {source:'Contact',title:'Reference available on request',body:'reference references professional reference available on request request a reference email Eric Sawtelle',href:root+'contact.html#reference'},
-      {source:'Contact',title:'Resume',body:'resume cv curriculum vitae pdf view download out of date preserved artifact',href:root+'contact.html#contact-card-title'}
+      {source:'Contact',title:'Contact / résumé availability',body:'resume résumé cv curriculum vitae current copy available on request contact hiring recruiting',href:root+'contact.html#resume-availability'}
     );
     return entries;
   }

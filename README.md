@@ -44,9 +44,9 @@ resume-status notices without modifying the PDF
 
 The current visual draft and its exact reference provenance live under [`docs/design/`](docs/design/). The design reference is treated as a vocabulary and process contract, not a copy/paste template.
 
-## Resume status
+## Résumé status
 
-The tracked PDF at `site/resume/Eric_Sawtelle.pdf` is intentionally preserved unchanged and is currently **out of date** relative to the work represented by this portfolio. See [`RESUME_STATUS.md`](RESUME_STATUS.md).
+The résumé is not part of the public GitHub Pages deployment. A current copy is available through the portfolio Contact flow. See [`RESUME_STATUS.md`](RESUME_STATUS.md).
 
 ## Development approach
 
@@ -56,3 +56,7 @@ AI-assisted coding and review are used heavily, but generated output is not trea
 
 - GitHub: <https://github.com/es-3581100>
 - Email: <e.sawtelle358@gmail.com>
+
+## Licensing and portfolio content
+
+This repository does not currently use a blanket MIT license. Existing reuse terms remain in [`LICENSE.md`](LICENSE.md). Authored portfolio presentation/content and automated-use preferences are documented separately in [`CONTENT_USAGE.md`](CONTENT_USAGE.md). Crawler-policy topology and the intended origin-root robots configuration are documented in [`CRAWLER_POLICY.md`](CRAWLER_POLICY.md).

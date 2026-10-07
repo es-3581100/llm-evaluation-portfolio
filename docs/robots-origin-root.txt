@@ -1,0 +1,38 @@
+# Intended origin-root robots.txt for https://es-3581100.github.io/
+# IMPORTANT: This file is NOT effective while stored only inside the project
+# repository. It must be served exactly at https://es-3581100.github.io/robots.txt
+# to control crawling for this origin.
+#
+# Rules are scoped to /llm-evaluation-portfolio/ so other GitHub Pages projects
+# under the same origin are not broadly blocked.
+
+User-agent: GPTBot
+Disallow: /llm-evaluation-portfolio/
+
+User-agent: ClaudeBot
+Disallow: /llm-evaluation-portfolio/
+
+User-agent: Google-Extended
+Disallow: /llm-evaluation-portfolio/
+
+User-agent: CCBot
+Disallow: /llm-evaluation-portfolio/
+
+User-agent: PerplexityBot
+Disallow: /llm-evaluation-portfolio/
+
+User-agent: OAI-SearchBot
+Allow: /llm-evaluation-portfolio/
+Disallow: /llm-evaluation-portfolio/resume/
+
+User-agent: Claude-SearchBot
+Allow: /llm-evaluation-portfolio/
+Disallow: /llm-evaluation-portfolio/resume/
+
+User-agent: Googlebot
+Allow: /llm-evaluation-portfolio/
+Disallow: /llm-evaluation-portfolio/resume/
+
+User-agent: *
+Allow: /llm-evaluation-portfolio/
+Disallow: /llm-evaluation-portfolio/resume/

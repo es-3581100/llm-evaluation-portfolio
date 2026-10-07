@@ -1,9 +1,9 @@
-# Resume status
+# Résumé status
 
-**As of 2026-10-06:** `site/resume/Eric_Sawtelle.pdf` is intentionally preserved **unchanged** and should be treated as **out of date**.
+**As of 2026-10-06:** the résumé is not part of the public GitHub Pages deployment.
 
-The PDF predates the current portfolio expansion into experimental AI systems design, agentic engineering, AI-native applications, technical visualization, provenance systems, and human-centered AI workflows.
+A current copy is available through the portfolio Contact flow. The status metadata intentionally records availability without publishing a document path.
 
-Until a separately authorized resume revision is produced, use the portfolio landing page, Work index, case studies, and linked repositories as the current record of work.
+Earlier public repository history, search caches, archives, or third-party copies may still contain prior résumé artifacts. Removing the current deployment copy reduces discovery; it does not make historical public material private or inaccessible.
 
-This status record does **not** authorize edits to the resume itself.
+Any future public or externally hosted résumé location should be added only through a separate, intentional update.
