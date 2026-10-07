@@ -1,0 +1,220 @@
+══════════════════════════════════════════════════════════════════════════════
+ FIBONACCI HEX PALETTES
+══════════════════════════════════════════════════════════════════════════════
+ Input     #5C7650   RGB 92, 118, 80   HSV 101.1° · 32% · 46%
+ Wheel    hue 101.1° → θ = 11.1° · r = 77.6 px of 240.9 px edge (32%) · brightness 46%
+ Auto     OUTWARD (core → edge) — the outer 26% of the radius spirals inward, the rest outward
+
+── 01  φ  Fibonacci — inward · edge → core ─────────────────────────────────
+   φ = 1.6180339887  ·  8 of 8 nodes  ·  trace 257 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #5F7276  rgb( 95,114,118)  191.1°   19%    47.9px  1 × 90°
+   02  #716776  rgb(113,103,118)  281.1°   12%    29.6px  2 × 90°
+   03  #766F6D  rgb(118,111,109)   11.1°    7%    18.3px  3 × 90°
+   04  #727670  rgb(114,118,112)  101.1°    5%    11.3px  4 × 90°
+   05  #737576  rgb(115,117,118)  191.1°    3%     7.0px  5 × 90°
+   06  #757476  rgb(117,116,118)  281.1°    2%     4.3px  6 × 90°
+   07  #767575  rgb(118,117,117)   11.1°    1%     2.7px  7 × 90°
+   #5C7650 #5F7276 #716776 #766F6D #727670 #737576 #757476 #767575
+   shape VOLUME · CLOUD · linearity 75.66% · planarity 92.413% · off-plane 10.09 · hull vol 2,851 · gray spread 27 (chartreuse) · PC1 42.2° from gray
+   flatter than 75% of random RGB sets, 56% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 02  φ  Fibonacci — outward · core → edge  ★ HTML auto pick ──────────────
+   φ = 1.6180339887  ·  3 of 3 nodes  ·  trace 621 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #76463B  rgb(118, 70, 59)   11.1°   50%   125.5px  1 × 90°
+   02  #571376  rgb( 87, 19,118)  281.1°   84%   203.1px  2 × 90°
+   #5C7650 #76463B #571376
+   shape TRIANGLE · linearity 81.31% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 72 (violet) · PC1 70.9° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 03  τ  Tribonacci — inward · edge → core ────────────────────────────────
+   τ = 1.8392867552  ·  6 of 6 nodes  ·  trace 208 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #627276  rgb( 98,114,118)  191.1°   17%    42.2px  1 × 90°
+   02  #726B76  rgb(114,107,118)  281.1°   10%    22.9px  2 × 90°
+   03  #767170  rgb(118,113,112)   11.1°    5%    12.5px  3 × 90°
+   04  #747673  rgb(116,118,115)  101.1°    3%     6.8px  4 × 90°
+   05  #747676  rgb(116,118,118)  191.1°    1%     3.7px  5 × 90°
+   #5C7650 #627276 #726B76 #767170 #747673 #747676
+   shape VOLUME · CLOUD · linearity 82.25% · planarity 95.677% · off-plane 6.67 · hull vol 1,730 · gray spread 27 (chartreuse) · PC1 42.4° from gray
+   flatter than 74% of random RGB sets, 59% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 04  τ  Tribonacci — outward · core → edge  ★ HTML auto pick ─────────────
+   τ = 1.8392867552  ·  2 of 2 nodes  ·  trace 474 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #763F33  rgb(118, 63, 51)   11.1°   57%   142.7px  1 × 90°
+   #5C7650 #763F33
+
+── 05  δ  Silver ratio — inward · edge → core ──────────────────────────────
+   δ = 2.4142135624  ·  4 of 4 nodes  ·  trace 154 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #677376  rgb(103,115,118)  191.1°   13%    32.1px  1 × 90°
+   02  #746F76  rgb(116,111,118)  281.1°    6%    13.3px  2 × 90°
+   03  #767473  rgb(118,116,115)   11.1°    2%     5.5px  3 × 90°
+   #5C7650 #677376 #746F76 #767473
+   shape FOLDED FAN · linearity 91.46% · planarity 99.187% · off-plane 2.64 · hull vol 465 · gray spread 27 (chartreuse) · PC1 43.2° from gray
+   flatter than 63% of random RGB sets, 54% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 06  δ  Silver ratio — outward · core → edge  ★ HTML auto pick ───────────
+   δ = 2.4142135624  ·  2 of 2 nodes  ·  trace 338 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #762E1E  rgb(118, 46, 30)   11.1°   75%   187.3px  1 × 90°
+   #5C7650 #762E1E
+
+── 07  ρ  Plastic constant — inward · edge → core ──────────────────────────
+   ρ = 1.3247179572  ·  8 of 13 nodes  ·  trace 427 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #5A7176  rgb( 90,113,118)  191.1°   23%    58.6px  1 × 90°
+   02  #6F6076  rgb(111, 96,118)  281.1°   18%    44.2px  2 × 90°
+   03  #766966  rgb(118,105,102)   11.1°   13%    33.4px  3 × 90°
+   04  #6E766A  rgb(110,118,106)  101.1°   10%    25.2px  4 × 90°
+   05  #6D7476  rgb(109,116,118)  191.1°    8%    19.0px  5 × 90°
+   06  #746F76  rgb(116,111,118)  281.1°    6%    14.4px  6 × 90°
+   07  #767271  rgb(118,114,113)   11.1°    4%    10.8px  7 × 90°
+   #5C7650 #5A7176 #6F6076 #766966 #6E766A #6D7476 #746F76 #767271
+   shape VOLUME · CLOUD · linearity 62.30% · planarity 87.779% · off-plane 12.64 · hull vol 5,650 · gray spread 27 (chartreuse) · PC1 51.9° from gray
+   flatter than 45% of random RGB sets, 23% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 08  ρ  Plastic constant — outward · core → edge  ★ HTML auto pick ───────
+   ρ = 1.3247179572  ·  5 of 5 nodes  ·  trace 920 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #764E45  rgb(118, 78, 69)   11.1°   41%   102.8px  1 × 90°
+   02  #613376  rgb( 97, 51,118)  281.1°   57%   136.1px  2 × 90°
+   03  #216676  rgb( 33,102,118)  191.1°   72%   180.3px  3 × 90°
+   04  #267601  rgb( 38,118,  1)  101.1°   99%   238.9px  4 × 90°
+   #5C7650 #764E45 #613376 #216676 #267601
+   shape VOLUME · CLOUD · linearity 63.67% · planarity 92.668% · off-plane 28.86 · hull vol 111,159 · gray spread 85 (chartreuse) · PC1 62.4° from gray
+   flatter than 33% of random RGB sets, 24% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 09  J  Julia modulated — inward · edge → core ───────────────────────────
+   J / φ = 1.6180339887  ·  8 of 15 nodes  ·  trace 249 px
+   00  #587651  rgb( 88,118, 81)  108.3°   31%    77.6px  ORIGIN
+   01  #587667  rgb( 88,118,103)  149.6°   26%    61.0px  J01 · 45°
+   02  #607476  rgb( 96,116,118)  184.8°   18%    47.9px  J02 · 90°
+   03  #656776  rgb(101,103,118)  233.3°   15%    37.7px  J03 · 135°
+   04  #736876  rgb(115,104,118)  288.3°   12%    29.6px  J04 · 180°
+   05  #766A70  rgb(118,106,112)  329.6°   10%    23.3px  J05 · 225°
+   06  #766E6E  rgb(118,110,110)    4.8°    7%    18.3px  J06 · 270°
+   07  #76756F  rgb(118,117,111)   53.3°    6%    14.4px  J07 · 315°
+   #587651 #587667 #607476 #656776 #736876 #766A70 #766E6E #76756F
+   shape VOLUME · CLOUD · linearity 73.28% · planarity 93.862% · off-plane 7.48 · hull vol 4,145 · gray spread 28 (green) · PC1 51.0° from gray
+   flatter than 84% of random RGB sets, 69% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 10  J  Julia modulated — outward · core → edge  ★ HTML auto pick ────────
+   J / φ = 1.6180339887  ·  5 of 5 nodes  ·  trace 640 px
+   00  #587651  rgb( 88,118, 81)  108.3°   31%    77.6px  ORIGIN
+   01  #767149  rgb(118,113, 73)   53.3°   38%    98.7px  J01 · 45°
+   02  #76423D  rgb(118, 66, 61)    4.8°   48%   125.5px  J02 · 90°
+   03  #76264F  rgb(118, 38, 79)  329.6°   68%   159.7px  J03 · 135°
+   04  #631676  rgb( 99, 22,118)  288.3°   82%   203.1px  J04 · 180°
+   #587651 #767149 #76423D #76264F #631676
+   shape FOLDED FAN · linearity 80.46% · planarity 97.888% · off-plane 11.03 · hull vol 18,777 · gray spread 72 (magenta) · PC1 68.9° from gray
+   flatter than 75% of random RGB sets, 65% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 11  B  Binet sequence — inward · edge → core ────────────────────────────
+   B = 1.6180339887  ·  8 of 8 nodes  ·  trace 258 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #5F7276  rgb( 95,114,118)  191.1°   19%    48.5px  F6=8 · 1 × 90°
+   02  #716776  rgb(113,103,118)  281.1°   12%    29.8px  F7=13 · 2 × 90°
+   03  #766F6D  rgb(118,111,109)   11.1°    7%    18.5px  F8=21 · 3 × 90°
+   04  #727670  rgb(114,118,112)  101.1°    5%    11.4px  F9=34 · 4 × 90°
+   05  #737576  rgb(115,117,118)  191.1°    3%     7.1px  F10=55 · 5 × 90°
+   06  #757476  rgb(117,116,118)  281.1°    2%     4.4px  F11=89 · 6 × 90°
+   07  #767575  rgb(118,117,117)   11.1°    1%     2.7px  F12=144 · 7 × 90°
+   #5C7650 #5F7276 #716776 #766F6D #727670 #737576 #757476 #767575
+   shape VOLUME · CLOUD · linearity 75.66% · planarity 92.413% · off-plane 10.09 · hull vol 2,851 · gray spread 27 (chartreuse) · PC1 42.2° from gray
+   flatter than 75% of random RGB sets, 56% of random wheel picks, 0% of ramp+accent sets
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness.
+
+── 12  B  Binet sequence — outward · core → edge  ★ HTML auto pick ─────────
+   B = 1.6180339887  ·  3 of 3 nodes  ·  trace 621 px
+   00  #5C7650  rgb( 92,118, 80)  101.1°   32%    77.6px  ORIGIN
+   01  #76463B  rgb(118, 70, 59)   11.1°   50%   124.1px  F6=8 · 1 × 90°
+   02  #571376  rgb( 87, 19,118)  281.1°   84%   201.7px  F7=13 · 2 × 90°
+   #5C7650 #76463B #571376
+   shape TRIANGLE · linearity 81.31% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 72 (violet) · PC1 70.9° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 13  Rauzy tri-tile — centred on the wheel (rot 344°) ────────────────────
+   scale 58% · rotation -16.0°
+   00  #645F76  rgb(100, 95,118)  253.0°   20%    49.1px  tile A · 4,893 visible pts
+   01  #766A4E  rgb(118,106, 78)   41.7°   34%    82.9px  tile B · 2,661 visible pts
+   02  #497658  rgb( 73,118, 88)  139.1°   38%    91.3px  tile C · 1,446 visible pts
+   #645F76 #766A4E #497658
+   shape TRIANGLE · linearity 53.00% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 32 (mint) · PC1 69.5° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 14  Rauzy tri-tile — centred on the wheel (rot 74°) ─────────────────────
+   scale 58% · rotation 74.0°
+   00  #765E65  rgb(118, 94,101)  343.0°   20%    49.1px  tile A · 4,893 visible pts
+   01  #4F7656  rgb( 79,118, 86)  131.7°   33%    82.9px  tile B · 2,661 visible pts
+   02  #4B5376  rgb( 75, 83,118)  229.1°   36%    91.3px  tile C · 1,446 visible pts
+   #765E65 #4F7656 #4B5376
+   shape TRIANGLE · linearity 50.88% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 32 (blue) · PC1 69.8° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 15  Rauzy tri-tile — centred on the wheel (rot 164°) ────────────────────
+   scale 58% · rotation 164.0°
+   00  #71765F  rgb(113,118, 95)   73.0°   20%    49.1px  tile A · 4,893 visible pts
+   01  #4E5A76  rgb( 78, 90,118)  221.7°   34%    82.9px  tile B · 2,661 visible pts
+   02  #764968  rgb(118, 73,104)  319.1°   38%    91.3px  tile C · 1,446 visible pts
+   #71765F #4E5A76 #764968
+   shape TRIANGLE · linearity 56.39% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 33 (rose) · PC1 62.3° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 16  Rauzy tri-tile — centred on the wheel (rot 254°) ────────────────────
+   scale 58% · rotation 254.0°
+   00  #5E766F  rgb( 94,118,111)  163.0°   20%    49.1px  tile A · 4,893 visible pts
+   01  #764F6E  rgb(118, 79,110)  311.7°   33%    82.9px  tile B · 2,661 visible pts
+   02  #766E4B  rgb(118,110, 75)   49.1°   36%    91.3px  tile C · 1,446 visible pts
+   #5E766F #764F6E #766E4B
+   shape TRIANGLE · linearity 53.53% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 32 (yellow) · PC1 87.7° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 17  Rauzy tri-tile — centred near your colour (rot 344°) ────────────────
+   scale 58% · rotation -16.0°
+   00  #627668  rgb( 98,118,104)  136.0°   17%    40.4px  tile A · 4,893 visible pts
+   01  #6B7635  rgb(107,118, 53)   70.1°   55%   138.4px  tile B · 2,661 visible pts
+   02  #307632  rgb( 48,118, 50)  121.8°   59%   158.6px  tile C · 1,446 visible pts
+   #627668 #6B7635 #307632
+   shape TRIANGLE · linearity 70.99% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 56 (green) · PC1 35.4° from gray
+   Face-locked: G = 118 on every color, so the set lies on one flat face of the RGB cube. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 18  Rauzy tri-tile — centred near your colour (rot 74°) ─────────────────
+   scale 58% · rotation 74.0°
+   00  #757658  rgb(117,118, 88)   62.0°   26%    68.7px  tile A · 4,893 visible pts
+   01  #357632  rgb( 53,118, 50)  117.0°   58%   153.7px  tile B · 2,661 visible pts
+   02  #547673  rgb( 84,118,115)  175.4°   29%    74.6px  tile C · 1,446 visible pts
+   #757658 #357632 #547673
+   shape TRIANGLE · linearity 78.37% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 54 (green) · PC1 35.3° from gray
+   Face-locked: G = 118 on every color, so the set lies on one flat face of the RGB cube. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 19  Rauzy tri-tile — centred near your colour (rot 164°) ────────────────
+   scale 58% · rotation 164.0°
+   00  #577639  rgb( 87,118, 57)   90.1°   52%   122.0px  tile A · 4,893 visible pts
+   01  #50766D  rgb( 80,118,109)  165.4°   32%    79.1px  tile B · 2,661 visible pts
+   02  #76625B  rgb(118, 98, 91)   15.7°   23%    56.5px  tile C · 1,446 visible pts
+   #577639 #50766D #76625B
+   shape TRIANGLE · linearity 56.85% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 43 (chartreuse) · PC1 56.4° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+── 20  Rauzy tri-tile — centred near your colour (rot 254°) ────────────────
+   scale 58% · rotation 254.0°
+   00  #457649  rgb( 69,118, 73)  124.6°   41%   108.6px  tile A · 4,893 visible pts
+   01  #766761  rgb(118,103, 97)   18.0°   18%    42.5px  tile B · 2,661 visible pts
+   02  #67762E  rgb(103,118, 46)   72.6°   61%   150.9px  tile C · 1,446 visible pts
+   #457649 #766761 #67762E
+   shape TRIANGLE · linearity 65.34% · planarity 100.000% · off-plane 0.00 · hull vol n/a · gray spread 54 (yellow) · PC1 52.2° from gray
+   Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3.
+
+══════════════════════════════════════════════════════════════════════════════
+wrote /mnt/data/portfolio-redesign-20261007/palette-candidates.json
+wrote /mnt/data/portfolio-redesign-20261007/palette-candidates.html

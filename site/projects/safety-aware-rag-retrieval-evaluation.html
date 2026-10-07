@@ -5,11 +5,12 @@
 <title>Safety-Aware RAG/Retrieval Evaluation — Eric Sawtelle</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f6f1e8'/%3E%3Cpath d='M9 21.5h14M9 16h14M9 10.5h14' stroke='%2322475e' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
 
-<link rel="stylesheet" href="/llm-evaluation-portfolio/assets/portfolio.css"><link rel="stylesheet" href="/llm-evaluation-portfolio/assets/evidence.css"><link rel="stylesheet" href="/llm-evaluation-portfolio/assets/visual-system.css"><!-- BEGIN GENERATED DISCOVERY METADATA -->
+<link rel="stylesheet" href="/llm-evaluation-portfolio/assets/portfolio.css"><link rel="stylesheet" href="/llm-evaluation-portfolio/assets/evidence.css"><link rel="stylesheet" href="/llm-evaluation-portfolio/assets/visual-system.css">
+<!-- BEGIN GENERATED DISCOVERY METADATA -->
 <link rel="alternate" type="application/json" href="/llm-evaluation-portfolio/data/discovery-index.json" title="Machine-readable portfolio index">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Safety-Aware RAG/Retrieval Evaluation","url":"https://es-3581100.github.io/llm-evaluation-portfolio/projects/safety-aware-rag-retrieval-evaluation.html","author":{"@id":"https://es-3581100.github.io/llm-evaluation-portfolio/#eric-sawtelle"},"isPartOf":{"@id":"https://es-3581100.github.io/llm-evaluation-portfolio/#website"},"about":["LLM Evaluation","Retrieval-Augmented Generation","Retrieval Evaluation","AI Reliability","Grounded Generation"],"keywords":["LLM Evaluation","RAG","Retrieval Evaluation","Grounding","Abstention","AI Reliability"]}</script>
 <!-- END GENERATED DISCOVERY METADATA --></head>
-<body class="evidence-page" data-page="research-detail">
+<body class="evidence-page" data-page="research-detail" data-study="rag" data-design="correction-dossier">
 <header class="site-header"><div class="nav-shell"><div class="brand"><a class="brand-mark external-link" href="https://www.linkedin.com/in/eric-sawtelle-0b021226b/" target="_blank" rel="noreferrer" aria-label="Eric Sawtelle on LinkedIn">ES</a><a class="brand-copy brand-home" href="/llm-evaluation-portfolio/"><strong>Eric Sawtelle</strong><span>systems / interfaces / evidence</span></a></div><nav class="main-nav" aria-label="Primary"><a href="/llm-evaluation-portfolio/#branches">Branches</a><a href="/llm-evaluation-portfolio/projects/index.html">Work</a><a href="/llm-evaluation-portfolio/case-studies.html" aria-current="page">Research archive</a><a href="/llm-evaluation-portfolio/about.html">About</a><a href="/llm-evaluation-portfolio/contact.html">Contact</a><a class="external-link" href="https://github.com/es-3581100" target="_blank" rel="noreferrer">GitHub ↗</a></nav></div></header>
 <main class="page-shell evidence-shell evidence-detail">
 <nav class="meta"><a href="/llm-evaluation-portfolio/projects/index.html">&larr; Work</a></nav>
@@ -23,9 +24,12 @@
 
 <div class="note"><strong>Corrected:</strong> an earlier interpretation was wrong and a corrected account exists. The correction: A post-hoc audit found the FTS5/BM25 score direction had been interpreted backward; corrected threshold classification changed low-score/found balance while the empty count remained 15.</div>
 
-
-
-
+<section class="study-proof" aria-label="Corrected retrieval outcome summary" data-flow-role="3">
+<div><strong>74</strong><span>benchmark questions</span></div>
+<div><strong>15</strong><span>empty retrieval outcomes</span></div>
+<div><strong>15</strong><span>low-score outcomes</span></div>
+<div><strong>44</strong><span>found outcomes</span></div>
+</section>
 
 <h2>Summary</h2>
 <p>74-question benchmark for grounding, source authority, live-state answerability, policy compatibility, and abstention in a tool-using LLM-agent retrieval system. Corrected retrieval outcomes are public; aggregate precision/abstention metrics remain withheld pending reconciliation.</p>

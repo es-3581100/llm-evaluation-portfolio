@@ -1,0 +1,85 @@
+{
+  "schema_version": "portfolio-redesign.v1",
+  "date": "2026-10-07",
+  "source_head": "6b76ea83fa2092c95eed39b9c152ab0b4a87df5b",
+  "math_by_design_sha256": "a735791160fe22962ac1cff8af9e482d069919ec1c4c18adfc7372b360c2b5db",
+  "palette_helper_sha256": "ba4e73da4db54e60bac1ca13e6093824619553d0a2bec249c4d2cf940cd8b91f",
+  "semantic_seed": "#5C7650",
+  "shared_css_sha256": {
+    "visual-system.css": "f31329f6ff2ecc6466983ac62e7c9ef2a198b985a27b739e579dccaaf6019914",
+    "portfolio.css": "77719fbc4244e0c6aef3448dce79099193f3b67f544e6cd96469081e0db26af0",
+    "evidence.css": "f2ef4afd93b6a2d8444de76a56abbcd358762024362e5c566eef2b957c566d29"
+  },
+  "pages": [
+    {
+      "route": "/index.html",
+      "sha256": "190285d41994afafb9b2c2a0b9e3a6b0738703d0c55f52ed9841bc18358c5804",
+      "design": "The Switchyard"
+    },
+    {
+      "route": "/projects/index.html",
+      "sha256": "27f25ee50c16e34a549bdd02e4cb9ce54832baa72fc07da2a64c130ed320fe53",
+      "design": "The Project Ledger"
+    },
+    {
+      "route": "/about.html",
+      "sha256": "78072852d9b8813af52be4518c009e467e69a036380bb1087c451b985af20242",
+      "design": "Mechanical Folio"
+    },
+    {
+      "route": "/about-me.html",
+      "sha256": "21244340f0c1b87cd6fe9cfe8a0c18306aa2eed06f3638f0b333fd321c2c2f33",
+      "design": "Margin Essay"
+    },
+    {
+      "route": "/contact.html",
+      "sha256": "a06c400556fe73c38681a3e664a3642d82737a92d34128bd0cadbdf56712244f",
+      "design": "Dispatch Sheet"
+    },
+    {
+      "route": "/case-studies.html",
+      "sha256": "9575e8710b1a58c58de423d71223f9d3a8a6c9b817cb123734c7596d5ef9c3ac",
+      "design": "Evidence Register"
+    },
+    {
+      "route": "/skills.html",
+      "sha256": "817c2f836d989100e8c564a49e79dc4118d576e79b5e2f79b393d9fb2284b27f",
+      "design": "Capability Concordance"
+    },
+    {
+      "route": "/experience.html",
+      "sha256": "b205a70e8700197f6ff637f288cb4cc236ebefe64100911a9926aee11245f18f",
+      "design": "Operations Chain"
+    },
+    {
+      "route": "/search.html",
+      "sha256": "d482a8a6b12c38eafaad39f0244dbd0d61ff9f6c6a72c1648f74080a7968aae6",
+      "design": "Lookup Instrument"
+    },
+    {
+      "route": "/content-usage.html",
+      "sha256": "49213636e40420f7d9b2de456cd5b3ae9b7d7bd902b02bf85d7bbe56afe068a1",
+      "design": "Colophon"
+    },
+    {
+      "route": "/projects/safety-aware-rag-retrieval-evaluation.html",
+      "sha256": "f34aa2f415c0d03688e7cd7ed4ce7d72641217bd9eb3042c59e5c2b980eebaec",
+      "design": "Correction Dossier"
+    },
+    {
+      "route": "/projects/belief-lifecycle-engine.html",
+      "sha256": "52b6b4f5d1e57ab8407d5feb7f1ce5a242c20bf990b2309bc1363bc6c52260e1",
+      "design": "Measured Record"
+    },
+    {
+      "route": "/projects/ai-agent-red-team-evaluation-guide.html",
+      "sha256": "31e5bfb46ccd0aafd8b002b6c8d9604440927fc559c435ed092b26ccef9c58cd",
+      "design": "Quarantine Manual"
+    },
+    {
+      "route": "/projects/goal-hijacking-in-state-exploration-agents.html",
+      "sha256": "6b71872b96c18da2f2fe84a3b05f7948f52492ee75b0819fde1c6eaf077c22ce",
+      "design": "Argument Map"
+    }
+  ]
+}

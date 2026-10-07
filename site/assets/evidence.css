@@ -1,210 +1,137 @@
-/* Evidence/archive composition on the canonical portfolio shell.
-   The shell, typography tokens, header, footer, colors, and motion come from
-   portfolio.css + visual-system.css. This file owns only evidence-heavy content. */
+/* Evidence-heavy page compositions — archive, skills, experience, research details. */
+.evidence-page{background:var(--paper);color:var(--ink)}
+.evidence-page .evidence-shell{width:min(calc(100% - 42px),var(--max));margin-inline:auto;padding:clamp(55px,7vw,94px) 0 var(--s7)}
+.evidence-page a{color:inherit}
+.evidence-page code{font-family:var(--mono);font-size:.88em;overflow-wrap:anywhere}
+.evidence-page table{border-collapse:collapse;width:100%}
+.evidence-page th,.evidence-page td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+.evidence-page th{font:800 8px/1.35 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--ink)}
+.evidence-page td{font-size:13px;line-height:1.55}
+.evidence-page .badge{display:inline;border:0;padding:0;color:var(--muted);font:800 8px/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.evidence-page .badge::before{content:"[";color:var(--rule-dark)}.evidence-page .badge::after{content:"]";color:var(--rule-dark)}
+.evidence-page .badge.corrected,.evidence-page .status.corrected{color:var(--evidence-oxide)}
+.evidence-page .badge.preliminary,.evidence-page .status.preliminary{color:var(--support-warm)}
+.evidence-page .status-row{margin:0 0 var(--s4)}
+.evidence-page .meta{color:var(--muted);font-size:9px;line-height:1.5}
+.evidence-page .note,.evidence-page .boundary{padding:var(--s4) 0 var(--s4) var(--s4);border-left:3px solid var(--action);color:var(--ink-soft);margin:var(--s4) 0;background:transparent}
+.evidence-page .boundary{border-left-color:var(--support-cool)}
+.evidence-page .positioning-line{font-size:9px;font-weight:800;letter-spacing:.075em;text-transform:uppercase;color:var(--action)}
 
-.evidence-page .evidence-shell{
-  max-width:1040px;
-  padding-top:clamp(48px,7vw,78px);
-  padding-bottom:clamp(58px,8vw,90px);
-}
-.evidence-page-head{
-  position:relative;
-  padding:0 0 28px;
-  margin:0 0 30px;
-}
-.evidence-page-head::after{
-  content:"";
-  position:absolute;
-  left:0;right:0;bottom:0;
-  height:1px;
-  background:var(--breaker-highlight,#A3B18A);
-}
-.evidence-page-head h1,
-.evidence-detail h1{
-  font:500 clamp(48px,7vw,82px)/.94 var(--display);
-  letter-spacing:-.055em;
-  margin:10px 0 14px;
-  color:var(--ink);
-}
-.evidence-page-head p,
-.evidence-detail>p,
-.evidence-detail li{
-  color:var(--muted);
-}
-.evidence-lede{
-  max-width:780px;
-  font-size:16px;
-  line-height:1.65;
-  margin:0;
-}
-.evidence-page h2{
-  font:500 clamp(25px,3vw,36px)/1.08 var(--display);
-  letter-spacing:-.035em;
-  margin:40px 0 12px;
-  color:var(--ink);
-}
-.evidence-page h3{
-  font:600 18px/1.2 var(--sans);
-  margin:0 0 8px;
-  color:var(--ink);
-}
-.evidence-page p{margin:0 0 16px}
-.evidence-page ul{padding-left:20px;margin:0 0 22px}
-.evidence-page li{margin:7px 0}
-.evidence-page a{color:inherit;text-underline-offset:.2em}
-.evidence-page a:hover,.evidence-page a:focus-visible{color:var(--signal)}
-.evidence-page a:focus-visible,
-.evidence-page button:focus-visible{
-  outline:2px solid var(--breaker-highlight,#A3B18A);
-  outline-offset:3px;
-}
-.evidence-page code{
-  font-family:var(--mono);
-  font-size:.9em;
-  background:rgba(249,247,241,.72);
-  border:1px solid var(--line);
-  padding:2px 4px;
-}
-.evidence-page .meta{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.6;
-}
-.evidence-page .evidence-back{
-  display:inline-flex;
-  margin-bottom:24px;
-  font:800 10px/1.3 var(--mono);
-  letter-spacing:.07em;
-  text-transform:uppercase;
-  text-decoration:none;
-  border-bottom:1px solid var(--ink);
-  padding-bottom:4px;
-}
-.evidence-page .card-list{
-  display:grid;
-  gap:0;
-  margin:0;
-  border-top:1px solid var(--line);
-}
-.evidence-page .grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:0;
-  margin:24px 0 38px;
-  border-top:1px solid var(--line);
-  border-left:1px solid var(--line);
-}
-.evidence-page .card{
-  margin:0;
-  padding:24px 0;
-  background:transparent;
-  border:0;
-  border-bottom:1px solid var(--line);
-  border-radius:0;
-  box-shadow:none;
-}
-.evidence-page .grid>.card{
-  padding:22px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(249,247,241,.42);
-}
-.evidence-page .card:hover{
-  transform:none;
-  box-shadow:none;
-  border-color:var(--line);
-}
-.evidence-page .card h2,
-.evidence-page .card h3{margin-top:0}
-.evidence-page .card-title{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
-}
-.evidence-page .card-title a{text-decoration:none}
-.evidence-page .project-card .meta{margin-bottom:10px}
-.evidence-page .badge{
-  display:inline-flex;
-  align-items:center;
-  min-height:25px;
-  padding:4px 8px;
-  margin:2px 3px 2px 0;
-  border:1px solid var(--line-strong);
-  border-radius:0;
-  background:rgba(249,247,241,.56);
-  color:var(--ink);
-  font:800 9px/1.2 var(--mono);
-  letter-spacing:.055em;
-  text-transform:none;
-  vertical-align:middle;
-}
-.evidence-page .badge.corrected{border-color:var(--signal);color:var(--signal)}
-.evidence-page .badge.preliminary,
-.evidence-page .badge.warn{border-style:dashed}
-.evidence-page .status-row{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 24px}
-.evidence-page table{
-  width:100%;
-  border-collapse:collapse;
-  margin:16px 0 24px;
-  background:rgba(249,247,241,.46);
-  border-top:1px solid var(--line-strong);
-  border-bottom:1px solid var(--line-strong);
-}
-.evidence-page th,
-.evidence-page td{
-  border-bottom:1px solid var(--line);
-  padding:11px 12px;
-  text-align:left;
-  vertical-align:top;
-}
-.evidence-page tr:last-child td{border-bottom:0}
-.evidence-page th{
-  background:rgba(163,177,138,.10);
-  color:var(--muted);
-  font:800 9px/1.3 var(--mono);
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.evidence-page .note,
-.evidence-page .boundary{
-  margin:18px 0 26px;
-  padding:16px 18px;
-  border:0;
-  border-left:3px solid var(--breaker-highlight,#A3B18A);
-  border-radius:0;
-  background:rgba(249,247,241,.56);
-  color:var(--ink);
-}
-.evidence-page .boundary{border-left-color:var(--signal)}
-.evidence-page .positioning-line{
-  color:var(--signal);
-  font:800 10px/1.5 var(--mono);
-  letter-spacing:.07em;
-  text-transform:uppercase;
-}
-.evidence-detail{
-  max-width:1040px;
-}
-.evidence-detail>.eyebrow{margin-bottom:10px}
-.evidence-detail>h1{
-  max-width:15ch;
-  margin-bottom:18px;
-}
-.evidence-detail>h2:first-of-type{margin-top:34px}
+/* ---------- Research archive / EVIDENCE REGISTER ---------- */
+body[data-page="research"] .evidence-shell{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:0 clamp(12px,1.8vw,28px)}
+body[data-page="research"] .evidence-page-head{grid-column:1/5;align-self:start;position:sticky;top:88px;padding-right:var(--s4)}
+body[data-page="research"] .evidence-page-head h1{font:400 clamp(60px,7vw,100px)/.86 var(--serif);letter-spacing:-.055em;margin:var(--s3) 0 var(--s5);max-width:5ch}
+body[data-page="research"] .evidence-lede{color:var(--muted);max-width:31ch;font-size:16px}
+body[data-page="research"] .card-list{grid-column:5/14;border-top:1px solid var(--ink);counter-reset:record}
+body[data-page="research"] .project-card{counter-increment:record;padding:var(--s5) 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:60px 1fr;gap:var(--s4);background:transparent}
+body[data-page="research"] .project-card::before{content:"0" counter(record);font:800 8px/1.3 var(--mono);color:var(--action);padding-top:5px}
+body[data-page="research"] .card-title{display:grid;grid-template-columns:1fr auto;gap:var(--s4);align-items:start}
+body[data-page="research"] .card-title h2{font:400 clamp(28px,3.3vw,48px)/.98 var(--serif);letter-spacing:-.04em;margin:0 0 var(--s4);max-width:12ch}
+body[data-page="research"] .card-title a{text-decoration:none}body[data-page="research"] .card-title a:hover,body[data-page="research"] .card-title a:focus-visible{color:var(--action)}
+body[data-page="research"] .project-card>ul{grid-column:2;list-style:none;padding:0;margin:0}
+body[data-page="research"] .project-card li{display:block;padding:8px 0;border-top:1px solid #dedbd1;color:var(--muted);font-size:12px;overflow-wrap:anywhere}
+body[data-page="research"] .project-card li strong{display:inline-block;width:128px;vertical-align:top;font:800 8px/1.4 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+body[data-page="research"] .project-card li a{color:var(--support-cool)}
 
-@media(max-width:680px){
-  .evidence-page .evidence-shell{
-    width:min(100% - 22px,var(--max));
-    padding-top:38px;
-    padding-bottom:54px;
-  }
-  .evidence-page-head{padding-bottom:22px;margin-bottom:24px}
-  .evidence-page-head h1,.evidence-detail h1{font-size:clamp(42px,13vw,60px)}
-  .evidence-page .grid{grid-template-columns:1fr}
-  .evidence-page table{display:block;overflow-x:auto}
-  .evidence-page th,.evidence-page td{min-width:120px;padding:9px}
-  .evidence-page .card{padding:20px 0}
-  .evidence-page .grid>.card{padding:18px}
+/* ---------- Skills / CAPABILITY CONCORDANCE ---------- */
+body[data-page="skills"]{background:#101614;color:#e8eeea}
+body[data-page="skills"] .site-header,body[data-page="skills"] .site-footer{background:#101614}
+body[data-page="skills"] .evidence-shell{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));column-gap:clamp(12px,1.8vw,28px);padding-top:clamp(48px,6vw,78px)}
+body[data-page="skills"] .evidence-page-head{grid-column:1/6;padding-bottom:var(--s6)}
+body[data-page="skills"] .evidence-page-head .eyebrow{color:var(--action-light)}
+body[data-page="skills"] .evidence-page-head h1{font:400 clamp(70px,8vw,116px)/.82 var(--serif);letter-spacing:-.06em;color:#fff;margin:var(--s3) 0 var(--s4)}
+body[data-page="skills"] .evidence-lede{color:#9aa69f;font-size:16px;max-width:34ch}
+body[data-page="skills"] .grid{grid-column:7/14;display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);align-self:end;padding-bottom:var(--s6)}
+body[data-page="skills"] .grid .card{border-top:1px solid var(--action-light);padding-top:var(--s3)}
+body[data-page="skills"] .grid h2{font:400 clamp(24px,3vw,40px)/1 var(--serif);letter-spacing:-.035em;color:#fff;margin:0 0 var(--s3)}
+body[data-page="skills"] .grid p{color:#909d96;margin:0}
+body[data-page="skills"] .evidence-shell>h2[id]{grid-column:1/6;margin:0;padding:12px 0;border-top:1px solid #35413c;font:500 clamp(17px,1.8vw,24px)/1.15 var(--serif);letter-spacing:-.02em;color:#e2e8e4;scroll-margin-top:80px}
+body[data-page="skills"] .evidence-shell>ul{grid-column:6/14;list-style:none;margin:0;padding:12px 0;border-top:1px solid #35413c;display:flex;gap:8px 18px;flex-wrap:wrap;align-items:start}
+body[data-page="skills"] .evidence-shell>ul li{margin:0}
+body[data-page="skills"] .evidence-shell>ul a{font:750 9px/1.4 var(--mono);text-decoration:none;color:#a7b3ac;border-bottom:1px solid #53615a;padding-bottom:2px}
+body[data-page="skills"] .evidence-shell>ul a:hover,body[data-page="skills"] .evidence-shell>ul a:focus-visible{color:var(--action-light);border-color:currentColor}
+
+/* ---------- Experience / OPERATIONS CHAIN ---------- */
+body[data-page="experience"] .evidence-shell{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:0 clamp(12px,1.8vw,28px)}
+body[data-page="experience"] .evidence-page-head{grid-column:1/7;padding-bottom:var(--s7)}
+body[data-page="experience"] .evidence-page-head h1{font:400 clamp(68px,8vw,112px)/.84 var(--serif);letter-spacing:-.06em;margin:var(--s3) 0 var(--s5)}
+body[data-page="experience"] .evidence-lede{max-width:60ch;color:var(--muted);font-size:16px}
+body[data-page="experience"] .evidence-shell>h2{grid-column:1/4;font:800 9px/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--action);margin:0;padding-top:var(--s3);border-top:1px solid var(--ink)}
+body[data-page="experience"] .evidence-shell>ul{grid-column:4/10;margin:0 0 var(--s7);padding:var(--s3) 0 0 18px}
+body[data-page="experience"] .evidence-shell>ul li{margin:8px 0}
+body[data-page="experience"] .card-list{grid-column:4/14;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);margin-bottom:var(--s6)}
+body[data-page="experience"] .card-list .card{padding:var(--s4);border-left:1px solid var(--rule);min-height:220px}
+body[data-page="experience"] .card-list .card:nth-child(1){grid-column:1/4}body[data-page="experience"] .card-list .card:nth-child(2){grid-column:4/7;margin-top:var(--s5)}body[data-page="experience"] .card-list .card:nth-child(3){grid-column:7/10;margin-top:var(--s6)}
+body[data-page="experience"] .card-list h3{font:500 clamp(21px,2.3vw,31px)/1.03 var(--serif);letter-spacing:-.03em;margin:0 0 var(--s3)}
+body[data-page="experience"] .card-list p{color:var(--muted);margin:0}
+
+/* ---------- Research details / four proof structures ---------- */
+body[data-page="research-detail"] .evidence-shell{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));column-gap:clamp(12px,1.8vw,28px);align-items:start}
+body[data-page="research-detail"] .evidence-shell>.meta{grid-column:1/3;margin-bottom:var(--s4)}
+body[data-page="research-detail"] .evidence-shell>.eyebrow{grid-column:1/6;margin-bottom:var(--s3)}
+body[data-page="research-detail"] .evidence-shell>h1{grid-column:1/10;font:400 clamp(54px,6.5vw,96px)/.86 var(--serif);letter-spacing:-.055em;margin:0 0 var(--s4);max-width:12ch}
+body[data-page="research-detail"] .evidence-shell>.status-row{grid-column:10/14;justify-self:end;align-self:end;margin-bottom:var(--s5)}
+body[data-page="research-detail"] .detail-positioning{grid-column:1/14;padding:var(--s3) 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin:0 0 var(--s5)}
+body[data-page="research-detail"] .evidence-shell>.note{grid-column:1/14;margin:0 0 var(--s5)}
+body[data-page="research-detail"] .study-proof{grid-column:1/14;margin:0 0 var(--s7)}
+body[data-page="research-detail"] .evidence-shell>h2{grid-column:1/4;font:800 9px/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--action);margin:0;padding:var(--s4) 0;border-top:1px solid var(--rule)}
+body[data-page="research-detail"] .evidence-shell>h2+*{grid-column:4/14;margin-top:0;padding-top:var(--s4);border-top:1px solid var(--rule)}
+body[data-page="research-detail"] .evidence-shell>p{max-width:72ch}
+body[data-page="research-detail"] .evidence-shell>ul{padding-left:20px}
+body[data-page="research-detail"] .evidence-shell>h2+table{margin-bottom:var(--s5)}
+body[data-page="research-detail"] .evidence-shell>h2+.boundary{border-top:1px solid var(--rule);border-left:3px solid var(--support-cool);padding:var(--s4) 0 var(--s4) var(--s4)}
+body[data-page="research-detail"] .evidence-shell>h2+p .badge{margin-right:8px}
+
+/* RAG / Correction dossier */
+body[data-study="rag"] .study-proof{border-top:3px solid var(--evidence-oxide);display:grid;grid-template-columns:repeat(4,1fr)}
+body[data-study="rag"] .study-proof div{padding:var(--s4) var(--s3);border-right:1px solid var(--rule)}body[data-study="rag"] .study-proof div:last-child{border-right:0}
+body[data-study="rag"] .study-proof strong{display:block;font:400 clamp(38px,5vw,72px)/.9 var(--serif);letter-spacing:-.05em;color:var(--evidence-oxide)}
+body[data-study="rag"] .study-proof span{display:block;margin-top:8px;font:750 8px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+body[data-study="rag"] .note{border-left-color:var(--evidence-oxide)}
+
+/* BLE / Measured record */
+body[data-study="ble"] .study-proof{display:grid;grid-template-columns:5fr 3fr;gap:var(--s4);align-items:end;border-top:1px solid var(--support-cool);border-bottom:1px solid var(--rule);padding:var(--s5) 0}
+body[data-study="ble"] .study-proof .proof-major strong{display:block;font:400 clamp(86px,12vw,180px)/.72 var(--serif);letter-spacing:-.07em;color:var(--support-cool)}
+body[data-study="ble"] .study-proof .proof-major span,body[data-study="ble"] .study-proof .proof-secondary span{font:800 9px/1.45 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+body[data-study="ble"] .study-proof .proof-secondary{display:grid;gap:var(--s4)}
+body[data-study="ble"] .study-proof .proof-secondary strong{display:block;font:400 clamp(38px,5vw,70px)/.9 var(--serif);letter-spacing:-.045em;color:var(--ink)}
+
+/* Red-team / Quarantine manual */
+body[data-study="redteam"]{background:#111614;color:#e6ece8}
+body[data-study="redteam"] .site-header,body[data-study="redteam"] .site-footer{background:#111614}
+body[data-study="redteam"] .evidence-shell>h1{color:#fff}
+body[data-study="redteam"] .evidence-shell>.meta a,body[data-study="redteam"] .evidence-shell>.eyebrow{color:var(--action-light)}
+body[data-study="redteam"] .detail-positioning,body[data-study="redteam"] .evidence-shell>h2,body[data-study="redteam"] .evidence-shell>h2+*,body[data-study="redteam"] th,body[data-study="redteam"] td{border-color:#35413c}
+body[data-study="redteam"] .evidence-shell>h2{color:var(--action-light)}
+body[data-study="redteam"] .evidence-shell>p,body[data-study="redteam"] .evidence-shell>ul,body[data-study="redteam"] td{color:#aeb8b2}
+body[data-study="redteam"] th{color:#839089}
+body[data-study="redteam"] a{color:#dce4df}
+body[data-study="redteam"] .study-proof{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--action-light);border-bottom:1px solid #35413c}
+body[data-study="redteam"] .study-proof div{padding:var(--s4) var(--s3);border-right:1px solid #35413c}body[data-study="redteam"] .study-proof div:last-child{border-right:0}
+body[data-study="redteam"] .study-proof strong{display:block;font:400 clamp(28px,3.4vw,48px)/.95 var(--serif);color:#fff}
+body[data-study="redteam"] .study-proof span{font:800 8px/1.35 var(--mono);letter-spacing:.055em;text-transform:uppercase;color:#89968f}
+body[data-study="redteam"] .note{border-left-color:var(--support-violet);color:#bac4be}
+body[data-study="redteam"] .boundary{color:#bac4be}
+body[data-study="redteam"] code{color:#b6c6bd}
+
+/* Goal-hijacking / Argument map */
+body[data-study="goal"] .study-proof{display:grid;grid-template-columns:2fr 6fr;gap:var(--s5);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);padding:var(--s5) 0}
+body[data-study="goal"] .study-proof .proof-count strong{display:block;font:400 clamp(72px,9vw,130px)/.75 var(--serif);letter-spacing:-.06em;color:var(--support-warm)}
+body[data-study="goal"] .study-proof .proof-count span{font:800 8px/1.35 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+body[data-study="goal"] .proof-chain{display:grid;grid-template-columns:repeat(7,1fr);align-items:center}
+body[data-study="goal"] .proof-chain span{position:relative;padding:10px 7px;border-top:1px solid var(--support-warm);font:750 8px/1.3 var(--mono);text-transform:uppercase;color:var(--ink)}
+body[data-study="goal"] .proof-chain span:not(:last-child)::after{content:"→";position:absolute;right:-5px;color:var(--support-warm)}
+body[data-study="goal"] .proof-zero{grid-column:2;display:block;margin-top:var(--s4);color:var(--evidence-oxide);font:800 9px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+
+@media(max-width:760px){
+  .evidence-page .evidence-shell{width:min(calc(100% - 28px),var(--max));padding-top:50px}
+  body[data-page="research"] .evidence-shell,body[data-page="skills"] .evidence-shell,body[data-page="experience"] .evidence-shell,body[data-page="research-detail"] .evidence-shell{display:block}
+  body[data-page="research"] .evidence-page-head{position:static;margin-bottom:var(--s6)}body[data-page="research"] .project-card{grid-template-columns:34px 1fr}body[data-page="research"] .project-card li strong{display:block;width:auto;margin-bottom:3px}body[data-page="research"] .project-card>ul{grid-column:2}
+  body[data-page="skills"] .grid{grid-template-columns:1fr;margin-bottom:var(--s6)}body[data-page="skills"] .evidence-shell>h2[id],body[data-page="skills"] .evidence-shell>ul{display:block}body[data-page="skills"] .evidence-shell>ul{padding-bottom:var(--s4)}
+  body[data-page="experience"] .evidence-page-head{padding-bottom:var(--s6)}body[data-page="experience"] .evidence-shell>h2{margin-top:var(--s5)}body[data-page="experience"] .evidence-shell>ul{margin-bottom:var(--s6)}body[data-page="experience"] .card-list{display:block}body[data-page="experience"] .card-list .card:nth-child(n){margin:0;border-left:0;border-top:1px solid var(--rule);min-height:0;padding:var(--s4) 0}
+  body[data-page="research-detail"] .evidence-shell>h1{font-size:clamp(48px,13vw,72px)}body[data-page="research-detail"] .evidence-shell>.status-row{margin-bottom:var(--s4)}body[data-page="research-detail"] .evidence-shell>h2{margin-top:var(--s5);padding-bottom:8px}body[data-page="research-detail"] .evidence-shell>h2+*{padding-top:0;border-top:0}.evidence-page table{display:block;overflow-x:auto}.evidence-page th,.evidence-page td{min-width:120px}
+  body[data-study="rag"] .study-proof{grid-template-columns:1fr 1fr}body[data-study="rag"] .study-proof div{border-bottom:1px solid var(--rule)}
+  body[data-study="ble"] .study-proof{grid-template-columns:1fr}.study-proof .proof-major strong{font-size:86px!important}
+  body[data-study="redteam"] .study-proof{grid-template-columns:1fr 1fr}body[data-study="redteam"] .study-proof div{border-bottom:1px solid #35413c}
+  body[data-study="goal"] .study-proof{grid-template-columns:1fr}.proof-chain{grid-template-columns:1fr!important}.proof-chain span::after{display:none}.proof-zero{grid-column:1!important}
 }

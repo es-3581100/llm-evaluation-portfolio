@@ -1,0 +1,2100 @@
+{
+  "seed": {
+    "hex": "#5C7650",
+    "rgb": [
+      92,
+      118,
+      80
+    ],
+    "hue": 101.05263157894737,
+    "saturation": 0.3220338983050848,
+    "value_in": 0.4627450980392157,
+    "value_used": 0.4627450980392157,
+    "theta_rad": 0.19290481206253118,
+    "r_px": 77.57575802075583,
+    "edge_px": 240.89314332761018,
+    "auto_direction": "out",
+    "radius_px": 273.0,
+    "notes": []
+  },
+  "palettes": [
+    {
+      "key": "fibonacci",
+      "title": "\u03c6  Fibonacci \u2014 inward \u00b7 edge \u2192 core",
+      "kind": "spiral",
+      "direction": "in",
+      "formula": "Golden-ratio log spiral: radius changes by \u03c6 each 90\u00b0 turn.",
+      "meta": {
+        "ratio": 1.618033988749895,
+        "trace_length_px": 256.63124746829,
+        "total_nodes": 8,
+        "ratio_label": "\u03c6 = 1.6180339887",
+        "turn_deg": 90.0,
+        "html_auto_pick": false
+      },
+      "hexes": [
+        "#5C7650",
+        "#5F7276",
+        "#716776",
+        "#766F6D",
+        "#727670",
+        "#737576",
+        "#757476",
+        "#767575"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#5F7276",
+          "rgb": [
+            95,
+            114,
+            118
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 47.944455159864376,
+          "hue": 191.0526315789474,
+          "sat": 0.1918016485419518
+        },
+        {
+          "hex": "#716776",
+          "rgb": [
+            113,
+            103,
+            118
+          ],
+          "label": "2 \u00d7 90\u00b0",
+          "r_px": 29.631302860891456,
+          "hue": 281.0526315789473,
+          "sat": 0.12300600362291522
+        },
+        {
+          "hex": "#766F6D",
+          "rgb": [
+            118,
+            111,
+            109
+          ],
+          "label": "3 \u00d7 90\u00b0",
+          "r_px": 18.313152298972916,
+          "hue": 11.052631578947341,
+          "sat": 0.07326171064476389
+        },
+        {
+          "hex": "#727670",
+          "rgb": [
+            114,
+            118,
+            112
+          ],
+          "label": "4 \u00d7 90\u00b0",
+          "r_px": 11.318150561918541,
+          "hue": 101.05263157894734,
+          "sat": 0.04698411256366092
+        },
+        {
+          "hex": "#737576",
+          "rgb": [
+            115,
+            117,
+            118
+          ],
+          "label": "5 \u00d7 90\u00b0",
+          "r_px": 6.995001737054378,
+          "hue": 191.0526315789474,
+          "sat": 0.02798348339233983
+        },
+        {
+          "hex": "#757476",
+          "rgb": [
+            117,
+            116,
+            118
+          ],
+          "label": "6 \u00d7 90\u00b0",
+          "r_px": 4.323148824864161,
+          "hue": 281.0526315789474,
+          "sat": 0.017946334068067508
+        },
+        {
+          "hex": "#767575",
+          "rgb": [
+            118,
+            117,
+            117
+          ],
+          "label": "7 \u00d7 90\u00b0",
+          "r_px": 2.671852912190218,
+          "hue": 11.052631578947398,
+          "sat": 0.01068873953225561
+        }
+      ],
+      "geometry": {
+        "n": 8,
+        "mean": [
+          110.25,
+          114.25,
+          111.25
+        ],
+        "shape": "VOLUME \u00b7 CLOUD",
+        "linearity_pct": 75.65658109827164,
+        "third_pc_pct": 7.5870379757863216,
+        "planarity_pct": 92.41296202421368,
+        "off_plane_max": 10.090606126001564,
+        "hull_volume": 2850.999999999997,
+        "gray_spread": 27.471197037382023,
+        "gray_branch": "chartreuse",
+        "pc1_angle_deg": 42.15326490209614,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 11.531502727706734,
+            "p5": 3.614592094954295,
+            "p95": 22.13132739560341,
+            "flatter_than_pct": 74.75
+          },
+          "ramp": {
+            "median": 0.11161696082996612,
+            "p5": 0.028103820801919324,
+            "p95": 0.3036585602368046,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 8.302991227660716,
+            "p5": 2.3022262090188477,
+            "p95": 17.441456040195423,
+            "flatter_than_pct": 55.5
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "fibonacci",
+      "title": "\u03c6  Fibonacci \u2014 outward \u00b7 core \u2192 edge",
+      "kind": "spiral",
+      "direction": "out",
+      "formula": "Golden-ratio log spiral: radius changes by \u03c6 each 90\u00b0 turn.",
+      "meta": {
+        "ratio": 1.618033988749895,
+        "trace_length_px": 621.1909287778506,
+        "total_nodes": 3,
+        "ratio_label": "\u03c6 = 1.6180339887",
+        "turn_deg": 90.0,
+        "html_auto_pick": true
+      },
+      "hexes": [
+        "#5C7650",
+        "#76463B",
+        "#571376"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#76463B",
+          "rgb": [
+            118,
+            70,
+            59
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 125.52021318062019,
+          "hue": 11.052631578947398,
+          "sat": 0.5021432349810915
+        },
+        {
+          "hex": "#571376",
+          "rgb": [
+            87,
+            19,
+            118
+          ],
+          "label": "2 \u00d7 90\u00b0",
+          "r_px": 203.095971201376,
+          "hue": 281.0526315789474,
+          "sat": 0.843095691292339
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          99.0,
+          69.0,
+          85.66666666666667
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 81.30652896993405,
+        "third_pc_pct": 5.850501366969463e-16,
+        "planarity_pct": 100.0,
+        "off_plane_max": 3.538974133559517e-15,
+        "hull_volume": null,
+        "gray_spread": 71.6147098483731,
+        "gray_branch": "violet",
+        "pc1_angle_deg": 70.94521246504303,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "tribonacci",
+      "title": "\u03c4  Tribonacci \u2014 inward \u00b7 edge \u2192 core",
+      "kind": "spiral",
+      "direction": "in",
+      "formula": "Tribonacci-constant log spiral: radius changes by \u03c4 \u2248 1.8393 each 90\u00b0.",
+      "meta": {
+        "ratio": 1.8392867552141612,
+        "trace_length_px": 207.8141856037374,
+        "total_nodes": 6,
+        "ratio_label": "\u03c4 = 1.8392867552",
+        "turn_deg": 90.0,
+        "html_auto_pick": false
+      },
+      "hexes": [
+        "#5C7650",
+        "#627276",
+        "#726B76",
+        "#767170",
+        "#747673",
+        "#747676"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#627276",
+          "rgb": [
+            98,
+            114,
+            118
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 42.17708728714416,
+          "hue": 191.0526315789474,
+          "sat": 0.16872931072838857
+        },
+        {
+          "hex": "#726B76",
+          "rgb": [
+            114,
+            107,
+            118
+          ],
+          "label": "2 \u00d7 90\u00b0",
+          "r_px": 22.93121894537493,
+          "hue": 281.0526315789473,
+          "sat": 0.09519249335456965
+        },
+        {
+          "hex": "#767170",
+          "rgb": [
+            118,
+            113,
+            112
+          ],
+          "label": "3 \u00d7 90\u00b0",
+          "r_px": 12.467451788236728,
+          "hue": 11.052631578947341,
+          "sat": 0.049876003348619025
+        },
+        {
+          "hex": "#747673",
+          "rgb": [
+            116,
+            118,
+            115
+          ],
+          "label": "4 \u00d7 90\u00b0",
+          "r_px": 6.77841655353249,
+          "hue": 101.05263157894734,
+          "sat": 0.028138686140659345
+        },
+        {
+          "hex": "#747676",
+          "rgb": [
+            116,
+            118,
+            118
+          ],
+          "label": "5 \u00d7 90\u00b0",
+          "r_px": 3.6853506036057055,
+          "hue": 191.0526315789474,
+          "sat": 0.014743233995875724
+        }
+      ],
+      "geometry": {
+        "n": 6,
+        "mean": [
+          109.0,
+          114.66666666666667,
+          110.16666666666667
+        ],
+        "shape": "VOLUME \u00b7 CLOUD",
+        "linearity_pct": 82.25399645726525,
+        "third_pc_pct": 4.323021510999327,
+        "planarity_pct": 95.67697848900067,
+        "off_plane_max": 6.665510595382352,
+        "hull_volume": 1729.9999999999957,
+        "gray_spread": 27.471197037382023,
+        "gray_branch": "chartreuse",
+        "pc1_angle_deg": 42.35341767330565,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 7.758564302214039,
+            "p5": 1.274166187347673,
+            "p95": 18.800482849229216,
+            "flatter_than_pct": 73.85
+          },
+          "ramp": {
+            "median": 0.07281940784609657,
+            "p5": 0.010169930221205178,
+            "p95": 0.2504334726598646,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 5.402128182503402,
+            "p5": 0.6444115528404238,
+            "p95": 14.863236176569258,
+            "flatter_than_pct": 59.35
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "tribonacci",
+      "title": "\u03c4  Tribonacci \u2014 outward \u00b7 core \u2192 edge",
+      "kind": "spiral",
+      "direction": "out",
+      "formula": "Tribonacci-constant log spiral: radius changes by \u03c4 \u2248 1.8393 each 90\u00b0.",
+      "meta": {
+        "ratio": 1.8392867552141612,
+        "trace_length_px": 473.9306221034836,
+        "total_nodes": 2,
+        "ratio_label": "\u03c4 = 1.8392867552",
+        "turn_deg": 90.0,
+        "html_auto_pick": true
+      },
+      "hexes": [
+        "#5C7650",
+        "#763F33"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#763F33",
+          "rgb": [
+            118,
+            63,
+            51
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 142.68406425327493,
+          "hue": 11.052631578947398,
+          "sat": 0.5708071695296604
+        }
+      ],
+      "geometry": {
+        "n": 2,
+        "mean": [
+          105.0,
+          90.5,
+          65.5
+        ],
+        "shape": "SEGMENT",
+        "linearity_pct": 100.0,
+        "third_pc_pct": 0.0,
+        "planarity_pct": 100.0,
+        "off_plane_max": 2.886579864025407e-15,
+        "hull_volume": null,
+        "gray_spread": 50.52392172690741,
+        "gray_branch": "red",
+        "pc1_angle_deg": 60.206786514404094,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Add at least three colors to see a shape."
+      }
+    },
+    {
+      "key": "silver",
+      "title": "\u03b4  Silver ratio \u2014 inward \u00b7 edge \u2192 core",
+      "kind": "spiral",
+      "direction": "in",
+      "formula": "Silver-ratio log spiral: radius changes by \u03b4 = 1+\u221a2 each 90\u00b0.",
+      "meta": {
+        "ratio": 2.414213562373095,
+        "trace_length_px": 153.61969612918816,
+        "total_nodes": 4,
+        "ratio_label": "\u03b4 = 2.4142135624",
+        "turn_deg": 90.0,
+        "html_auto_pick": false
+      },
+      "hexes": [
+        "#5C7650",
+        "#677376",
+        "#746F76",
+        "#767473"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#677376",
+          "rgb": [
+            103,
+            115,
+            118
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 32.13293108357047,
+          "hue": 191.0526315789474,
+          "sat": 0.12854769407147387
+        },
+        {
+          "hex": "#746F76",
+          "rgb": [
+            116,
+            111,
+            118
+          ],
+          "label": "2 \u00d7 90\u00b0",
+          "r_px": 13.309895853614883,
+          "hue": 281.0526315789473,
+          "sat": 0.05525228186139641
+        },
+        {
+          "hex": "#767473",
+          "rgb": [
+            118,
+            116,
+            115
+          ],
+          "label": "3 \u00d7 90\u00b0",
+          "r_px": 5.513139376340707,
+          "hue": 11.052631578947341,
+          "sat": 0.022055297479089908
+        }
+      ],
+      "geometry": {
+        "n": 4,
+        "mean": [
+          107.25,
+          115.0,
+          107.75
+        ],
+        "shape": "FOLDED FAN",
+        "linearity_pct": 91.4582149501906,
+        "third_pc_pct": 0.8126580954936099,
+        "planarity_pct": 99.1873419045064,
+        "off_plane_max": 2.639093904053736,
+        "hull_volume": 464.83333333333377,
+        "gray_spread": 27.471197037382023,
+        "gray_branch": "chartreuse",
+        "pc1_angle_deg": 43.15351696697665,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 1.6458166759600348,
+            "p5": 0.01330637236070584,
+            "p95": 12.392033313225749,
+            "flatter_than_pct": 62.7
+          },
+          "ramp": {
+            "median": 0.015594766332169278,
+            "p5": 0.00011747163380052914,
+            "p95": 0.14339856429980855,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 1.0165857907847058,
+            "p5": 0.0004055913579332717,
+            "p95": 9.012722976608407,
+            "flatter_than_pct": 54.3
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "silver",
+      "title": "\u03b4  Silver ratio \u2014 outward \u00b7 core \u2192 edge",
+      "kind": "spiral",
+      "direction": "out",
+      "formula": "Silver-ratio log spiral: radius changes by \u03b4 = 1+\u221a2 each 90\u00b0.",
+      "meta": {
+        "ratio": 2.414213562373095,
+        "trace_length_px": 337.79303370257287,
+        "total_nodes": 2,
+        "ratio_label": "\u03b4 = 2.4142135624",
+        "turn_deg": 90.0,
+        "html_auto_pick": true
+      },
+      "hexes": [
+        "#5C7650",
+        "#762E1E"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#762E1E",
+          "rgb": [
+            118,
+            46,
+            30
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 187.28444712508212,
+          "hue": 11.052631578947398,
+          "sat": 0.7492308669497533
+        }
+      ],
+      "geometry": {
+        "n": 2,
+        "mean": [
+          105.0,
+          82.0,
+          55.0
+        ],
+        "shape": "SEGMENT",
+        "linearity_pct": 99.99999999999997,
+        "third_pc_pct": 0.0,
+        "planarity_pct": 100.0,
+        "off_plane_max": 6.772360450213455e-15,
+        "hull_volume": null,
+        "gray_spread": 66.29228210483228,
+        "gray_branch": "red",
+        "pc1_angle_deg": 52.68560872251902,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Add at least three colors to see a shape."
+      }
+    },
+    {
+      "key": "plastic",
+      "title": "\u03c1  Plastic constant \u2014 inward \u00b7 edge \u2192 core",
+      "kind": "spiral",
+      "direction": "in",
+      "formula": "Plastic-constant log spiral: radius changes by \u03c1 \u2248 1.3247 each 90\u00b0.",
+      "meta": {
+        "ratio": 1.324717957244746,
+        "trace_length_px": 426.5768571524373,
+        "total_nodes": 13,
+        "ratio_label": "\u03c1 = 1.3247179572",
+        "turn_deg": 90.0,
+        "html_auto_pick": false
+      },
+      "hexes": [
+        "#5C7650",
+        "#5A7176",
+        "#6F6076",
+        "#766966",
+        "#6E766A",
+        "#6D7476",
+        "#746F76",
+        "#767271"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#5A7176",
+          "rgb": [
+            90,
+            113,
+            118
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 58.56020717202632,
+          "hue": 191.0526315789474,
+          "sat": 0.23426993251047407
+        },
+        {
+          "hex": "#6F6076",
+          "rgb": [
+            111,
+            96,
+            118
+          ],
+          "label": "2 \u00d7 90\u00b0",
+          "r_px": 44.20579252494206,
+          "hue": 281.0526315789473,
+          "sat": 0.18350789032140696
+        },
+        {
+          "hex": "#766966",
+          "rgb": [
+            118,
+            105,
+            102
+          ],
+          "label": "3 \u00d7 90\u00b0",
+          "r_px": 33.36996549581376,
+          "hue": 11.052631578947341,
+          "sat": 0.13349644651386286
+        },
+        {
+          "hex": "#6E766A",
+          "rgb": [
+            110,
+            118,
+            106
+          ],
+          "label": "4 \u00d7 90\u00b0",
+          "r_px": 25.190241676212548,
+          "hue": 101.05263157894734,
+          "sat": 0.10457018962118937
+        },
+        {
+          "hex": "#6D7476",
+          "rgb": [
+            109,
+            116,
+            118
+          ],
+          "label": "5 \u00d7 90\u00b0",
+          "r_px": 19.015550848729507,
+          "hue": 191.0526315789474,
+          "sat": 0.07607165392866566
+        },
+        {
+          "hex": "#746F76",
+          "rgb": [
+            116,
+            111,
+            118
+          ],
+          "label": "6 \u00d7 90\u00b0",
+          "r_px": 14.35441464708425,
+          "hue": 281.0526315789474,
+          "sat": 0.059588307283460165
+        },
+        {
+          "hex": "#767271",
+          "rgb": [
+            118,
+            114,
+            113
+          ],
+          "label": "7 \u00d7 90\u00b0",
+          "r_px": 10.835827029128303,
+          "hue": 11.052631578947398,
+          "sat": 0.043348693411414056
+        }
+      ],
+      "geometry": {
+        "n": 8,
+        "mean": [
+          108.0,
+          111.375,
+          109.125
+        ],
+        "shape": "VOLUME \u00b7 CLOUD",
+        "linearity_pct": 62.304852866319415,
+        "third_pc_pct": 12.221224720548335,
+        "planarity_pct": 87.77877527945166,
+        "off_plane_max": 12.63980745143696,
+        "hull_volume": 5649.833333333334,
+        "gray_spread": 27.471197037382023,
+        "gray_branch": "chartreuse",
+        "pc1_angle_deg": 51.857814251882594,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 11.531502727706734,
+            "p5": 3.614592094954295,
+            "p95": 22.13132739560341,
+            "flatter_than_pct": 45.45
+          },
+          "ramp": {
+            "median": 0.11161696082996612,
+            "p5": 0.028103820801919324,
+            "p95": 0.3036585602368046,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 8.302991227660716,
+            "p5": 2.3022262090188477,
+            "p95": 17.441456040195423,
+            "flatter_than_pct": 22.55
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "plastic",
+      "title": "\u03c1  Plastic constant \u2014 outward \u00b7 core \u2192 edge",
+      "kind": "spiral",
+      "direction": "out",
+      "formula": "Plastic-constant log spiral: radius changes by \u03c1 \u2248 1.3247 each 90\u00b0.",
+      "meta": {
+        "ratio": 1.324717957244746,
+        "trace_length_px": 919.5779539522324,
+        "total_nodes": 5,
+        "ratio_label": "\u03c1 = 1.3247179572",
+        "turn_deg": 90.0,
+        "html_auto_pick": true
+      },
+      "hexes": [
+        "#5C7650",
+        "#764E45",
+        "#613376",
+        "#216676",
+        "#267601"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#764E45",
+          "rgb": [
+            118,
+            78,
+            69
+          ],
+          "label": "1 \u00d7 90\u00b0",
+          "r_px": 102.76599969696838,
+          "hue": 11.052631578947398,
+          "sat": 0.4111150724357509
+        },
+        {
+          "hex": "#613376",
+          "rgb": [
+            97,
+            51,
+            118
+          ],
+          "label": "2 \u00d7 90\u00b0",
+          "r_px": 136.13596519278215,
+          "hue": 281.0526315789474,
+          "sat": 0.565130095909952
+        },
+        {
+          "hex": "#216676",
+          "rgb": [
+            33,
+            102,
+            118
+          ],
+          "label": "3 \u00d7 90\u00b0",
+          "r_px": 180.34175771772422,
+          "hue": 191.0526315789474,
+          "sat": 0.7214566588748905
+        },
+        {
+          "hex": "#267601",
+          "rgb": [
+            38,
+            118,
+            1
+          ],
+          "label": "4 \u00d7 90\u00b0",
+          "r_px": 238.90196488975056,
+          "hue": 101.05263157894734,
+          "sat": 0.9917341838362262
+        }
+      ],
+      "geometry": {
+        "n": 5,
+        "mean": [
+          75.6,
+          93.4,
+          77.2
+        ],
+        "shape": "VOLUME \u00b7 CLOUD",
+        "linearity_pct": 63.67089425416687,
+        "third_pc_pct": 7.331502555821445,
+        "planarity_pct": 92.66849744417856,
+        "off_plane_max": 28.860887135403196,
+        "hull_volume": 111159.16666666667,
+        "gray_spread": 84.573439487032,
+        "gray_branch": "chartreuse",
+        "pc1_angle_deg": 62.44461051254862,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 4.944566784349703,
+            "p5": 0.41992289620863144,
+            "p95": 16.251136822714123,
+            "flatter_than_pct": 33.4
+          },
+          "ramp": {
+            "median": 0.04639916915535924,
+            "p5": 0.003541424998277512,
+            "p95": 0.20829692131520877,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 3.5607506799810937,
+            "p5": 0.12893571650020166,
+            "p95": 13.138796185096947,
+            "flatter_than_pct": 23.9
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "julia",
+      "title": "J  Julia modulated \u2014 inward \u00b7 edge \u2192 core",
+      "kind": "spiral",
+      "direction": "in",
+      "formula": "Julia-inspired phase modulation on a \u03c6-scaled spiral, nodes every 45\u00b0 (exploratory, not a canonical Julia spiral). The phase term is non-zero at t = 0, so node 00 sits slightly off your exact colour -- same as the HTML.",
+      "meta": {
+        "ratio": 1.618033988749895,
+        "trace_length_px": 249.36590189524912,
+        "total_nodes": 15,
+        "ratio_label": "J / \u03c6 = 1.6180339887",
+        "turn_deg": 45.0,
+        "html_auto_pick": false
+      },
+      "hexes": [
+        "#587651",
+        "#587667",
+        "#607476",
+        "#656776",
+        "#736876",
+        "#766A70",
+        "#766E6E",
+        "#76756F"
+      ],
+      "swatches": [
+        {
+          "hex": "#587651",
+          "rgb": [
+            88,
+            118,
+            81
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 108.32880802094536,
+          "sat": 0.31147368001740333
+        },
+        {
+          "hex": "#587667",
+          "rgb": [
+            88,
+            118,
+            103
+          ],
+          "label": "J01 \u00b7 45\u00b0",
+          "r_px": 60.986289048593676,
+          "hue": 149.57356203371364,
+          "sat": 0.257944873050189
+        },
+        {
+          "hex": "#607476",
+          "rgb": [
+            96,
+            116,
+            118
+          ],
+          "label": "J02 \u00b7 90\u00b0",
+          "r_px": 47.944455159864376,
+          "hue": 184.8140235421754,
+          "sat": 0.1835104030441323
+        },
+        {
+          "hex": "#656776",
+          "rgb": [
+            101,
+            103,
+            118
+          ],
+          "label": "J03 \u00b7 135\u00b0",
+          "r_px": 37.691599479756384,
+          "hue": 233.30711888363282,
+          "sat": 0.1464137463632523
+        },
+        {
+          "hex": "#736876",
+          "rgb": [
+            115,
+            104,
+            118
+          ],
+          "label": "J04 \u00b7 180\u00b0",
+          "r_px": 29.631302860891456,
+          "hue": 288.3288080209454,
+          "sat": 0.11897235916563913
+        },
+        {
+          "hex": "#766A70",
+          "rgb": [
+            118,
+            106,
+            112
+          ],
+          "label": "J05 \u00b7 225\u00b0",
+          "r_px": 23.294689568837295,
+          "hue": 329.57356203371364,
+          "sat": 0.09852617428139543
+        },
+        {
+          "hex": "#766E6E",
+          "rgb": [
+            118,
+            110,
+            110
+          ],
+          "label": "J06 \u00b7 270\u00b0",
+          "r_px": 18.313152298972916,
+          "hue": 4.814023542175448,
+          "sat": 0.07009473667366639
+        },
+        {
+          "hex": "#76756F",
+          "rgb": [
+            118,
+            117,
+            111
+          ],
+          "label": "J07 \u00b7 315\u00b0",
+          "r_px": 14.396909910919083,
+          "hue": 53.30711888363294,
+          "sat": 0.055925074690556055
+        }
+      ],
+      "geometry": {
+        "n": 8,
+        "mean": [
+          105.25,
+          111.5,
+          108.875
+        ],
+        "shape": "VOLUME \u00b7 CLOUD",
+        "linearity_pct": 73.28077622126598,
+        "third_pc_pct": 6.138256184225342,
+        "planarity_pct": 93.86174381577466,
+        "off_plane_max": 7.482570633258387,
+        "hull_volume": 4144.666666666664,
+        "gray_spread": 27.796882319185848,
+        "gray_branch": "green",
+        "pc1_angle_deg": 51.01316807858228,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 11.531502727706734,
+            "p5": 3.614592094954295,
+            "p95": 22.13132739560341,
+            "flatter_than_pct": 83.85
+          },
+          "ramp": {
+            "median": 0.11161696082996612,
+            "p5": 0.028103820801919324,
+            "p95": 0.3036585602368046,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 8.302991227660716,
+            "p5": 2.3022262090188477,
+            "p95": 17.441456040195423,
+            "flatter_than_pct": 68.75
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "julia",
+      "title": "J  Julia modulated \u2014 outward \u00b7 core \u2192 edge",
+      "kind": "spiral",
+      "direction": "out",
+      "formula": "Julia-inspired phase modulation on a \u03c6-scaled spiral, nodes every 45\u00b0 (exploratory, not a canonical Julia spiral). The phase term is non-zero at t = 0, so node 00 sits slightly off your exact colour -- same as the HTML.",
+      "meta": {
+        "ratio": 1.618033988749895,
+        "trace_length_px": 640.114180834514,
+        "total_nodes": 5,
+        "ratio_label": "J / \u03c6 = 1.6180339887",
+        "turn_deg": 45.0,
+        "html_auto_pick": true
+      },
+      "hexes": [
+        "#587651",
+        "#767149",
+        "#76423D",
+        "#76264F",
+        "#631676"
+      ],
+      "swatches": [
+        {
+          "hex": "#587651",
+          "rgb": [
+            88,
+            118,
+            81
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 108.32880802094536,
+          "sat": 0.31147368001740333
+        },
+        {
+          "hex": "#767149",
+          "rgb": [
+            118,
+            113,
+            73
+          ],
+          "label": "J01 \u00b7 45\u00b0",
+          "r_px": 98.67788852835005,
+          "hue": 53.30711888363288,
+          "sat": 0.3833161643992009
+        },
+        {
+          "hex": "#76423D",
+          "rgb": [
+            118,
+            66,
+            61
+          ],
+          "label": "J02 \u00b7 90\u00b0",
+          "r_px": 125.52021318062019,
+          "hue": 4.814023542175448,
+          "sat": 0.48043647245873033
+        },
+        {
+          "hex": "#76264F",
+          "rgb": [
+            118,
+            38,
+            79
+          ],
+          "label": "J03 \u00b7 135\u00b0",
+          "r_px": 159.66417757694373,
+          "hue": 329.57356203371364,
+          "sat": 0.6753084448691715
+        },
+        {
+          "hex": "#631676",
+          "rgb": [
+            99,
+            22,
+            118
+          ],
+          "label": "J04 \u00b7 180\u00b0",
+          "r_px": 203.095971201376,
+          "hue": 288.3288080209454,
+          "sat": 0.8154486808865706
+        }
+      ],
+      "geometry": {
+        "n": 5,
+        "mean": [
+          108.2,
+          71.4,
+          82.4
+        ],
+        "shape": "FOLDED FAN",
+        "linearity_pct": 80.46210985205234,
+        "third_pc_pct": 2.111762073640221,
+        "planarity_pct": 97.88823792635978,
+        "off_plane_max": 11.030840242153921,
+        "hull_volume": 18777.33333333333,
+        "gray_spread": 71.89343966362068,
+        "gray_branch": "magenta",
+        "pc1_angle_deg": 68.93337285714723,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 4.944566784349703,
+            "p5": 0.41992289620863144,
+            "p95": 16.251136822714123,
+            "flatter_than_pct": 75.35
+          },
+          "ramp": {
+            "median": 0.04639916915535924,
+            "p5": 0.003541424998277512,
+            "p95": 0.20829692131520877,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 3.5607506799810937,
+            "p5": 0.12893571650020166,
+            "p95": 13.138796185096947,
+            "flatter_than_pct": 65.1
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "binet",
+      "title": "B  Binet sequence \u2014 inward \u00b7 edge \u2192 core",
+      "kind": "spiral",
+      "direction": "in",
+      "formula": "Exact Fibonacci radii F(5+i)/F(5) at each 90\u00b0 node (reciprocal when inward), log-interpolated between nodes.",
+      "meta": {
+        "ratio": 1.618033988749895,
+        "trace_length_px": 258.36058894733736,
+        "total_nodes": 8,
+        "ratio_label": "B = 1.6180339887",
+        "turn_deg": 90.0,
+        "html_auto_pick": false
+      },
+      "hexes": [
+        "#5C7650",
+        "#5F7276",
+        "#716776",
+        "#766F6D",
+        "#727670",
+        "#737576",
+        "#757476",
+        "#767575"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#5F7276",
+          "rgb": [
+            95,
+            114,
+            118
+          ],
+          "label": "F6=8 \u00b7 1 \u00d7 90\u00b0",
+          "r_px": 48.48484876297239,
+          "hue": 191.0526315789474,
+          "sat": 0.19396349152446232
+        },
+        {
+          "hex": "#716776",
+          "rgb": [
+            113,
+            103,
+            118
+          ],
+          "label": "F7=13 \u00b7 2 \u00d7 90\u00b0",
+          "r_px": 29.836830007983007,
+          "hue": 281.0526315789473,
+          "sat": 0.12385919165580181
+        },
+        {
+          "hex": "#766F6D",
+          "rgb": [
+            118,
+            111,
+            109
+          ],
+          "label": "F8=21 \u00b7 3 \u00d7 90\u00b0",
+          "r_px": 18.470418576370434,
+          "hue": 11.052631578947341,
+          "sat": 0.0738908539140809
+        },
+        {
+          "hex": "#727670",
+          "rgb": [
+            114,
+            118,
+            112
+          ],
+          "label": "F9=34 \u00b7 4 \u00d7 90\u00b0",
+          "r_px": 11.408199708934681,
+          "hue": 101.05263157894734,
+          "sat": 0.04735792622133599
+        },
+        {
+          "hex": "#737576",
+          "rgb": [
+            115,
+            117,
+            118
+          ],
+          "label": "F10=55 \u00b7 5 \u00d7 90\u00b0",
+          "r_px": 7.052341638250529,
+          "hue": 191.0526315789474,
+          "sat": 0.028212871494467252
+        },
+        {
+          "hex": "#757476",
+          "rgb": [
+            117,
+            116,
+            118
+          ],
+          "label": "F11=89 \u00b7 6 \u00d7 90\u00b0",
+          "r_px": 4.358188652851451,
+          "hue": 281.0526315789474,
+          "sat": 0.0180917920396115
+        },
+        {
+          "hex": "#767575",
+          "rgb": [
+            118,
+            117,
+            117
+          ],
+          "label": "F12=144 \u00b7 7 \u00d7 90\u00b0",
+          "r_px": 2.693602709054022,
+          "hue": 11.052631578947398,
+          "sat": 0.010775749529136801
+        }
+      ],
+      "geometry": {
+        "n": 8,
+        "mean": [
+          110.25,
+          114.25,
+          111.25
+        ],
+        "shape": "VOLUME \u00b7 CLOUD",
+        "linearity_pct": 75.65658109827164,
+        "third_pc_pct": 7.5870379757863216,
+        "planarity_pct": 92.41296202421368,
+        "off_plane_max": 10.090606126001564,
+        "hull_volume": 2850.999999999997,
+        "gray_spread": 27.471197037382023,
+        "gray_branch": "chartreuse",
+        "pc1_angle_deg": 42.15326490209614,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "null_models": {
+          "rgb": {
+            "median": 11.531502727706734,
+            "p5": 3.614592094954295,
+            "p95": 22.13132739560341,
+            "flatter_than_pct": 74.75
+          },
+          "ramp": {
+            "median": 0.11161696082996612,
+            "p5": 0.028103820801919324,
+            "p95": 0.3036585602368046,
+            "flatter_than_pct": 0.0
+          },
+          "wheel": {
+            "median": 8.302991227660716,
+            "p5": 2.3022262090188477,
+            "p95": 17.441456040195423,
+            "flatter_than_pct": 55.5
+          }
+        },
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. More volume than a neutral ramp + one accent produces, which points to two or more independent chroma directions. Within the range of random wheel picks at this brightness."
+      }
+    },
+    {
+      "key": "binet",
+      "title": "B  Binet sequence \u2014 outward \u00b7 core \u2192 edge",
+      "kind": "spiral",
+      "direction": "out",
+      "formula": "Exact Fibonacci radii F(5+i)/F(5) at each 90\u00b0 node (reciprocal when inward), log-interpolated between nodes.",
+      "meta": {
+        "ratio": 1.618033988749895,
+        "trace_length_px": 621.134918415045,
+        "total_nodes": 3,
+        "ratio_label": "B = 1.6180339887",
+        "turn_deg": 90.0,
+        "html_auto_pick": true
+      },
+      "hexes": [
+        "#5C7650",
+        "#76463B",
+        "#571376"
+      ],
+      "swatches": [
+        {
+          "hex": "#5C7650",
+          "rgb": [
+            92,
+            118,
+            80
+          ],
+          "label": "ORIGIN",
+          "r_px": 77.57575802075583,
+          "hue": 101.0526315789474,
+          "sat": 0.3220338983050848
+        },
+        {
+          "hex": "#76463B",
+          "rgb": [
+            118,
+            70,
+            59
+          ],
+          "label": "F6=8 \u00b7 1 \u00d7 90\u00b0",
+          "r_px": 124.12121283320933,
+          "hue": 11.052631578947398,
+          "sat": 0.4965465383026235
+        },
+        {
+          "hex": "#571376",
+          "rgb": [
+            87,
+            19,
+            118
+          ],
+          "label": "F7=13 \u00b7 2 \u00d7 90\u00b0",
+          "r_px": 201.69697085396515,
+          "hue": 281.0526315789474,
+          "sat": 0.8372881355932205
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          99.0,
+          69.0,
+          85.66666666666667
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 81.30652896993405,
+        "third_pc_pct": 5.850501366969463e-16,
+        "planarity_pct": 100.0,
+        "off_plane_max": 3.538974133559517e-15,
+        "hull_volume": null,
+        "gray_spread": 71.6147098483731,
+        "gray_branch": "violet",
+        "pc1_angle_deg": 70.94521246504303,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred on the wheel (rot 344\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": -0.28,
+        "centred": true,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#645F76",
+        "#766A4E",
+        "#497658"
+      ],
+      "swatches": [
+        {
+          "hex": "#645F76",
+          "rgb": [
+            100,
+            95,
+            118
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 49.11097072590937,
+          "hue": 252.9676589454084,
+          "sat": 0.19861247921910893
+        },
+        {
+          "hex": "#766A4E",
+          "rgb": [
+            118,
+            106,
+            78
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 82.86378863742151,
+          "hue": 41.69220265247196,
+          "sat": 0.3432142129396505
+        },
+        {
+          "hex": "#497658",
+          "rgb": [
+            73,
+            118,
+            88
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 91.28568352107396,
+          "hue": 139.13888075614932,
+          "sat": 0.3791920902744588
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          97.0,
+          106.33333333333333,
+          94.66666666666667
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 52.99740834189046,
+        "third_pc_pct": 4.143716169531992e-15,
+        "planarity_pct": 100.0,
+        "off_plane_max": 4.300290260820821e-15,
+        "hull_volume": null,
+        "gray_spread": 32.4037034920393,
+        "gray_branch": "mint",
+        "pc1_angle_deg": 69.51187660858199,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred on the wheel (rot 74\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": 1.2907963267948965,
+        "centred": true,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#765E65",
+        "#4F7656",
+        "#4B5376"
+      ],
+      "swatches": [
+        {
+          "hex": "#765E65",
+          "rgb": [
+            118,
+            94,
+            101
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 49.11097072590937,
+          "hue": 342.9676589454084,
+          "sat": 0.20242572105248188
+        },
+        {
+          "hex": "#4F7656",
+          "rgb": [
+            79,
+            118,
+            86
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 82.86378863742151,
+          "hue": 131.69220265247196,
+          "sat": 0.33274599586656384
+        },
+        {
+          "hex": "#4B5376",
+          "rgb": [
+            75,
+            83,
+            118
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 91.28568352107396,
+          "hue": 229.13888075614932,
+          "sat": 0.36476701362050595
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          90.66666666666667,
+          98.33333333333333,
+          101.66666666666667
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 50.87970464066104,
+        "third_pc_pct": 2.59629905505954e-15,
+        "planarity_pct": 100.0,
+        "off_plane_max": 4.353606255818732e-15,
+        "hull_volume": null,
+        "gray_spread": 32.341923257592455,
+        "gray_branch": "blue",
+        "pc1_angle_deg": 69.75998806515659,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred on the wheel (rot 164\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": 2.861592653589793,
+        "centred": true,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#71765F",
+        "#4E5A76",
+        "#764968"
+      ],
+      "swatches": [
+        {
+          "hex": "#71765F",
+          "rgb": [
+            113,
+            118,
+            95
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 49.110970725909375,
+          "hue": 72.9676589454084,
+          "sat": 0.19861247921910893
+        },
+        {
+          "hex": "#4E5A76",
+          "rgb": [
+            78,
+            90,
+            118
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 82.86378863742151,
+          "hue": 221.6922026524719,
+          "sat": 0.3432142129396505
+        },
+        {
+          "hex": "#764968",
+          "rgb": [
+            118,
+            73,
+            104
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 91.28568352107398,
+          "hue": 319.1388807561493,
+          "sat": 0.3791920902744589
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          103.0,
+          93.66666666666667,
+          105.66666666666667
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 56.39386150538992,
+        "third_pc_pct": 0.0,
+        "planarity_pct": 100.0,
+        "off_plane_max": 7.716901908508517e-15,
+        "hull_volume": null,
+        "gray_spread": 32.567877834864625,
+        "gray_branch": "rose",
+        "pc1_angle_deg": 62.32022508953469,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred on the wheel (rot 254\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": 4.432388980384689,
+        "centred": true,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#5E766F",
+        "#764F6E",
+        "#766E4B"
+      ],
+      "swatches": [
+        {
+          "hex": "#5E766F",
+          "rgb": [
+            94,
+            118,
+            111
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 49.11097072590937,
+          "hue": 162.9676589454084,
+          "sat": 0.20242572105248188
+        },
+        {
+          "hex": "#764F6E",
+          "rgb": [
+            118,
+            79,
+            110
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 82.86378863742151,
+          "hue": 311.6922026524719,
+          "sat": 0.3327459958665637
+        },
+        {
+          "hex": "#766E4B",
+          "rgb": [
+            118,
+            110,
+            75
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 91.28568352107396,
+          "hue": 49.13888075614926,
+          "sat": 0.364767013620506
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          110.0,
+          102.33333333333333,
+          98.66666666666667
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 53.53127280380493,
+        "third_pc_pct": 0.0,
+        "planarity_pct": 100.0,
+        "off_plane_max": 3.3613747591780665e-15,
+        "hull_volume": null,
+        "gray_spread": 32.341923257592455,
+        "gray_branch": "yellow",
+        "pc1_angle_deg": 87.68598495377807,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred near your colour (rot 344\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": -0.28,
+        "centred": false,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#627668",
+        "#6B7635",
+        "#307632"
+      ],
+      "swatches": [
+        {
+          "hex": "#627668",
+          "rgb": [
+            98,
+            118,
+            104
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 40.38502304541508,
+          "hue": 135.97748156001052,
+          "sat": 0.16572521159332876
+        },
+        {
+          "hex": "#6B7635",
+          "rgb": [
+            107,
+            118,
+            53
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 138.440084456238,
+          "hue": 70.05587537001776,
+          "sat": 0.5504378768588143
+        },
+        {
+          "hex": "#307632",
+          "rgb": [
+            48,
+            118,
+            50
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 158.62058051910495,
+          "hue": 121.84568707047328,
+          "sat": 0.591530626684342
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          84.33333333333333,
+          118.0,
+          69.0
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 70.99418889936912,
+        "third_pc_pct": 0.0,
+        "planarity_pct": 100.0,
+        "off_plane_max": 0.0,
+        "hull_volume": null,
+        "gray_spread": 56.356011214421486,
+        "gray_branch": "green",
+        "pc1_angle_deg": 35.387585791626485,
+        "face_locked": [
+          "G = 118"
+        ],
+        "brightness_shell": null,
+        "verdict": "Face-locked: G = 118 on every color, so the set lies on one flat face of the RGB cube. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred near your colour (rot 74\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": 1.2907963267948965,
+        "centred": false,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#757658",
+        "#357632",
+        "#547673"
+      ],
+      "swatches": [
+        {
+          "hex": "#757658",
+          "rgb": [
+            117,
+            118,
+            88
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 68.70444609599056,
+          "hue": 61.95484508568967,
+          "sat": 0.2564745818622232
+        },
+        {
+          "hex": "#357632",
+          "rgb": [
+            53,
+            118,
+            50
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 153.65249969499632,
+          "hue": 117.00530378300209,
+          "sat": 0.5790375777671469
+        },
+        {
+          "hex": "#547673",
+          "rgb": [
+            84,
+            118,
+            115
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 74.61624417688891,
+          "hue": 175.40087340634523,
+          "sat": 0.2850925974672879
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          84.66666666666667,
+          118.0,
+          84.33333333333333
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 78.3660043307134,
+        "third_pc_pct": 0.0,
+        "planarity_pct": 100.0,
+        "off_plane_max": 0.0,
+        "hull_volume": null,
+        "gray_spread": 54.33844556726542,
+        "gray_branch": "green",
+        "pc1_angle_deg": 35.27709315644107,
+        "face_locked": [
+          "G = 118"
+        ],
+        "brightness_shell": null,
+        "verdict": "Face-locked: G = 118 on every color, so the set lies on one flat face of the RGB cube. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred near your colour (rot 164\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": 2.861592653589793,
+        "centred": false,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#577639",
+        "#50766D",
+        "#76625B"
+      ],
+      "swatches": [
+        {
+          "hex": "#577639",
+          "rgb": [
+            87,
+            118,
+            57
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 121.97939172214113,
+          "hue": 90.12644552252988,
+          "sat": 0.5159315981615815
+        },
+        {
+          "hex": "#50766D",
+          "rgb": [
+            80,
+            118,
+            109
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 79.07784234818396,
+          "hue": 165.41949302125,
+          "sat": 0.32243399143319196
+        },
+        {
+          "hex": "#76625B",
+          "rgb": [
+            118,
+            98,
+            91
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 56.496111968891285,
+          "hue": 15.713329149216008,
+          "sat": 0.23156976256562206
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          95.0,
+          111.33333333333333,
+          85.66666666666667
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 56.8535309548719,
+        "third_pc_pct": 2.292689655585158e-15,
+        "planarity_pct": 100.0,
+        "off_plane_max": 8.847537101751631e-15,
+        "hull_volume": null,
+        "gray_spread": 43.135445594854666,
+        "gray_branch": "chartreuse",
+        "pc1_angle_deg": 56.424315636492736,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    },
+    {
+      "key": "rauzy",
+      "title": "Rauzy tri-tile \u2014 centred near your colour (rot 254\u00b0)",
+      "kind": "rauzy",
+      "direction": null,
+      "formula": "Tribonacci Rauzy fractal (stepped line projected along (\u03c4\u00b2,\u03c4,1)); each tile contributes the visible fractal pixel closest to its centroid.",
+      "meta": {
+        "scale_pct": 58.0,
+        "rotation_rad": 4.432388980384689,
+        "centred": false,
+        "visible_points": [
+          4893,
+          2661,
+          1446
+        ]
+      },
+      "hexes": [
+        "#457649",
+        "#766761",
+        "#67762E"
+      ],
+      "swatches": [
+        {
+          "hex": "#457649",
+          "rgb": [
+            69,
+            118,
+            73
+          ],
+          "label": "tile A \u00b7 4,893 visible pts",
+          "r_px": 108.58002200186455,
+          "hue": 124.57103982601188,
+          "sat": 0.4147642574623649
+        },
+        {
+          "hex": "#766761",
+          "rgb": [
+            118,
+            103,
+            97
+          ],
+          "label": "tile B \u00b7 2,661 visible pts",
+          "r_px": 42.542584220680375,
+          "hue": 17.998585267772114,
+          "sat": 0.1760081195744787
+        },
+        {
+          "hex": "#67762E",
+          "rgb": [
+            103,
+            118,
+            46
+          ],
+          "label": "tile C \u00b7 1,446 visible pts",
+          "r_px": 150.94606764256645,
+          "hue": 72.62854472749626,
+          "sat": 0.6093320715055737
+        }
+      ],
+      "geometry": {
+        "n": 3,
+        "mean": [
+          96.66666666666667,
+          113.0,
+          72.0
+        ],
+        "shape": "TRIANGLE",
+        "linearity_pct": 65.33998691086748,
+        "third_pc_pct": 0.0,
+        "planarity_pct": 100.0,
+        "off_plane_max": 5.2735593669694936e-15,
+        "hull_volume": null,
+        "gray_spread": 53.72150407425317,
+        "gray_branch": "yellow",
+        "pc1_angle_deg": 52.19595707140532,
+        "face_locked": [],
+        "brightness_shell": 118,
+        "verdict": "Every color has max(R,G,B) = 118: the set sits on a single brightness shell, which is all one wheel brightness can reach. Three points always form a flat triangle, so flatness says nothing at n = 3."
+      }
+    }
+  ]
+}
