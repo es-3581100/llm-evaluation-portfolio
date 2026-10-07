@@ -6,10 +6,10 @@
   const resumeUrl=body.dataset.resume||"data/resume-status.json";
   const esc=(s)=>String(s??"").replace(/[&<>\"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
   const projectMap=(data)=>new Map(data.projects.map(p=>[p.id,p]));
-  function links(list){return (list||[]).map(x=>`<a href="${esc(x.url)}" ${/^https?:/.test(x.url)?'target="_blank" rel="noreferrer"':''}>${esc(x.label)}</a>`).join("");}
+  function links(list){return (list||[]).map(x=>{const ext=/^https?:/.test(x.url);return `<a class="${ext?'external-link':''}" href="${esc(x.url)}" ${ext?'target="_blank" rel="noreferrer"':''}>${esc(x.label)}</a>`;}).join("");}
   function tags(list){return `<div class="tag-row">${(list||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>`;}
   function projectSlice(p){return `<article class="project-slice"><div><div class="project-type">${esc(p.type)}</div><div class="plate-status">${esc(p.status)}</div></div><div><h4>${esc(p.title)}</h4><p>${esc(p.summary)}</p>${tags(p.tags)}</div><div><div class="signal-readout">${esc(p.signal)}</div><div class="project-links">${links(p.links)}</div></div></article>`;}
-  function plate(p){const first=(p.links||[])[0];return `<a class="project-plate" href="${esc(first?first.url:'#')}" ${first&&/^https?:/.test(first.url)?'target="_blank" rel="noreferrer"':''}><div class="plate-top"><span class="project-type">${esc(p.type)}</span><span class="plate-status">${esc(p.status)}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><div class="plate-signal">${esc(p.signal)}</div></a>`;}
+  function plate(p){const first=(p.links||[])[0],ext=first&&/^https?:/.test(first.url);return `<a class="project-plate ${ext?'external-link':''}" href="${esc(first?first.url:'#')}" ${ext?'target="_blank" rel="noreferrer"':''}><div class="plate-top"><span class="project-type">${esc(p.type)}</span><span class="plate-status">${esc(p.status)}</span></div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><div class="plate-signal">${esc(p.signal)}</div></a>`;}
   function fillIdentity(data){document.querySelectorAll('[data-field]').forEach(el=>{const key=el.dataset.field;if(data.identity[key])el.textContent=data.identity[key];});}
   function renderResume(status){document.querySelectorAll('[data-resume-status]').forEach(el=>{el.innerHTML=`<strong>Resume status · ${esc(status.status.replaceAll('_',' '))}</strong><p>${esc(status.note)}</p>`;});}
   function renderHome(data){
@@ -25,5 +25,14 @@
     filters.addEventListener('click',e=>{const b=e.target.closest('button[data-filter]');if(!b)return;active=b.dataset.filter;draw();});draw();
   }
   function renderAbout(data){fillIdentity(data);const target=document.getElementById('about-branches');if(target)target.innerHTML=data.branches.map(b=>`<div><b>${esc(b.number)} / ${esc(b.label)}</b>${esc(b.short)}</div>`).join('');}
-  Promise.all([fetch(dataUrl).then(r=>{if(!r.ok)throw new Error('portfolio data '+r.status);return r.json()}),fetch(resumeUrl).then(r=>r.ok?r.json():null)]).then(([data,resume])=>{if(page==='home')renderHome(data);if(page==='work')renderWork(data);if(page==='about')renderAbout(data);if(resume)renderResume(resume);document.documentElement.classList.add('data-ready');}).catch(err=>{document.querySelectorAll('[data-dynamic]').forEach(el=>el.innerHTML=`<div class="error-state">The portfolio data could not be loaded. Static navigation and project links remain available. ${esc(err.message)}</div>`);});
+  function wireContact(data){
+    const snippet=document.getElementById('contact-snippet');
+    if(snippet)snippet.textContent=[data.identity.name,data.identity.role,'e.sawtelle358@gmail.com','https://www.linkedin.com/in/eric-sawtelle-0b021226b/','https://es-3581100.github.io/llm-evaluation-portfolio/resume/Eric_Sawtelle.pdf'].join('\n');
+    const copy=document.querySelector('[data-copy-contact]');
+    if(copy&&snippet)copy.addEventListener('click',async()=>{const value=snippet.textContent;try{await navigator.clipboard.writeText(value);}catch(_){const ta=document.createElement('textarea');ta.value=value;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}copy.dataset.copied='true';copy.textContent='Copied';window.setTimeout(()=>{copy.dataset.copied='false';copy.textContent='Copy snippet';},1400);});
+    const dialog=document.getElementById('resume-dialog'),open=document.querySelector('[data-resume-open]');
+    if(open&&dialog)open.addEventListener('click',()=>{if(typeof dialog.showModal==='function')dialog.showModal();else window.open('resume/Eric_Sawtelle.pdf','_blank','noopener');});
+    if(dialog)dialog.querySelectorAll('[data-resume-choice]').forEach(a=>a.addEventListener('click',()=>window.setTimeout(()=>dialog.close(),0)));
+  }
+  Promise.all([fetch(dataUrl).then(r=>{if(!r.ok)throw new Error('portfolio data '+r.status);return r.json()}),fetch(resumeUrl).then(r=>r.ok?r.json():null)]).then(([data,resume])=>{if(page==='home')renderHome(data);if(page==='work')renderWork(data);if(page==='about')renderAbout(data);if(page==='contact')wireContact(data);if(resume)renderResume(resume);document.documentElement.classList.add('data-ready');}).catch(err=>{document.querySelectorAll('[data-dynamic]').forEach(el=>el.innerHTML=`<div class="error-state">The portfolio data could not be loaded. Static navigation and project links remain available. ${esc(err.message)}</div>`);});
 })();

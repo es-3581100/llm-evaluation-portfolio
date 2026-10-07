@@ -1,0 +1,80 @@
+{
+  "schema_version": "ui-design-draft.v1",
+  "design_id": "portfolio",
+  "draft_id": "20261007T001600Z-signal-thread",
+  "visual_example_name": "Branchwork Atlas / Signal Thread",
+  "created_at_utc": "2026-10-07T00:16:00Z",
+  "direction": "Refine Branchwork Atlas with stronger green section relationships, tactile paper-card lift, semantic blue outbound-link motion, a centered high-contrast footer, split header destinations, and a copyable contact/resume surface.",
+  "provenance": {
+    "mode": "derive",
+    "references": [
+      {
+        "name": "UI Build Reference — Master Index v2",
+        "artifact": "ui-build-ref-master-v2(1).html",
+        "sha256": "ddb591cc8902067a9b65c10c6b25089f0174bf186d062254b509c3cdd8f9119d",
+        "used_for": [
+          "immutable draft/history contract",
+          "semantic color discipline",
+          "state-only motion"
+        ]
+      },
+      {
+        "name": "Kolmaf-AI Desktop public index",
+        "artifact": "donCannoli-burns/kolmaf-ai-desktop@index.html",
+        "sha256": "61413a1b24a368495111b444b2d1d58ef07b87701f98c593bbe4a00f4a493635",
+        "used_for": [
+          "hard paper-card shadow depth",
+          "small directional hover motion",
+          "button lift/press principle"
+        ]
+      },
+      {
+        "name": "Branchwork Atlas / Ivory Switchboard",
+        "artifact": "docs/design/portfolio/drafts/20261006T231000Z-branchwork-atlas/design.json",
+        "sha256": "966a399e147c177d39fbcf50b0a0ea8d715ad945ba6ac9779005bb14a921f739",
+        "used_for": [
+          "existing palette",
+          "typography jobs",
+          "branch composition",
+          "geometry language"
+        ]
+      }
+    ],
+    "inherited_moves": [
+      "warm mineral-paper material",
+      "graphite + green signal palette",
+      "serif/sans/mono job split",
+      "near-square editorial geometry",
+      "branch rail and ledger composition"
+    ],
+    "deliberate_departures": [
+      "2px signal-green major section rules",
+      "semantic blue external-link interaction",
+      "tactile hard card shadows",
+      "centered dark footer destination block",
+      "ES→GitHub and name/descriptor→Contact",
+      "copyable contact card + view/download resume dialog"
+    ],
+    "intentional_repeat": true,
+    "repeat_reason": "User explicitly requested a refinement of the existing portfolio visual rather than a new visual identity."
+  },
+  "semantics": {
+    "signal_green": "#2d6a59 — section relationship / active selection / internal signal",
+    "external_blue": "#2368c4 — outbound destination during interaction, paired with motion and edge changes",
+    "footer": "dark centered identity + practice areas + primary links"
+  },
+  "interaction_states": [
+    "hover lift",
+    "keyboard focus",
+    "external blue shift",
+    "copy success",
+    "resume modal",
+    "reduced motion"
+  ],
+  "implementation": {
+    "resume_pdf_mutated": false,
+    "contact_copy_box": true,
+    "resume_choice_dialog": true,
+    "split_brand_destinations": true
+  }
+}
