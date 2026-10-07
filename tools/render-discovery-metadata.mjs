@@ -47,6 +47,7 @@ const jsonld = {
     ]
   },
   "about.html": {"@context":"https://schema.org","@type":"ProfilePage","url":BASE+"about.html","name":"About — Eric Sawtelle","mainEntity":{"@id":PERSON_ID},"isPartOf":{"@id":WEBSITE_ID}},
+  "about-me.html": {"@context":"https://schema.org","@type":"ProfilePage","url":BASE+"about-me.html","name":"About me — Eric Sawtelle","mainEntity":{"@id":PERSON_ID},"isPartOf":{"@id":WEBSITE_ID}},
   "projects/index.html": {"@context":"https://schema.org","@type":"CollectionPage","url":BASE+"projects/index.html","name":"Work — Eric Sawtelle","about":{"@id":PERSON_ID},"isPartOf":{"@id":WEBSITE_ID}},
   "case-studies.html": {"@context":"https://schema.org","@type":"CollectionPage","url":BASE+"case-studies.html","name":"Research archive — Eric Sawtelle","about":["LLM Evaluation","AI Reliability","AI Safety","Agentic AI Systems"],"isPartOf":{"@id":WEBSITE_ID}},
   "skills.html": {"@context":"https://schema.org","@type":"CollectionPage","url":BASE+"skills.html","name":"Skills — Eric Sawtelle","about":{"@id":PERSON_ID},"isPartOf":{"@id":WEBSITE_ID}},
