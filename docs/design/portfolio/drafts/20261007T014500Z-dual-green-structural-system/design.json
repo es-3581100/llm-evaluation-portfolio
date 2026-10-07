@@ -31,7 +31,7 @@
       {
         "name": "Sacred Computations atlas crop",
         "artifact": "site/assets/gallery/sacred-computations-atlas.webp",
-        "sha256": "a35b4f75d95e5fadca506403c1e8b3abf83a4234fea5772129df8168e1b1def5",
+        "sha256": "c7b0671f963a0f4ede3a83f24f234037f36009ffcd86999958445f566f49136b",
         "used_for": [
           "Rendered-Systems-Gallery real preview"
         ]
