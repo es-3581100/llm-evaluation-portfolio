@@ -6,6 +6,15 @@ I design and build experimental systems across **agent orchestration, AI-native 
 
 Live portfolio: <https://es-3581100.github.io/llm-evaluation-portfolio/>
 
+## Merged upstream open-source contributions
+
+I have contributed code to [WaterSheep](https://github.com/SamratDuttaOfficial/WaterSheep), an independent open-source AI project. These changes were accepted and merged into the original repository under my [es-3581100 GitHub account](https://github.com/es-3581100).
+
+- **[PR #2 — HTTP client disconnect handling](https://github.com/SamratDuttaOfficial/WaterSheep/pull/2)** (merged October 25, 2026): separated inference errors from response-write failures so broken pipes and connection resets do not misclassify successful inference as a bad request. Added regression tests for disconnected clients and normal JSON responses.
+- **[PR #3 — Local decision-record training and warm-start](https://github.com/SamratDuttaOfficial/WaterSheep/pull/3)** (merged November 12, 2026): added strict local NDJSON imports, deterministic semantic-graph-to-decision-record conversion, local-record-only training configuration, optional warm-start from existing model weights, self-tests, and documentation. The documentation explicitly distinguishes supported workflows from unproven generalization claims.
+
+These are **merged upstream contributions**, not a claim to own, maintain, or have trained a benchmark-winning WaterSheep model. The linked PRs and file diffs are the primary evidence.
+
 ## Work branches
 
 1. **Agentic systems** — DonSquad, Kolmaf-AI Desktop, Goblin Logic Manager.

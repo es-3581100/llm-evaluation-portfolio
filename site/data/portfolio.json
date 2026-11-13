@@ -1,6 +1,6 @@
 {
   "schema_version": "portfolio-site.v2",
-  "updated": "2026-10-06",
+  "updated": "2026-11-13",
   "identity": {
     "name": "Eric Sawtelle",
     "role": "Experimental AI Systems Designer & Agentic Engineer",
@@ -25,6 +25,36 @@
     {
       "title": "Cross boundaries deliberately",
       "body": "Move between Kotlin, Go, Python, browser systems, native runtimes, symbolic math, and ML when the problem actually benefits from it."
+    }
+  ],
+  "open_source_contributions": [
+    {
+      "id": "watersheep-pr-2",
+      "title": "HTTP client disconnect handling",
+      "type": "WaterSheep · upstream reliability",
+      "status": "merged PR #2",
+      "summary": "Separated inference exceptions from HTTP response-write disconnects, preventing broken pipes or connection resets from reclassifying successful inference as a bad request; added regression tests.",
+      "signal": "Merged October 25, 2026",
+      "links": [
+        {
+          "label": "Upstream PR #2",
+          "url": "https://github.com/SamratDuttaOfficial/WaterSheep/pull/2"
+        }
+      ]
+    },
+    {
+      "id": "watersheep-pr-3",
+      "title": "Local record training & warm-start",
+      "type": "WaterSheep · upstream ML tooling",
+      "status": "merged PR #3",
+      "summary": "Added strict local NDJSON imports, deterministic semantic-graph record conversion, local-record-only training setup, and optional warm-start from existing model weights, with self-tests and documented evaluation limits.",
+      "signal": "Merged November 12, 2026",
+      "links": [
+        {
+          "label": "Upstream PR #3",
+          "url": "https://github.com/SamratDuttaOfficial/WaterSheep/pull/3"
+        }
+      ]
     }
   ],
   "branches": [
